@@ -1,0 +1,52 @@
+.servicesAbout {
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        gap: 16px;
+
+        &:not(:first-of-type) {
+            padding-top: 16px;
+            border-top: 1px solid #4C4C4C33;
+        }
+
+        &:not(:last-of-type) {
+            padding-bottom: 16px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Involve';
+            font-size: 16px;
+        }
+    }
+
+    &__link-title {
+        font-size: clamp(1rem, 0.8866rem + 0.4372vw, 1.25rem);
+        line-height: 1.2;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: 'Involve';
+    }
+
+    @media(max-width:767px) {
+        &__link {
+            grid-template-columns: repeat(1, 1fr);
+            padding-top: 24px;
+
+            &:not(:first-of-type) {
+                padding-top: 24px;
+            }
+
+            &:not(:last-of-type) {
+                padding-bottom: 24px;
+            }
+        }
+    }
+}

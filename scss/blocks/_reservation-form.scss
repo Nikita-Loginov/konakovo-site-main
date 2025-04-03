@@ -1,0 +1,148 @@
+body {
+    &.showForm {
+        .reservation-form--scroll {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0 , -30px);
+        }
+    }
+}
+
+.wrapper--animation {
+    .reservation-form {
+        &--scroll {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(100px);
+        }
+    }
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap:clamp(1.5rem, 1.3299rem + 0.6557vw, 1.875rem);
+
+    &--scroll {
+        position: fixed;
+        z-index: 30;
+        background-color: #fff;
+        backdrop-filter: blur(81px);
+        left: 30px;
+        right: 30px;
+        bottom: 0px;
+        padding: 16px;
+        width: fit-content;
+        margin: 0 auto;
+        border-radius: 16px;
+        flex-direction: row;
+        align-items: center;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-30px);
+        transition: all .5s;
+        
+        .button {
+            margin: 0;
+            // width: 100%;
+        }
+
+        @media(max-width:767px) {
+            flex-direction: column;
+            width: auto;
+
+            .reservation-form__inputs {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                width: 100%;
+            }
+
+            .reservation-form__box-content {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+        @media(max-width:550px) {
+
+            .reservation-form__inputs {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+
+    @media(max-width:767px) {
+        &--scroll {
+            display: none;
+        }
+    }
+
+    &__inputs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(0.75rem, 0.6366rem + 0.4372vw, 1rem);
+    }
+
+    &__box {
+        cursor: pointer;
+    }
+
+    &__box-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 13px 16px;
+        border: 1px solid #BABABA4D;
+        backdrop-filter: blur(4px);
+        min-height: 50px;
+        border-radius: 12px;
+        position: relative;
+    }
+
+    &__input {
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 50px;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color:#707070;
+        font-size: 16px;
+        font-family: 'Onest';
+        font-weight: 400;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-1px);
+    }
+
+    &__arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__btn {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    @media(max-width:767px) {
+        &__inputs {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        &__btn {
+            width: 100%;
+        }
+    }
+}

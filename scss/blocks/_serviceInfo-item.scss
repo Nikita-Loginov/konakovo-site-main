@@ -1,0 +1,108 @@
+.serviceInfo-item {
+  padding: clamp(1.25rem, 1.1366rem + 0.4372vw, 1.5rem) 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  counter-increment: custom-number-list 1;
+  border-top: 1px solid #4c4c4c33;
+
+  &:nth-child(-n + 9) {
+    .serviceInfo-item {
+      &__number {
+        &::before {
+          content: "0" counter(custom-number-list);
+        }
+      }
+    }
+  }
+
+  &__head {
+    max-width: 706px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+  }
+
+  &__number {
+    position: relative;
+
+    &:before {
+      top: 0;
+      left: 0;
+      position: absolute;
+      content: counter(custom-number-list);
+      font-size: clamp(2rem, 1.8866rem + 0.4372vw, 2.25rem);
+      line-height: 1.4;
+      letter-spacing: calc(-1em / 25);
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(1rem, 0.7732rem + 0.8743vw, 1.5rem);
+    max-width: 686px;
+    width: 100%;
+
+    .link,
+    .button {
+      margin-top: auto;
+    }
+  }
+
+  &__title {
+    font-size: clamp(2rem, 1.8866rem + 0.4372vw, 2.25rem);
+    line-height: 1.4;
+  }
+
+  &__textbox,
+  &__content-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    p {
+      font-size: clamp(0.875rem, 0.8183rem + 0.2186vw, 1rem);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(0.875rem, 0.8183rem + 0.2186vw, 1rem);
+    font-weight: 400;
+    font-family: "Involve";
+  }
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+
+    &__head {
+      display: flex;
+    }
+
+    &__number {
+      display: none;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 550px) {
+    &__content {
+      .link,
+      .button {
+        width: 100%;
+      }
+    }
+  }
+}

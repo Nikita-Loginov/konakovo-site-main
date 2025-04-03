@@ -1,0 +1,59 @@
+.allPages {
+    display: flex;
+    flex-direction: column;
+    color:#fff;
+    
+    h1 {
+        color:#fff;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__boxs {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__top {
+        img {
+            max-width: 600px;
+            width: 100%;
+        }
+    }
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__text {
+        font-size: 20px;
+        color:#fff;
+    }
+
+    &__step {
+        font-size: 24px;
+        font-weight: 700;
+        color:#fff;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 30px;
+    }
+}
+
+.allPages-page {
+    background-color: #000;
+}

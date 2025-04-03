@@ -1,0 +1,60 @@
+.moreText {
+    &.more {
+        .moreText__textbox {
+            -webkit-line-clamp: 50000;
+        }
+    }
+
+    &--serviceCard {
+        .moreText__inner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        max-width: 803px;
+        width: 100%;
+
+        .button {
+            padding-inline: 50px;
+        }
+    }
+
+    &__textbox {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        line-clamp: 5;
+        box-orient: vertical;
+        transition: all .5s;
+    }
+
+    @media(max-width:1100px) {
+        &__inner {
+            flex-direction: column;
+        }
+
+        &--serviceCard {
+            .moreText__inner {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}

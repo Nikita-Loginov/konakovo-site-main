@@ -1,0 +1,65 @@
+.services-item  {
+    position: relative;
+    min-height: 388px;
+    background-color: #EAECEE;
+    padding: 30px 30px 0 30px;
+
+    &:hover {
+        img {
+            scale:1.1;
+        }
+    }
+
+    &--orange {
+        background-color: #FDF9DC;
+    }
+
+    &--yellow {
+        background-color: #F1EBD6;
+    }
+
+    &--green {
+        background-color: #EAF1EC;
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            transition: all .5s;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+    
+    &__title {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    &__textbox {
+        p {
+            font-size: 14px;
+        }
+    }
+
+    @media(max-width:650px) {
+        &__img {
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+}

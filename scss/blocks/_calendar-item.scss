@@ -1,0 +1,66 @@
+.calendar-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &--prevDay {
+    opacity: 0.6;
+  }
+
+  &:hover {
+    .calendar-item__img-box {
+        img {
+            scale: 1.1;
+        }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__img-box {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      transition: all .5s;
+      min-height: 235px;
+
+      @media(max-width:500px) {
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__date {
+    background-color: #fff;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    text-align: center;
+    padding: 3px 12px;
+    min-height: 34px;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Involve';
+    position: absolute;
+    z-index: 2;
+    align-content: center;
+    top: 12px;
+    left: 12px;
+  }
+
+  &__name {
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: calc(1em / 50);
+  }
+}

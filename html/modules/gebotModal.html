@@ -1,0 +1,77 @@
+<div class="modalBlock gebot">
+  <div class="modalBlock__inner">
+    <div class="modalBlock__top">
+      <button class="modal-close">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M19.5852 22.0247C20.2072 22.6584 21.2156 22.6584 21.8375 22.0247C22.4595 21.3909 22.4595 20.3633 21.8375 19.7295L14.2778 12.0263L22.0076 4.49971C22.6436 3.8805 22.6665 2.8532 22.0588 2.20519C21.4511 1.55717 20.443 1.53383 19.807 2.15304L12.0249 9.73057L4.41419 1.97533C3.79222 1.34155 2.78381 1.34156 2.16184 1.97534C1.53987 2.60912 1.53987 3.63667 2.16184 4.27046L9.72137 11.9735L1.99236 19.4993C1.35642 20.1185 1.33351 21.1458 1.94119 21.7939C2.54886 22.4419 3.55702 22.4652 4.19296 21.846L11.9743 14.2692L19.5852 22.0247Z"
+            fill="#05ADAD"
+          />
+        </svg>
+      </button>
+
+      <div class="modalBlock__content">
+        <h2 class="modalBlock__title">Запишитесь на персональную экскурсию</h2>
+
+        <div class="modalBlock__textbox">
+          <p>
+            Мы подробно расскажем обо всем, покажем инфрастуктуру и доступные
+            для покупки дома
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <form novalidate class="form" data-form>
+      <div class="form__inputs">
+        <div class="form__input form__item">
+          <input
+            type="text"
+            name="name"
+            required
+            pattern="[A-Za-zА-Яа-яЁё\s]*"
+            data-title="Нельзя вводить цифры"
+            data-empty="Ведите минимум один символ"
+            minlength="1"
+            aria-errormessage="name-errors"
+            placeholder="Имя*"
+          />
+
+          <div class="form__errors" id="name-errors"></div>
+        </div>
+
+        <div class="form__input form__item">
+          <input
+            type="tel"
+            name="tel"
+            minlength="1"
+            required
+            pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}"
+            data-title="телефон должен иметь вид +{7} (000) 000-00-00"
+            data-empty="Ведите минимум один символ"
+            aria-errormessage="tel-errors"
+            placeholder="Телефон*"
+          />
+
+          <div class="form__errors" id="tel-errors"></div>
+        </div>
+      </div>
+
+      <div class="form__bottom">
+        <div class="form__bottom-textbox">
+            <p>Нажимая на кнопку, я соглашаюсь на обработку персональных данных</p>
+        </div>
+
+        <button class="button button--white disabled modal-open" data-modal="succesModal" type="submit">
+            записаться на экскурсию
+          </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+.topBox {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 1.0829rem + 1.608vw, 2.5rem);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: flex-end;
+
+        &.center {
+            align-items: center;
+        }
+    }
+
+    &__textbox {
+        text-align: right;
+    }
+
+    @media(max-width:767px) {
+        &__header {
+            flex-direction: column;
+            align-items: flex-start;
+
+            &.center {
+                align-items: flex-start;
+            }
+        }
+
+        .textbox {
+            display: inline-block;
+
+            &__text {
+                display: inline;
+            }
+        }
+
+        &__textbox {
+            text-align: left;
+        }
+    }
+}

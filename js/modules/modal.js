@@ -1,0 +1,71 @@
+function openModal() {
+  const modalOpenBtns = document.querySelectorAll(".modal-open");
+  const modals = document.querySelectorAll(".modalBlock");
+
+  modalOpenBtns.forEach((modalBtn) => {
+    const nameModal = modalBtn.dataset.modal;
+
+    if (nameModal) {
+      modalBtn.addEventListener("click", () => {
+        const modalBlock = document.querySelector(`.${nameModal}`);
+
+        if (modalBlock) {
+          modals.forEach((modal) => {
+            modal.classList.remove("open");
+          });
+
+          if (modalBlock.classList.contains("modalBlockTwo")) {
+            getImgSrc(modalBtn, modalBlock);
+          }
+
+          modalBlock.classList.add("open");
+          document.body.classList.add("open-modal");
+          document.documentElement.classList.add("open-modal");
+        }
+      });
+    }
+  });
+}
+
+function getImgSrc(btn, modalBlock) {
+  const img = btn.querySelector(".modal-img");
+
+  if (img) {
+    const src = img.getAttribute("src");
+
+    setImgSrc(src, modalBlock);
+  }
+}
+
+function setImgSrc(src, modalBlock) {
+  const imgModalBlock = modalBlock.querySelector(".modalBlockTwo__img");
+  imgModalBlock.textContent = ''
+
+  const html = `
+            <picture>
+              <source srcset="${src} 1x, ${src} 2x">
+              <img src=${src} alt="фотография здания">
+            </picture>
+            `;
+
+  imgModalBlock.insertAdjacentHTML("beforeend", html);
+}
+
+function closeModal() {
+  document.addEventListener("click", (e) => {
+    if (
+      e.target.classList.contains("modalBlock") ||
+      e.target.closest(".modal-close")
+    ) {
+      const modalRelative = e.target.closest(".modalBlock");
+      modalRelative.classList.remove("open");
+      document.body.classList.remove("open-modal");
+      document.documentElement.classList.remove("open-modal");
+    }
+  });
+}
+
+export function initModal() {
+  openModal();
+  closeModal();
+}

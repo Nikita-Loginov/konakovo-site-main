@@ -1,0 +1,149 @@
+.accordeon {
+  &__btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid #4c4c4c33;
+    background-color: transparent;
+
+    span {
+      height: 16px;
+      width: 16px;
+      position: relative;
+      overflow: hidden;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        background-color: #4c4c4c;
+        border-radius: 10px;
+        transition: all 0.5s;
+        transform-origin: center;
+      }
+
+      &:before {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+      }
+
+      &:after {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        height: 2px;
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    &__question {
+      padding: 24px 0;
+      cursor: pointer;
+      transition: all 0.5s;
+
+      * {
+        transition: all 0.5s;
+      }
+
+      &:hover {
+        * {
+          color: $accent-color;
+        }
+      }
+    }
+
+    &__item {
+      transition: all 0.5s;
+      border-top: none;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid #efefef;
+      }
+
+      &.active {
+        padding: 24px 0;
+
+        .accordeon__question {
+          padding: 0;
+        }
+
+        .accordeon__answer {
+          padding-top: 16px;
+        }
+
+        .accordeon__btn {
+          span {
+            &:before {
+              rotate: 270deg;
+            }
+
+            &:after {
+              opacity: 0;
+              //   rotate: 360deg;
+            }
+          }
+        }
+      }
+    }
+
+    &__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s;
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      border: 1px solid #4c4c4c33;
+      background-color: transparent;
+
+      span {
+        height: 16px;
+        width: 16px;
+        position: relative;
+        overflow: hidden;
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          background-color: #4c4c4c;
+          border-radius: 10px;
+          transition: all 0.5s;
+          transform-origin: center;
+        }
+
+        &:before {
+          left: 50%;
+          transform: translateX(-50%);
+          width: 2px;
+          height: 100%;
+        }
+
+        &:after {
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          width: 100%;
+          height: 2px;
+        }
+      }
+    }
+  }
+
+
+}

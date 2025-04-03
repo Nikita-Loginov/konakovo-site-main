@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "air-datepicker": "^3.5.3",
+    "browser-sync": "^3.0.3",
+    "choices.js": "^11.1.0",
+    "gsap": "^3.12.7",
+    "gulp-file-include": "^2.3.0",
+    "swiper": "^11.2.6"
+  }
+}

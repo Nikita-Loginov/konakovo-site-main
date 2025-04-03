@@ -1,0 +1,89 @@
+.calendar {
+    &__inner,
+    &__top  {
+        display: flex;
+        flex-direction: column;
+        gap: $gap40-32;
+    }
+
+    &__swipers {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1.5rem, 1.3866rem + 0.4372vw, 1.75rem);
+    }
+
+    &__swiper-box {
+        .swiper-slide {
+            width: fit-content;
+        }
+    }
+
+    &__btn {
+        border: 1px solid #EFEFEF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 12px 38px;
+        min-height: 44px;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 16px;
+        background-color: transparent;
+        line-height: 1;
+        text-transform: uppercase;
+        transition: all .5s;
+
+        &.active,
+        &:hover {
+            background-color:$accent-color;
+            color:#fff;
+
+        }
+    }
+
+    &__month {
+        display: flex;
+        align-items: center;
+        gap: $gap40-24;
+
+        @media(max-width:767px) {
+            flex-direction: column-reverse;
+            align-items: normal;
+        }
+    }
+
+    &__boxs {
+        display: flex;
+        flex-direction: column;
+        gap: $gap40-24;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: $gap40-24;
+    }
+
+    &__box-title {
+        font-size: $fz48-32;
+        line-height: 1.4;
+        letter-spacing: calc(-1em / 25);
+        text-transform: uppercase;
+    }
+
+    &__box-items {
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        @media(max-width:1023px) {
+            .swiper-wrapper {
+                display: flex;
+                gap: 0;
+            }
+        }
+    }
+}

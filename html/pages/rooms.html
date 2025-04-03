@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Конаково, Активный отдых, Спорт, Рыбалка, Яхта"
+    />
+    <meta
+      name="description"
+      content="Конаково Ривер Клаб — это место на берегу Волги для активного отдыха, занятий спортом, охотой и рыбалкой."
+    />
+    <title>«Konakovo River Club» — event-отель — Официальный сайт</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <!-- <link rel="manifest" href="/img/favicon/site.webmanifest" /> -->
+    <link href="./css/lib/air-datepicker.css" rel="stylesheet" />
+    <link href="./css/lib/swiper.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/page.css" />
+    <link rel="stylesheet" href="./css/rooms.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+      @@include('../modules/preloader.html')
+
+      <main class="main">
+        <section class="goods open moreBlock">
+          <div class="container">
+            <div class="goods__inner">
+              <div class="goods-sidebar">
+                <button
+                  class="goods-sidebar__btn-top sidebar-btn"
+                  type="button"
+                  aria-label="открыть/закрыть боковую панель"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.24682 22L3.37452 21.7588C5.29344 18.1342 8.25757 15.17 11.8822 13.2511L12.1234 13.1234L12.1234 11.8766L11.8822 11.7489C8.25757 9.82997 5.29343 6.86584 3.37451 3.24121L3.24681 3L2 3.66008L2.1277 3.90129C4.02034 7.47628 6.86417 10.4502 10.3361 12.5C6.86417 14.5498 4.02034 17.5237 2.1277 21.0987L2 21.3399L3.24682 22Z"
+                      fill="#4C4C4C"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.1218 22L13.2495 21.7588C15.1684 18.1342 18.1326 15.17 21.7572 13.2511L21.9984 13.1234L21.9984 11.8766L21.7572 11.7489C18.1326 9.82997 15.1684 6.86584 13.2495 3.24121L13.1218 3L11.875 3.66008L12.0027 3.90129C13.8953 7.47628 16.7392 10.4502 20.2111 12.5C16.7392 14.5498 13.8953 17.5237 12.0027 21.0987L11.875 21.3399L13.1218 22Z"
+                      fill="#4C4C4C"
+                    />
+                  </svg>
+                </button>
+
+                <div class="goods-sidebar__btns-box">
+                  <div class="goods-sidebar__btns swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div
+                          class="goods-sidebar__btn active"
+                          data-tab-btn="room"
+                        >
+                          <span>Номера</span>
+
+                          <span class="goods-sidebar__btn-arrow">
+                            <img
+                              src="./img/icons/arrow.svg"
+                              alt="иконка стрелки"
+                            />
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="goods-sidebar__btn" data-tab-btn="cottages">
+                          <span>Коттеджи и танхаусы</span>
+
+                          <span class="goods-sidebar__btn-arrow">
+                            <img
+                              src="./img/icons/arrow.svg"
+                              alt="иконка стрелки"
+                          /></span>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="goods-sidebar__btn" data-tab-btn="glamping">
+                          <span>Глэмпинг</span>
+
+                          <span class="goods-sidebar__btn-arrow">
+                            <img
+                              src="./img/icons/arrow.svg"
+                              alt="иконка стрелки"
+                          /></span>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="goods-sidebar__btn" data-tab-btn="villa">
+                          <span>Вилла Валентина</span>
+
+                          <span class="goods-sidebar__btn-arrow">
+                            <img
+                              src="./img/icons/arrow.svg"
+                              alt="иконка стрелки"
+                          /></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goods__content">
+                <div class="goods__items-box">
+                  <h2 class="goods__title">Номера</h2>
+
+                  <div class="goods__items"></div>
+                </div>
+
+                <div class="goods__detail"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="rooms-banner">
+          <div class="container">
+            <div class="rooms-banner__inner">
+              <div class="rooms-banner__swiper-box">
+                <div class="rooms-banner__swiper swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="rooms-banner__slide">
+                        <picture>
+                          <source
+                            srcset="
+                              ./img/rooms-banner/one.webp 1x,
+                              ./img/rooms-banner/one.webp 2x
+                            "
+                          />
+                          <img
+                            src="./img/rooms-banner/one2x.webp"
+                            alt="фотография занятия"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="rooms-banner__slide">
+                        <picture>
+                          <source
+                            srcset="
+                              ./img/rooms-banner/one.webp 1x,
+                              ./img/rooms-banner/one.webp 2x
+                            "
+                          />
+                          <img
+                            src="./img/rooms-banner/one2x.webp"
+                            alt="фотография занятия"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="rooms-banner__slide">
+                        <picture>
+                          <source
+                            srcset="
+                              ./img/rooms-banner/one.webp 1x,
+                              ./img/rooms-banner/one.webp 2x
+                            "
+                          />
+                          <img
+                            src="./img/rooms-banner/one2x.webp"
+                            alt="фотография занятия"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="rooms-banner__content">
+                <div class="rooms-banner__top">
+                  <h2 class="rooms-banner__title">Ретрит-центр на острове в Тверской области</h2>
+
+                  <div class="textbox">
+                    <p>Пространство свободы и духовного развития на Острове в 2 часах от Москвы.</p>
+                  </div>
+                </div>
+
+                <ul class="rooms-banner__list" aria-label="список контактов">
+                  <li class="rooms-banner__link">
+                    <span class="rooms-banner__link-head">телефон</span>
+                    
+                    <a href="tel:+74951087093" aria-label="позвонить по номеру +7 495 108-70-93" title="+7 495 108-70-93" class="rooms-banner__link-text">+7 495 108-70-93</a>
+                  </li>
+
+                  <li class="rooms-banner__link">
+                    <span class="rooms-banner__link-head">адрес</span>
+                    
+                    <a href="https://yandex.ru/maps/?ll=36.767978,56.992723&mode=search&text=171256,%20Тверская%20обл.,%20г.%20Конаково,%20ул.%20Пригородная,%20дом%2070" target="_blank" aria-label="посмотреть на карте Тверская область, г. Конаково, на Московском Море" title="Тверская область, г. Конаково, на Московском Море" class="rooms-banner__link-text">Тверская область, г. Конаково, на Московском Море</a>
+                  </li>
+                </ul>
+
+                <a href="#" aria-label="Перейти на страницу контакты" class="link link--green">Перейти на страницу</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @@include('../modules/gebotModal.html')
+      @@include('../modules/successModal.html')
+      @@include('../modules/footer.html')
+    </div>
+
+    <script src="./js/lib/imask.min.js"></script>
+    <script src="./js/lib/air-datepicker.js"></script>
+    <script src="./js/lib/swiper.min.js"></script>
+    <script src="./js/rooms.js" type="module"></script>
+    <script src="./js/page.js" type="module"></script>
+  </body>
+</html>

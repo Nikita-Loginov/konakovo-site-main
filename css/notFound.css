@@ -1,0 +1,64 @@
+.main .notFound {
+  margin: 0;
+  padding: calc(128px + clamp(5.125rem, 4.6998rem + 1.6393vw, 6.0625rem)) 0 128px;
+}
+.main .notFound__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 544px;
+  gap: 4px;
+  text-align: center;
+  margin: 0 auto;
+}
+.main .notFound__title {
+  font-size: clamp(3.75rem, 1.1988rem + 9.8361vw, 9.375rem);
+  line-height: 1;
+}
+.main .notFound__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(1.5rem, 1.3299rem + 0.6557vw, 1.875rem);
+}
+.main .notFound__textbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.main .notFound .link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .main .notFound__inner {
+    gap: 20px;
+  }
+}
+@media (max-width: 550px) {
+  .main .notFound {
+    min-height: 50vh;
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}/*# sourceMappingURL=notFound.css.map */

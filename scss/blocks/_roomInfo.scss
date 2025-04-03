@@ -1,0 +1,87 @@
+.roomInfo {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  &__content {
+    max-width: 333px;
+    width: 100%;
+    flex-shrink: 0;
+
+    .swiper-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    font-size: clamp(1rem, 0.3615rem + 2.4615vw, 2.5rem);
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: "LibelSuit";
+    background-color: transparent;
+    color: #707070;
+    transition: all 0.5s;
+    text-align: left;
+    cursor: pointer;
+
+    &.active {
+      color: #4c4c4c;
+    }
+  }
+
+  &__items {
+    max-width: 918px;
+    width: 100%;
+  }
+
+  @media (max-width: 1023px) {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      max-width: 100%;
+
+      .swiper-wrapper {
+        flex-direction: row;
+        gap: 0;
+        padding-bottom: 10px;
+      }
+
+      .swiper-slide {
+        width: fit-content;
+      }
+    }
+
+    &__btn {
+        color:#4C4C4C;
+
+        font-size: clamp(1rem, -83.9rem + 96vw, 2.5rem);
+        color: #4C4C4C;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: 'Involve';
+
+        &.active {
+            color:$accent-color;
+            position: relative;
+
+            &:before {
+                content:"";
+                position: absolute;
+                bottom: -5px;
+                width: 100%;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background-color: $accent-color;
+            }
+        }
+    }
+  }
+}

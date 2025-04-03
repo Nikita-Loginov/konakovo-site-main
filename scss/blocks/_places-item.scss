@@ -1,0 +1,50 @@
+.places-item {
+    position: relative;
+    min-height: clamp(24.25rem, 22.9744rem + 4.918vw, 27.0625rem);
+    // max-width: 333px;
+    display: flex;
+    align-items: flex-end;
+    transition: all .5s;
+
+    &__img {
+        position: absolute;
+        inset:0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #4C4C4C33;
+        backdrop-filter: blur(7px);
+        gap: 12px;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    &__title {
+        font-size: clamp(2rem, 1.5464rem + 1.7486vw, 3rem);
+        line-height: 1.4;
+        color:#fff;
+
+    }
+
+    @media(max-width:450px) {
+        &__content {
+            .link,
+            .button {
+                width: 100%;
+            }
+        }
+    }
+}

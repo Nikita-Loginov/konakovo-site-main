@@ -1,0 +1,138 @@
+.officeContact {
+  --gap: 20px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-family: "Involve";
+  }
+
+  &__head,
+  &__item {
+    display: grid;
+    width: calc(100% - var(--gap) * 2);
+    grid-template-columns: 52% 48%;
+    gap: var(--gap);
+  }
+
+  &__head-info,
+  &__link {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap);
+  }
+
+  &__head-info {
+    font-weight: 500;
+
+    p {
+      color: #4c4c4cb2;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding: 16px 0 24px;
+    min-height: 116px;
+    border-top: 1px solid #efefef;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__top-title {
+    font-size: clamp(1rem, 0.8866rem + 0.4372vw, 1.25rem);
+    line-height: 1.25;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__link-info,
+  &__link-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__link-head {
+    display: none;
+    color: #4c4c4c66;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  a {
+    transition: all 0.5s;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  &__link-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  &__link-info-title {
+    font-size: clamp(1rem, 0.8866rem + 0.4372vw, 1.25rem);
+  }
+
+  &__link-info-text {
+    color: #4c4c4cb2;
+  }
+
+  &__link-details-text {
+    word-break: break-all;
+    font-size: clamp(1rem, 0.8866rem + 0.4372vw, 1.25rem);
+  }
+
+  @media (max-width: 1023px) {
+    &__head {
+      display: none;
+    }
+
+    &__link-info-title,
+    &__link-details-text {
+      font-weight: 500;
+    }
+
+    &__item {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0;
+      min-height: 0;
+      gap: 0;
+      width: 100%;
+    }
+
+    &__link {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__link-head {
+      display: block;
+    }
+
+    &__top {
+      align-items: center;
+    }
+  }
+}

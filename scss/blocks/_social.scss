@@ -1,0 +1,29 @@
+.social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__link {
+        width: 44px;
+        height: 44px;
+        border: 1px solid rgb(239, 239, 239);
+        border-radius: 12px;
+        background-color: rgb(255, 255, 255);   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s;
+        
+        &:hover {
+            background-color: #EFEFEF;   
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+}

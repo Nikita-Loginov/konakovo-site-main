@@ -1,0 +1,64 @@
+.discount {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1rem, 0.7732rem + 0.8743vw, 1.5rem);
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+    }
+
+    &__date {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 500;
+        font-size: clamp(0.875rem, 0.7049rem + 0.6557vw, 1.25rem);
+        font-family: 'Involve';
+        line-height: 1.2;
+    }
+
+    &__date-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-1px);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+        font-family: 'Involve';
+    }
+
+    &__link {
+        font-size: clamp(0.875rem, 0.8183rem + 0.2186vw, 1rem);
+    }
+
+    &__link-proccent {
+        color:$accent-color;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__textbox {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    @media(max-width:930px) {
+        &__date {
+            font-weight: 600;
+        }
+
+        &__list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

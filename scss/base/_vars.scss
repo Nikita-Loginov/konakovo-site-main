@@ -1,0 +1,43 @@
+//COLORS
+$bg-color: #ffffff;
+$main-color: #4c4c4c;
+$accent-color: #039191;
+$text-color: #4c4c4c;
+$title-color: #4c4c4c;
+
+//CONTAINER
+$padding-container: 0px 45px;
+$maxWidth-container: clamp(88.125rem, 83.1389rem + 10.4012vw, 92.5rem);
+
+//GAPS
+$gap40-16: clamp(1rem, 0.3197rem + 2.623vw, 2.5rem);
+$gap40-24: clamp(1.5rem, 1.0464rem + 1.7486vw, 2.5rem);
+$gap40-32: clamp(2rem, 1.7732rem + 0.8743vw, 2.5rem);
+
+//FONT_SIZE
+$fz48-32: clamp(2rem, 1.5464rem + 1.7486vw, 3rem);
+
+%hoverLink {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    background-color: $accent-color;
+    transform-origin: right;
+    scale: 0;
+    transition: scale 0.5s;
+  }
+
+  &:hover,
+  &:active {
+    &:before {
+      transform-origin: left;
+      scale: 1;
+    }
+  }
+}

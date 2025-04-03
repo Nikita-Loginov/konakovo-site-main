@@ -1,0 +1,109 @@
+.offers-item {
+  display: flex;
+  min-height: clamp(25rem, 21.6633rem + 12.8643vw, 33rem);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: clamp(1rem, 0.9479rem + 0.201vw, 1.125rem) 0 0 0;
+  position: relative;
+
+  &.modal-open {
+    cursor: pointer;
+
+    &:hover {
+      .offers-item__img {
+        img {
+          scale: 1.1;
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s;
+    }
+  }
+
+  &--all {
+    padding: 36px 30px 30px 44px;
+      background-color: $accent-color;
+
+    .offers-item__textbox {
+      p {
+        line-height: 1;
+        font-family: "Involve";
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__babge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 8px 14px;
+    margin: 0 clamp(1rem, 0.6872rem + 1.206vw, 1.75rem) 0 auto;
+  }
+
+  &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__babge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__babge-text {
+    font-family: "Onest";
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__bottom {
+    background-color: #4c4c4c33;
+    backdrop-filter: blur(7px);
+    padding: 16px 0 clamp(1rem, 0.6611rem + 1.3065vw, 1.8125rem) 16px;
+  }
+
+  &__textbox {
+    p {
+      font-family: "Onest";
+      font-size: clamp(1.25rem, 1.1457rem + 0.402vw, 1.5rem);
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.38;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    min-height: 40px;
+    border: 1px solid rgba(237, 237, 237, 0.3);
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 1.18;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+}

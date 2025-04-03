@@ -1,0 +1,94 @@
+.contacts {
+    &__content {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    &__lists {
+        max-width: 735px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-content: space-between;
+        font-family: "Involve";
+        letter-spacing: calc(-1em / 50);
+        font-size: clamp(0.875rem, 0.8229rem + 0.201vw, 1rem);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        max-width: 291px;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__link-tel {
+        font-size: clamp(1.25rem, 0.9372rem + 1.206vw, 2rem);
+        font-weight: 600;
+        line-height: 1.8;
+        font-family: "Onest";  
+    }
+    
+    a {
+        transition: all .5s;
+        &:hover {
+            color:$accent-color;
+        }
+    }
+
+    &__details {
+        max-width: 336px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        font-family: "Involve";
+        font-size: clamp(0.875rem, 0.8229rem + 0.201vw, 1rem);
+
+        .social__link {
+            border: none;
+            justify-content: start;
+
+            svg {
+                height: 27px;
+                width: 35px;
+            }
+        }
+    }
+
+    @media(max-width:767px) {
+        &__details {
+            display: none;
+        }
+
+        &__lists {
+            max-width: 100%;
+            gap: 28px;
+        }
+
+        &__list {
+            gap: 28px;
+        }
+
+        &__link {
+            gap: 12px;
+        }
+    }
+
+    @media(max-width:550px) {
+        &__lists {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__list {
+            max-width: 100%;
+        }
+    }
+}

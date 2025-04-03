@@ -1,0 +1,87 @@
+.roadInfo {
+    &__items-box {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__items {
+        max-width: 686px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+
+
+        &:first-of-type {
+            max-width: 568px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        font-family: 'Involve';
+    }
+
+    &__question {
+        display: flex;
+    }
+
+    &__answer {
+        font-size: clamp(1rem, 0.8866rem + 0.4372vw, 1.25rem);
+        line-height: 1.25;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__item-title {
+        text-transform: uppercase;
+    }
+
+    &__title {
+        font-size: clamp(2rem, 1.5464rem + 1.7486vw, 3rem);
+        line-height: 1.4;
+        font-family: "LibelSuit";
+    }
+
+    @media (max-width: 1023px) {
+        &__items-box {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        &__items {
+            max-width: 100%;
+            gap: 0;
+
+            &:first-of-type {
+                max-width: 100%;
+            }
+        }
+
+        &__item {
+            gap: 0;
+            border-bottom: 1px solid rgba(76, 76, 76, 0.2);
+        }
+
+        &__link {
+            gap: 16px;
+        }
+
+        .accordeon__question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}

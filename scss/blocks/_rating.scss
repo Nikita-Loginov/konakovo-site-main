@@ -1,0 +1,51 @@
+.rating {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: $main-color;
+  font-size: clamp(1rem, 0.8866rem + 0.4372vw, 1.25rem);
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+
+  &__box-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg,
+    img {
+      width: clamp(1rem, 0.7732rem + 0.8743vw, 1.5rem);
+      height: clamp(1rem, 0.7732rem + 0.8743vw, 1.5rem);
+    }
+  }
+
+  &__box-numbers {
+    font-size: clamp(1.25rem, 0.7964rem + 1.7486vw, 2.25rem);
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: calc(-1em / 25);
+  }
+
+  &__text {
+    line-height: 1.5;
+    font-family: "Involve";
+    letter-spacing: calc(1em / 50);
+  }
+
+  @media(max-width:1023px) {
+    flex-direction: row;
+
+    &__box-numbers {
+        font-family: 'Involve';
+        font-weight: 600;
+    }
+
+    &__text {
+        font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.goodInfo {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__textbox {
+        max-width: 568px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 24px;
+
+        p {
+            max-width: 333px;
+            &:nth-child(even) {
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__img {
+        max-width: 804px;
+        width: 100%;
+
+        img {
+            width: 100%;
+            // height: auto;
+        }
+    }
+
+    @media(max-width:1023px) {
+        &__content {
+            display: contents;
+        }
+
+        &__textbox {
+            max-width: 100%;
+            display: contents;
+
+            p {
+                max-width: 500px;
+
+                &:nth-child(2) {
+                    order:3
+                }
+
+                &:nth-child(even) {
+                    margin: 0;
+                }
+            }
+        }
+
+        &__img {
+            max-width: 100%;
+        }
+    }
+}

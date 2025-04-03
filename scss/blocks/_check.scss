@@ -1,0 +1,34 @@
+.check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &__box {
+        display: flex;
+        align-items: center;
+        input {
+            width: 0;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+
+            &:checked + span {
+                background-color: $accent-color;
+            }
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            border: 1px solid $accent-color;
+            transition: all .5s;
+            transform: translateY(-2px);
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.serviceInfo {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    counter-reset: custom-number-list;
+  }
+}

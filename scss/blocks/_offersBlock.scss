@@ -1,0 +1,57 @@
+.offersBlock {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 1.0829rem + 1.608vw, 2.5rem);
+
+    .more-btn {
+      display: none;
+    }
+  }
+
+  .offers-item {
+    min-height: clamp(21.25rem, 12.5463rem + 23.2099vw, 33rem);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 1023px) {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    &.more {
+      .offers-item {
+        &:nth-child(-n + 9999) {
+          display: flex;
+        }
+      }
+    }
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 24px;
+    }
+
+    &__content {
+      .more-btn {
+        display: flex;
+      }
+    }
+
+    .offers-item {
+      min-height: clamp(25rem, -3.0405rem + 108.1081vw, 37.5rem);
+      display: none;
+
+      &:nth-child(-n + 3) {
+        display: flex;
+      }
+    }
+  }
+}
