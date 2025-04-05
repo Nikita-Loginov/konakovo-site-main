@@ -10,11 +10,13 @@
     transition: all .5s;
 
     &.scrollBottom {
-        transform: translateY(-100%);
+        // transform: translateY(-100%);
+        top: -300px;
     }
 
     &.scrollTop {
-        transform: translateY(0%);
+        // transform: translateY(0%);
+        top: 0;
     }
 
     &__inner {

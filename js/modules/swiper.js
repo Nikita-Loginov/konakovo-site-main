@@ -1,5 +1,4 @@
 import { classAction } from "./classActions.js";
-import { changeCategory } from "../index.js";
 
 const swiperInstances = {};
 

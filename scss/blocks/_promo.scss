@@ -1,5 +1,30 @@
 .promo {
-  width: 100vw;
+  // width: 100vw;
+
+  &--organization {
+    .promo {
+      &__content-head {
+        gap: 16px;
+      }
+
+      &__textbox {
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.5;
+        }
+      }
+
+      &__img {
+        max-width: 50%;
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 
   &__items {
     display: flex;
@@ -110,6 +135,15 @@
     &__content {
         background-color: transparent;
         padding: 0;
+    }
+
+    &--organization {
+      .promo {
+        &__img {
+          max-width: 100%;
+          // margin: 0 auto;
+        }
+      }
     }
   }
 

@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  position: sticky;
+  top: 0;
 
   &__img-box {
     position: relative;

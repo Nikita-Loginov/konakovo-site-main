@@ -1,0 +1,52 @@
+.card-place {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-family: "Involve";
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: calc(1em / 50);
+  }
+
+  &__massa {
+    p {
+      font-size: 14px;
+      letter-spacing: calc(-1em / 100);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 400;
+    color:#000000;
+    font-family: 'Involve';
+  }
+}

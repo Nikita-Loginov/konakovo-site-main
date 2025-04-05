@@ -116,6 +116,10 @@
   }
 }
 
+.places {
+  --maxWidthActive: 686px;
+  --maxWidthDefaultSwiper: 333px;
+}
 .places__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,14 +156,19 @@
   max-width: 568px;
   width: 100%;
 }
+.places .swiper {
+  max-width: calc(var(--maxWidthDefaultSwiper) * 2 + var(--maxWidthActive) + 24px);
+  width: 100%;
+  overflow: hidden;
+}
 .places .swiper-slide {
-  max-width: 333px;
+  max-width: var(--maxWidthDefaultSwiper);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   width: 100%;
 }
 .places .swiper-slide.swiper-slide-next {
-  max-width: 686px;
+  max-width: var(--maxWidthActive);
   width: 100%;
   min-height: 500px;
   -webkit-transform-origin: center;

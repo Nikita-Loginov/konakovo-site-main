@@ -1,4 +1,7 @@
 .places {
+    --maxWidthActive : 686px;
+    --maxWidthDefaultSwiper : 333px;
+
     &__inner {
         display: flex;
         flex-direction: column;
@@ -25,7 +28,9 @@
     }
 
     .swiper {
-        // width: calc((100% - 40px))
+        max-width: calc(var(--maxWidthDefaultSwiper) * 2 + var(--maxWidthActive) + 12px * 2);
+        width: 100%;
+        overflow: hidden;
     }
 
     .swiper-wrapper {
@@ -33,18 +38,12 @@
     }
 
     .swiper-slide {
-        max-width: 333px;
+        max-width: var(--maxWidthDefaultSwiper);
         transition: all .5s;
         width: 100%;
 
-        // &.swiper-slide-active {
-        //     .places-item {
-        //         max-width: 333px;
-        //     }
-        // }
-
         &.swiper-slide-next {
-            max-width: 686px;
+            max-width: var(--maxWidthActive);
             width: 100%;
             min-height: 500px;
             transform-origin: center;

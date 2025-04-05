@@ -2,6 +2,7 @@
   &.open {
     .goods__inner {
       gap: 20px;
+
       transition: all 0.5s;
     }
 
@@ -45,6 +46,7 @@
     display: flex;
     justify-content: space-between;
     transition: all 0.5s;
+    align-items: flex-start;
   }
 
   &__content {

@@ -1,0 +1,53 @@
+.venues {
+    &__boxs {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(2.5rem, 2.2165rem + 1.0929vw, 3.125rem);
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1.25rem, 0.9665rem + 1.0929vw, 1.875rem);
+    }
+
+    &__box-title {
+        font-size: clamp(2rem, 1.8866rem + 0.4372vw, 2.25rem);
+        line-height: 1.4;
+    }
+
+    &__items-box {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1.25rem, 0.6831rem + 2.1858vw, 2.5rem);
+
+        .moreContent__btn {
+            margin: 0 auto;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    @media(max-width:1200px) {
+        &__items {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+    }
+
+    @media(max-width:1023px) {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media(max-width:650px) {
+        &__items {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

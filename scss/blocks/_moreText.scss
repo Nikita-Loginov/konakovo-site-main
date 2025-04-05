@@ -5,6 +5,12 @@
         }
     }
 
+    &--event {
+        .moreText__content {
+            margin-right: clamp(0rem, -34.9728rem + 50.8696vw, 7.3125rem);
+        }
+    }
+
     &--serviceCard {
         .moreText__inner {
             display: grid;

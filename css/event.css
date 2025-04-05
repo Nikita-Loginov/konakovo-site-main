@@ -1,5 +1,17 @@
-.promo {
-  width: 100vw;
+.promo--organization .promo__content-head {
+  gap: 16px;
+}
+.promo--organization .promo__textbox p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.promo--organization .promo__img {
+  max-width: 50%;
+  width: 100%;
+}
+.promo--organization .promo__img img {
+  width: 100%;
 }
 .promo__items {
   display: -webkit-box;
@@ -121,6 +133,9 @@
     background-color: transparent;
     padding: 0;
   }
+  .promo--organization .promo__img {
+    max-width: 100%;
+  }
 }
 @media (max-width: 767px) {
   .promo__content {
@@ -150,6 +165,9 @@
 
 .moreText.more .moreText__textbox {
   -webkit-line-clamp: 50000;
+}
+.moreText--event .moreText__content {
+  margin-right: clamp(0rem, -34.9728rem + 50.8696vw, 7.3125rem);
 }
 .moreText--serviceCard .moreText__inner {
   display: grid;

@@ -1,0 +1,11 @@
+.navigationTop {
+    @media(max-width:1023px) {
+        .container {
+            padding: 0;
+        }
+
+        .navigation__top {
+            padding: 0 clamp(1rem, 0.2285rem + 2.9744vw, 2.8125rem);
+        }
+    }
+}

@@ -42,6 +42,9 @@
           justify-content: space-between;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .goods__content {
   display: -webkit-box;
@@ -389,6 +392,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 24px;
+  position: sticky;
+  top: 0;
 }
 .good-big__img-box {
   position: relative;

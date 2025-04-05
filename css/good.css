@@ -149,6 +149,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 24px;
+  position: sticky;
+  top: 0;
 }
 .good-big__img-box {
   position: relative;

@@ -34,6 +34,11 @@
     line-height: 140%;
     text-transform: uppercase;
     letter-spacing: calc(-1em / 25);
+    transition: all .5s;
+
+    &:hover {
+      color: $accent-color;
+    }
   }
 
   &__map {

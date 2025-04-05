@@ -696,12 +696,10 @@ h3,
   transition: all 0.5s;
 }
 .header.scrollBottom {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  top: -300px;
 }
 .header.scrollTop {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  top: 0;
 }
 .header__inner {
   display: -webkit-box;

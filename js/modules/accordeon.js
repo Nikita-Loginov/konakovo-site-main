@@ -24,7 +24,9 @@ export function toggleAccordeonItems(e) {
             window.addEventListener('resize', currentResizeHandler);
 
             if (prevActiveAccordeonItem && prevActiveAccordeonItem !== relativeItem) {
-                classAction(prevActiveAccordeonItem, 'active', 'remove');
+                if (!relative.classList.contains('accordeon--showMore')) {
+                    classAction(prevActiveAccordeonItem, 'active', 'remove');
+                }
                 setHeightAnswer(prevActiveAccordeonItem);
             }
 

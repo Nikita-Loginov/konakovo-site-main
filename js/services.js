@@ -1,6 +1,7 @@
 import { serviceCategories, serviceItems } from "./data/goods.js";
 import { initSwiper } from "./modules/renderContent.js";
 import { classAction } from "./modules/classActions.js";
+import { addClassDisabledBtn } from "./functions.js";
 
 const CONFIG = {
   ACTIVE_TAB: 0,
@@ -239,23 +240,6 @@ const renderInfoServices = (
     }
   });
 };
-
-const addClassDisabledBtn = (swiper) => {
-  const relative = swiper.hostEl.closest('.boxSlide')
-  const arrowNext = relative.querySelector('.arrow-swiper.next');
-  const arrowPrev = relative.querySelector('.arrow-swiper.prev')
-  
-  if (swiper.isEnd) {
-    classAction(arrowNext, 'disabled', 'add')
-    classAction(arrowPrev, 'disabled', 'remove')
-  } else if (swiper.isBeginning) {
-    classAction(arrowPrev, 'disabled', 'add')
-    classAction(arrowNext, 'disabled', 'remove')
-  } else {
-    classAction(arrowPrev, 'disabled', 'remove')
-    classAction(arrowNext, 'disabled', 'remove')
-  }
-}
 
 const clearSwiper = () => {
   if (!swiperItems) return;
