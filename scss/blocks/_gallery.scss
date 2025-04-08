@@ -77,34 +77,34 @@
 
       &:nth-child(odd) {
         picture {
-            &:nth-child(odd) {
-              img {
-                height: 250px;
-              }
-            }
-    
-            &:nth-child(even) {
-              img {
-                height: 220px;
-              }
+          &:nth-child(odd) {
+            img {
+              height: 250px;
             }
           }
+
+          &:nth-child(even) {
+            img {
+              height: 220px;
+            }
+          }
+        }
       }
 
       &:nth-child(even) {
         picture {
-            &:nth-child(even) {
-              img {
-                height: 250px;
-              }
-            }
-    
-            &:nth-child(odd) {
-              img {
-                height: 220px;
-              }
+          &:nth-child(even) {
+            img {
+              height: 250px;
             }
           }
+
+          &:nth-child(odd) {
+            img {
+              height: 220px;
+            }
+          }
+        }
       }
 
       img {
@@ -113,12 +113,14 @@
       }
     }
 
-        .link, .button {
-            display: none;
-        }
+    .link,
+    .button {
+      display: none;
+    }
 
-    .link--media, .button--media {
-        display: flex;
-      }
+    .link--media,
+    .button--media {
+      display: flex;
+    }
   }
 }

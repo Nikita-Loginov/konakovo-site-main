@@ -1,0 +1,50 @@
+.videos-item {
+    position: relative;
+    max-width: 686px;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__box {
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+        height: clamp(10.9375rem, 8.8115rem + 8.1967vw, 15.625rem);
+        transition: all .5s;
+    }
+
+    &__actions {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 44px;
+        height: 44px;
+        background-color: #FFFFFF99;
+        border: 1px solid #FFFFFF1A;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        svg, 
+        img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            object-fit: contain;
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__content {
+        p {
+            font-weight: 500;
+        }
+    }
+}

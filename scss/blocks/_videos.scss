@@ -1,0 +1,38 @@
+.videos {
+  overflow: hidden;
+
+  .swiper {
+    overflow: visible;
+    min-height: clamp(15.625rem, 11.8548rem + 14.5355vw, 23.9375rem);
+  }
+
+  &__swiper-box {
+    padding-top: clamp(1.5rem, 1.0829rem + 1.608vw, 2.5rem);
+
+    @media (max-width: 1023px) {
+      padding: clamp(1.5rem, 1.0829rem + 1.608vw, 2.5rem)
+        clamp(1rem, 0.2285rem + 2.9744vw, 2.8125rem) 0;
+    }
+  }
+
+  .swiper-slide {
+    transition: all 0.5s;
+    min-height: clamp(10.9375rem, 8.8115rem + 8.1967vw, 15.625rem);
+    // max-width: 407px;
+
+    &.swiper-slide-active {
+      min-height: clamp(15.625rem, 11.8548rem + 14.5355vw, 23.9375rem);
+      // max-width: 685px;
+
+      img {
+        height: clamp(15.625rem, 11.8548rem + 14.5355vw, 23.9375rem);
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .arrows-swiper {
+      display: none;
+    }
+  }
+}

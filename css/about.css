@@ -454,10 +454,12 @@
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .gallery .link, .gallery .button {
+  .gallery .link,
+  .gallery .button {
     display: none;
   }
-  .gallery .link--media, .gallery .button--media {
+  .gallery .link--media,
+  .gallery .button--media {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

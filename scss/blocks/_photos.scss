@@ -1,0 +1,113 @@
+.photos {
+    overflow: hidden;
+
+    .swiper {
+        overflow: visible;
+    }
+
+    &__swipers-box {
+        padding-top: clamp(1.5rem, 1.0829rem + 1.608vw, 2.5rem);
+    }
+
+    &__swiper {
+        &--small {
+            padding-bottom: 20px;
+
+            .photos__slide {
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__slide {
+        overflow: hidden;
+        display: block;
+
+        &:hover {
+            img {
+                scale:1.1;
+            }
+        }
+
+        img {
+            transition: all .5s;
+            width: 100%;
+            max-height: 400px;
+        }
+    }
+
+    .moreContent__info {
+        display: none;
+    }
+
+    @media(max-width:767px) {
+        .topBox__header {
+          flex-direction: row;
+        }
+      }
+
+    @media(max-width:600px) {
+        &__swipers-box,
+        .arrows-swiper {
+            display: none;
+        }
+
+        .moreContent__info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;   
+        }
+
+        .moreContent__item-box {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+      
+            &:nth-child(odd) {
+              picture {
+                &:nth-child(odd) {
+                  img {
+                    height: 250px;
+                  }
+                }
+      
+                &:nth-child(even) {
+                  img {
+                    height: 220px;
+                  }
+                }
+              }
+            }
+      
+            &:nth-child(even) {
+              picture {
+                &:nth-child(even) {
+                  img {
+                    height: 250px;
+                  }
+                }
+      
+                &:nth-child(odd) {
+                  img {
+                    height: 220px;
+                  }
+                }
+              }
+            }
+      
+            img {
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+    }
+}

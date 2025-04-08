@@ -25,7 +25,7 @@ initContentMore({
   maxWidthInit: 13300000,
   functions: {
     getHtmlItem: (item) => {
-      return `<div class="card-place">
+      return `<div class="card-place moreContent__item">
                         <div class="card-place__img">
                           <picture>
                             <source
@@ -75,7 +75,7 @@ initContentMore({
     maxWidthInit: 13300000,
     functions: {
       getHtmlItem: (item) => {
-        return `<div class="card-place">
+        return `<div class="card-place moreContent__item">
                           <div class="card-place__img">
                             <picture>
                               <source

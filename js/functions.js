@@ -9,6 +9,8 @@ export const addClassDisabledBtn = (swiper) => {
   const { CLASS_DISABLED } = CONFIG;
 
   const relative = hostEl.closest(".boxSlide");
+  if (!relative) return;
+  
   const arrowNext = relative.querySelector(".arrow-swiper.next");
   const arrowPrev = relative.querySelector(".arrow-swiper.prev");
 
@@ -54,11 +56,12 @@ export const initContentMore = (options) => {
     if (data.length <= showCount) return;
 
     const moreContentBtn = moreContentInfo.querySelector(".moreContent__btn");
+    const items = container.querySelectorAll('.moreContent__item')
     let btnHtml;
 
     if (moreContentBtn) moreContentBtn.remove();
 
-    if (data.length > container.children.length) {
+    if (items.length && data.length > items.length) {
       btnHtml = `<button class="moreContent__btn button button--gray">${buttonTexts.collapsed}</button>`;
     } else {
       btnHtml = `<button class="moreContent__btn button button--gray">${buttonTexts.expanded}</button>`;
@@ -66,10 +69,6 @@ export const initContentMore = (options) => {
     }
 
     moreContentInfo.insertAdjacentHTML("beforeend", btnHtml);
-    // const items = moreContentInfo.querySelector(".moreContent__items");
-    // const length = items.children.length;
-    // console.log(length);
-    // scrollTop(lastChild)
   };
 
   function updateScreenState() {
@@ -99,9 +98,33 @@ export const initContentMore = (options) => {
 
     if (window.innerWidth < maxWidthInit) {
       const itemsToAdd = data.slice(currentIndex, endIndex);
-      itemsToAdd.forEach((item) => {
-        container.insertAdjacentHTML("beforeend", functions.getHtmlItem(item));
-      });
+      if (container.classList.contains('moreContent__two-column')) {
+        const moreContentItemBoxs = container.querySelectorAll('.moreContent__item-box');
+        const itemBoxOne = document.createElement('div');
+        const itemBoxtwo = document.createElement('div');
+        itemBoxOne.classList.add('moreContent__item-box')
+        itemBoxtwo.classList.add('moreContent__item-box')
+
+
+        itemsToAdd.forEach((item, index) => {
+          const htmlItem = functions.getHtmlItem(item);
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = htmlItem;
+
+          if (index % 2 === 0) {
+            itemBoxOne.append(...tempDiv.childNodes);
+          } else {
+            itemBoxtwo.append(...tempDiv.childNodes);
+          }
+        })
+
+        container.append(itemBoxOne, itemBoxtwo)
+      } else {
+        console.log('dsad')
+        itemsToAdd.forEach((item) => {
+          container.insertAdjacentHTML("beforeend", functions.getHtmlItem(item));
+        });
+      }
 
       if (!fullItems) {
         currentIndex = endIndex;
@@ -109,10 +132,9 @@ export const initContentMore = (options) => {
       }
 
       renderBtn();
-      const items = moreContentInfo.querySelector(".moreContent__items");
+      const items = container.querySelectorAll(".moreContent__item");
       const btnMore = moreContentInfo.querySelector('.moreContent__btn')
-      const length = items.children.length;
-
+      const length = items.length;
       if (length === data.length && btnMore) {
         btnMore.classList.add('full')
       }

@@ -387,3 +387,56 @@ export const venuesCards = [
 ].map((item, index) => {
   return { ...item, id: index + 1 };
 })
+
+export const photos = [
+  {
+    imgSrc: './img/gallery/one',
+    imgFormat: 'webp'
+  },
+  {
+    imgSrc: './img/gallery/two',
+    imgFormat: 'webp'
+  },
+  {
+    imgSrc: './img/gallery/three',
+    imgFormat: 'webp'
+  },
+  {
+    imgSrc: './img/gallery/four',
+    imgFormat: 'webp'
+  },
+  {
+    imgSrc: './img/gallery/one',
+    imgFormat: 'webp'
+  },
+  {
+    imgSrc: './img/gallery/two',
+    imgFormat: 'webp'
+  },
+  {
+    imgSrc: './img/gallery/three',
+    imgFormat: 'webp'
+  },
+  {
+    imgSrc: './img/gallery/four',
+    imgFormat: 'webp'
+  },
+  {
+    imgSrc: './img/gallery/one',
+    imgFormat: 'webp'
+  },
+  {
+    imgSrc: './img/gallery/two',
+    imgFormat: 'webp'
+  },
+  {
+    imgSrc: './img/gallery/three',
+    imgFormat: 'webp'
+  },
+  {
+    imgSrc: './img/gallery/four',
+    imgFormat: 'webp'
+  },
+].map((item, index) => {
+  return { ...item, id: index + 1 };
+})

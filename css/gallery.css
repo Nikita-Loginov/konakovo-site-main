@@ -1,0 +1,184 @@
+.photos {
+  overflow: hidden;
+}
+.photos .swiper {
+  overflow: visible;
+}
+.photos__swipers-box {
+  padding-top: clamp(1.5rem, 1.0829rem + 1.608vw, 2.5rem);
+}
+.photos__swiper--small {
+  padding-bottom: 20px;
+}
+.photos__swiper--small .photos__slide img {
+  height: 100%;
+  width: 100%;
+}
+.photos__slide {
+  overflow: hidden;
+  display: block;
+}
+.photos__slide:hover img {
+  scale: 1.1;
+}
+.photos__slide img {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 100%;
+  max-height: 400px;
+}
+.photos .moreContent__info {
+  display: none;
+}
+@media (max-width: 767px) {
+  .photos .topBox__header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media (max-width: 600px) {
+  .photos__swipers-box,
+  .photos .arrows-swiper {
+    display: none;
+  }
+  .photos .moreContent__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
+  }
+  .photos__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .photos .moreContent__item-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12px;
+  }
+  .photos .moreContent__item-box:nth-child(odd) picture:nth-child(odd) img {
+    height: 250px;
+  }
+  .photos .moreContent__item-box:nth-child(odd) picture:nth-child(even) img {
+    height: 220px;
+  }
+  .photos .moreContent__item-box:nth-child(even) picture:nth-child(even) img {
+    height: 250px;
+  }
+  .photos .moreContent__item-box:nth-child(even) picture:nth-child(odd) img {
+    height: 220px;
+  }
+  .photos .moreContent__item-box img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.videos {
+  overflow: hidden;
+}
+.videos .swiper {
+  overflow: visible;
+  min-height: clamp(15.625rem, 11.8548rem + 14.5355vw, 23.9375rem);
+}
+.videos__swiper-box {
+  padding-top: clamp(1.5rem, 1.0829rem + 1.608vw, 2.5rem);
+}
+@media (max-width: 1023px) {
+  .videos__swiper-box {
+    padding: clamp(1.5rem, 1.0829rem + 1.608vw, 2.5rem) clamp(1rem, 0.2285rem + 2.9744vw, 2.8125rem) 0;
+  }
+}
+.videos .swiper-slide {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  min-height: clamp(10.9375rem, 8.8115rem + 8.1967vw, 15.625rem);
+}
+.videos .swiper-slide.swiper-slide-active {
+  min-height: clamp(15.625rem, 11.8548rem + 14.5355vw, 23.9375rem);
+}
+.videos .swiper-slide.swiper-slide-active img {
+  height: clamp(15.625rem, 11.8548rem + 14.5355vw, 23.9375rem);
+}
+@media (max-width: 767px) {
+  .videos .arrows-swiper {
+    display: none;
+  }
+}
+
+.videos-item {
+  position: relative;
+  max-width: 686px;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.videos-item__box {
+  position: relative;
+}
+.videos-item img {
+  width: 100%;
+  height: clamp(10.9375rem, 8.8115rem + 8.1967vw, 15.625rem);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.videos-item__actions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1019607843);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+.videos-item__actions svg,
+.videos-item__actions img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 16px;
+  height: 16px;
+}
+.videos-item__content p {
+  font-weight: 500;
+}/*# sourceMappingURL=gallery.css.map */
