@@ -18,6 +18,12 @@
         }
     }
 
+    .swiper__month {
+        .swiper-wrapper {
+            padding-bottom: 4px;
+        }
+    }
+
     &__btn {
         border: 1px solid #EFEFEF;
         display: flex;

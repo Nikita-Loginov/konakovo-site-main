@@ -16,6 +16,11 @@
 
             &:checked + span {
                 background-color: $accent-color;
+
+                &:before {
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
         }
 
@@ -29,6 +34,19 @@
             border: 1px solid $accent-color;
             transition: all .5s;
             transform: translateY(-2px);
+
+            &:before {
+                position: absolute;
+                content:"";
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 16px;
+                height: 16px;
+                background-image: url(/img/icons/check.svg);
+                opacity: 0;
+                visibility: hidden;
+                transition: all .5s;
+            }
         }
     }
 }

@@ -1,50 +1,103 @@
-.places-item {
-    position: relative;
-    min-height: clamp(24.25rem, 22.9744rem + 4.918vw, 27.0625rem);
-    // max-width: 333px;
-    display: flex;
-    align-items: flex-end;
-    transition: all .5s;
-
-    &__img {
-        position: absolute;
-        inset:0;
-        width: 100%;
-        height: 100%;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    &__content {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        background-color: #4C4C4C33;
-        backdrop-filter: blur(7px);
-        gap: 12px;
-        width: 100%;
-        align-items: flex-start;
-    }
-
-    &__title {
-        font-size: clamp(2rem, 1.5464rem + 1.7486vw, 3rem);
-        line-height: 1.4;
-        color:#fff;
-
-    }
-
-    @media(max-width:450px) {
-        &__content {
-            .link,
-            .button {
-                width: 100%;
+.places {
+  &.restaurants {
+    @media(min-width: 1223px) {
+        .swiper-slide {
+            display: none;
+      
+            &:nth-child(-n + 3) {
+              display: flex;
             }
-        }
+          }
+      
+          .swiper-wrapper {
+            display: flex;
+            justify-content: space-between;
+          }
+      
+          .swiper-wrapper {
+            gap: 20px;
+            .swiper-slide {
+              max-width: 333px;
+              width: 100%;
+              flex-shrink: 0;
+      
+              &:nth-child(2) {
+                width: 100%;
+                max-width: 100%;
+                min-height: 500px;
+                flex-shrink: 1;
+      
+                .places-item__title {
+                  font-size: 48px;
+                }
+              }
+            }
+          }
     }
+
+  }
+}
+
+.places-item {
+  position: relative;
+  min-height: clamp(24.25rem, 22.9744rem + 4.918vw, 27.0625rem);
+  // max-width: 333px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.5s;
+
+  &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #4c4c4c33;
+    backdrop-filter: blur(7px);
+    gap: 12px;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    justify-content: space-between;
+    width: 100%;
+
+    .link,
+    .button {
+        width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 1.4;
+    color: #fff;
+  }
+
+  @media (max-width: 450px) {
+    &__content {
+      .link,
+      .button {
+        width: 100%;
+      }
+    }
+  }
 }

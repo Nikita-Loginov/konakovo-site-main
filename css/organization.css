@@ -288,9 +288,48 @@
   }
 }
 
+@media (min-width: 1223px) {
+  .places.restaurants .swiper-slide {
+    display: none;
+  }
+  .places.restaurants .swiper-slide:nth-child(-n+3) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .places.restaurants .swiper-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .places.restaurants .swiper-wrapper {
+    gap: 20px;
+  }
+  .places.restaurants .swiper-wrapper .swiper-slide {
+    max-width: 333px;
+    width: 100%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .places.restaurants .swiper-wrapper .swiper-slide:nth-child(2) {
+    width: 100%;
+    max-width: 100%;
+    min-height: 500px;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+  }
+  .places.restaurants .swiper-wrapper .swiper-slide:nth-child(2) .places-item__title {
+    font-size: 48px;
+  }
+}
+
 .places-item {
   position: relative;
   min-height: clamp(24.25rem, 22.9744rem + 4.918vw, 27.0625rem);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,8 +371,21 @@
       -ms-flex-align: start;
           align-items: flex-start;
 }
+.places-item__btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.places-item__btns .link,
+.places-item__btns .button {
+  width: 100%;
+}
 .places-item__title {
-  font-size: clamp(2rem, 1.5464rem + 1.7486vw, 3rem);
+  font-size: 36px;
   line-height: 1.4;
   color: #fff;
 }

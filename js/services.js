@@ -1,5 +1,6 @@
 import { serviceCategories, serviceItems } from "./data/goods.js";
 import { initSwiper } from "./modules/renderContent.js";
+import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
 import { classAction } from "./modules/classActions.js";
 import { addClassDisabledBtn } from "./functions.js";
 
@@ -8,6 +9,27 @@ const CONFIG = {
   MAX_COUNT: 4,
 };
 
+const swipers = [
+  {
+    selector: ".places__swiper",
+    breakpoint: 1223,
+    options: {
+      // loop: true,
+      slidesPerView: 1.1,
+      spaceBetween: 12,
+
+      breakpoints : {
+        767: {
+          slidesPerView: 2,
+        },
+  
+        450: {
+          slidesPerView: 1.3,
+        },
+      }
+    },
+  },
+];
 
 let swiperItems;
 
@@ -175,7 +197,6 @@ const renderSwiperBox = (
                     </div>
                   </div>`;
 
-
   container.insertAdjacentHTML("beforeend", html);
 };
 
@@ -187,7 +208,6 @@ const renderInfoServices = (
   const boxHead = document.querySelector(containerHead);
   const boxItems = document.querySelector(`${containerItems} .swiper-wrapper`);
   if (!boxHead || !boxItems) return;
-
 
   clearHtmlBox(boxHead);
   clearHtmlBox(boxItems);
@@ -209,7 +229,7 @@ const renderInfoServices = (
 
   clearSwiper();
 
-  swiperItems = initSwiper('.servicesMore__swiper', {
+  swiperItems = initSwiper(".servicesMore__swiper", {
     slidesPerView: 1.2,
     spaceBetween: 12,
 
@@ -230,14 +250,14 @@ const renderInfoServices = (
       600: {
         slidesPerView: 1.7,
         spaceBetween: 20,
-      }
+      },
     },
 
     on: {
-      slideChange : (swiper) => {
-        addClassDisabledBtn(swiper)
-      }
-    }
+      slideChange: (swiper) => {
+        addClassDisabledBtn(swiper);
+      },
+    },
   });
 };
 
@@ -255,7 +275,6 @@ const handleClickBtnTab = (e) => {
   const name = btn.dataset.btnTab;
   const itemIndex = serviceCategories.findIndex((item) => item.name === name);
 
-  
   if (itemIndex !== CONFIG.ACTIVE_TAB) {
     CONFIG.ACTIVE_TAB = itemIndex;
     renderInfoServices();
@@ -266,50 +285,62 @@ const handleClickBtnTab = (e) => {
     );
     classAction(btn, "active", "add");
   }
-
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   renderBtnTabs();
   renderInfoServices();
 
-  initSwiper('.places__swiper', {
-    slidesPerView: 1.1,
+  // initSwiper('.places__swiper', {
+  //   slidesPerView: 1.1,
 
-    spaceBetween: 12,
-    loop : true,
+  //   spaceBetween: 12,
+  //   loop : true,
 
+  //   breakpoints : {
+  //     1381 : {
+  //       slidesPerView: "auto",
+  //       effect: "coverflow",
+  //       coverflowEffect: {
+  //         rotate: 0,
+  //         stretch: 0,
+  //         depth: 0,
+  //         modifier: 1,
+  //         slideShadows: false,
+  //       },
+  //     },
 
-    breakpoints : {
-      1381 : {
-        slidesPerView: "auto",
-        effect: "coverflow",
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 0,
-          modifier: 1,
-          slideShadows: false,
-        },
-      },
+  //     767 : {
+  //       slidesPerView: 2,
+  //       spaceBetween: 20,
+  //     },
 
-      767 : {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
+  //     450 : {
+  //       slidesPerView: 1.3,
+  //     }
+  //   },
 
-      450 : {
-        slidesPerView: 1.3,
-      }
-    },
-
-    navigation: {
-      nextEl: ".places .arrow-swiper.next",
-      prevEl: ".places .arrow-swiper.prev",
-    },
-  })
+  //   navigation: {
+  //     nextEl: ".places .arrow-swiper.next",
+  //     prevEl: ".places .arrow-swiper.prev",
+  //   },
+  // })
 });
 
 document.addEventListener("click", (e) => {
   handleClickBtnTab(e);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  swipers.forEach((config) => {
+    slidersConfig.push(config);
+  });
+
+  handleAllSliders();
+});
+
+let resizeTimeout;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(handleAllSliders, 10);
 });

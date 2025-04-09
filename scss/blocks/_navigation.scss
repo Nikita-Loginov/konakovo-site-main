@@ -2,4 +2,10 @@
     display: flex;
     flex-direction: column;
     gap: clamp(1.5rem, 1.0951rem + 1.561vw, 2.5rem);
+
+    @media(max-width:767px) {
+        &__top {
+            display: none;
+        }
+    }
 }

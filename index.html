@@ -31,6 +31,9 @@
       href="/img/favicon/favicon-16x16.png"
     />
     <!-- <link rel="manifest" href="/img/favicon/site.webmanifest" /> -->
+    <link rel="preload" href="/fonts/Involve-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/LibelSuit-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Onest-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./css/page.css" />
     <link href="./css/lib/air-datepicker.css" rel="stylesheet" />
     <link href="./css/lib/swiper.min.css" rel="stylesheet" />
@@ -95,7 +98,7 @@
 
               <li class="menu__link">
                 <a
-                  href="notFound.html"
+                  href="calendar.html"
                   aria-label="перейти на страницу Календарь
                     событий"
                   title="Календарь
@@ -108,7 +111,7 @@
 
               <li class="menu__link">
                 <a
-                  href="notFound.html"
+                  href="services.html"
                   aria-label="перейти на страницу Услуги
                   отеля"
                   title="Услуги
@@ -121,7 +124,7 @@
 
               <li class="menu__link">
                 <a
-                  href="notFound.html"
+                  href="organization.html"
                   aria-label="перейти на страницу Организация
                   мероприятий"
                   title="Организация
@@ -134,7 +137,7 @@
 
               <li class="menu__link">
                 <a
-                  href="notFound.html"
+                  href="partners.html"
                   aria-label="перейти на страницу Агентам
                   и партнёрам"
                   title="Агентам
@@ -327,7 +330,8 @@
     </div>
   </div>
 </header>
- <div class="preloader">
+ 
+      <div class="preloader">
   <div class="preloader__img">
     <svg
       width="148.000000"
@@ -497,7 +501,7 @@
 
                 <form class="reservation-form">
                   <div class="reservation-form__inputs">
-                    <!-- <label class="reservation-form__box date-min">
+                    <label class="reservation-form__box date-min">
                       <input
                         type="text"
                         id="date-min"
@@ -593,8 +597,8 @@
                           </svg>
                         </span>
                       </div>
-                    </label> -->
-                    <label class="reservation-form__box">
+                    </label>
+                    <!-- <label class="reservation-form__box">
                       <input type="text" class="reservation-form__input" />
 
                       <div class="reservation-form__box-content">
@@ -682,7 +686,7 @@
                           </svg>
                         </span>
                       </div>
-                    </label>
+                    </label> -->
                     <label class="reservation-form__box">
                       <input type="text" class="reservation-form__input" />
 
@@ -1491,7 +1495,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="link link--green">смотреть все</a>
+                    <a href="calendar.html" class="link link--green">смотреть все</a>
                   </div>
 
                   <div class="events__items">
@@ -1892,11 +1896,11 @@
               <picture>
                 <source
                   srcset="
-                    ./img/territory/one.png   1x,
-                    ./img/territory/one2x.png 2x
+                    ./img/territory/one.webp   1x,
+                    ./img/territory/one2x.webp 2x
                   "
                 />
-                <img src="./img/territory/one.png" alt="территория" />
+                <img src="./img/territory/one.webp" alt="территория" loading="lazy"/>
               </picture>
             </div>
           </section>
@@ -1909,7 +1913,7 @@
 
                   <div class="topBox__content">
                     <a
-                      href="#"
+                      href="gallery.html"
                       aria-label="смотреть все фото и видео"
                       class="link link--gray"
                       >смотреть все</a
@@ -2520,7 +2524,7 @@
       <div class="modalBlock cardModal">
         <div class="modalBlock__inner">
           <div class="cardModal__img">
-            <img src="./img/mapModal/one.png" alt="карта территории" loading="lazy"/>
+            <img src="./img/mapModal/one.webp" width="500" height="500" alt="карта территории" loading="lazy"/>
           </div>
 
           <button class="modal-close">
@@ -2915,7 +2919,7 @@
 
                 <li class="footer__link">
                   <a
-                    href="#"
+                    href="organization.html"
                     aria-label="перейти на страницу Организация мероприятий"
                     title="Организация мероприятий"
                     class="footer__item"
@@ -2931,7 +2935,7 @@
               <ul class="footer__list">
                 <li class="footer__link">
                   <a
-                    href="notFound.html"
+                    href="partners.html"
                     aria-label="перейти на страницу Агентам и партнёрам"
                     title="Агентам и партнёрам"
                     class="footer__item"

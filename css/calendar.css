@@ -23,6 +23,9 @@
   width: -moz-fit-content;
   width: fit-content;
 }
+.calendar .swiper__month .swiper-wrapper {
+  padding-bottom: 4px;
+}
 .calendar__btn {
   border: 1px solid #EFEFEF;
   display: -webkit-box;
@@ -139,6 +142,10 @@
 .check__box input:checked + span {
   background-color: #039191;
 }
+.check__box input:checked + span:before {
+  opacity: 1;
+  visibility: visible;
+}
 .check__box span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,6 +164,19 @@
   transition: all 0.5s;
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
+}
+.check__box span:before {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  background-image: url(/img/icons/check.svg);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .calendar-item {

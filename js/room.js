@@ -1,66 +1,89 @@
 import { searcBlockTab } from "./modules/tab.js";
+import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
 
-let roomInfoSwiper = null;
+const swipers = [
+  {
+    selector: ".roomGallery__swiper",
+    breakpoint: 1000000,
+    options: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
 
+      pagination: {
+        el: ".roomGallery .swiper-pagination",
+        clickable: true,
+      },
 
+      breakpoints: {
+        1360: {
+          slidesPerView: 3,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+        // 550 : {
+        //     slidesPerView: 1,
+        // }
+      },
 
-function destroyRoomInfoSwiper() {
-  if (roomInfoSwiper) {
-    roomInfoSwiper.destroy(true, true);
-    roomInfoSwiper = null;
-  }
-}
+      navigation: {
+        nextEl: ".roomGallery .arrow-swiper.next",
+        prevEl: ".roomGallery .arrow-swiper.prev",
+      },
+    },
+  },
 
-function checkScreenWidth(width, callback) {
-  return window.innerWidth < width;
-}
+  {
+    selector: ".roomInfo__btns",
+    breakpoint: 1023,
+    options: {
+      slidesPerView: "auto",
+      spaceBetween: 16,
+    },
+  },
+];
 
-function handleResize() {
-  if (checkScreenWidth(1023)) {
-    initRoomInfoSwiper();
-  } else {
-    destroyRoomInfoSwiper();
-  }
-}
+document.addEventListener("DOMContentLoaded", () => {
+  swipers.forEach((config) => {
+    slidersConfig.push(config)
+  })
+
+  handleAllSliders();
+});
 
 let resizeTimeout;
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(handleResize, 10);
+  resizeTimeout = setTimeout(handleAllSliders, 10);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (checkScreenWidth(1023)) {
-    initRoomInfoSwiper();
-  }
-});
+// const swiperGallery = new Swiper(".roomGallery__swiper", {
+//   slidesPerView: 1,
+//   spaceBetween: 20,
+//   loop: true,
 
-const swiperGallery = new Swiper(".roomGallery__swiper", {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  loop: true,
+//   pagination: {
+//     el: ".roomGallery .swiper-pagination",
+//     clickable: true,
+//   },
 
-  pagination: {
-    el: ".roomGallery .swiper-pagination",
-    clickable: true,
-  },
+//   breakpoints: {
+//     1360: {
+//       slidesPerView: 3,
+//     },
+//     767: {
+//       slidesPerView: 2,
+//     },
+//     // 550 : {
+//     //     slidesPerView: 1,
+//     // }
+//   },
 
-  breakpoints : {
-    1360: {
-        slidesPerView: 3,
-    },
-    767: {
-        slidesPerView: 2,
-    },
-    // 550 : {
-    //     slidesPerView: 1,
-    // }
-  },
-
-  navigation: {
-    nextEl: ".roomGallery .arrow-swiper.next",
-    prevEl: ".roomGallery .arrow-swiper.prev",
-  },
-});
+//   navigation: {
+//     nextEl: ".roomGallery .arrow-swiper.next",
+//     prevEl: ".roomGallery .arrow-swiper.prev",
+//   },
+// });
 
 document.addEventListener("click", (e) => searcBlockTab(e));

@@ -31,6 +31,9 @@
       href="/img/favicon/favicon-16x16.png"
     />
     <!-- <link rel="manifest" href="/img/favicon/site.webmanifest" /> -->
+    <link rel="preload" href="/fonts/Involve-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/LibelSuit-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Onest-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./css/page.css" />
     <link href="./css/lib/air-datepicker.css" rel="stylesheet" />
     <link href="./css/lib/swiper.min.css" rel="stylesheet" />
@@ -38,7 +41,8 @@
   </head>
   <body>
     <div class="wrapper wrapper--animation">
-      @@include('../modules/header.html') @@include('../modules/preloader.html')
+      @@include('../modules/header.html') 
+      @@include('../modules/preloader.html')
 
       <main class="main">
         <section class="top">
@@ -54,7 +58,7 @@
 
                 <form class="reservation-form">
                   <div class="reservation-form__inputs">
-                    <!-- <label class="reservation-form__box date-min">
+                    <label class="reservation-form__box date-min">
                       <input
                         type="text"
                         id="date-min"
@@ -150,8 +154,8 @@
                           </svg>
                         </span>
                       </div>
-                    </label> -->
-                    <label class="reservation-form__box">
+                    </label>
+                    <!-- <label class="reservation-form__box">
                       <input type="text" class="reservation-form__input" />
 
                       <div class="reservation-form__box-content">
@@ -239,7 +243,7 @@
                           </svg>
                         </span>
                       </div>
-                    </label>
+                    </label> -->
                     <label class="reservation-form__box">
                       <input type="text" class="reservation-form__input" />
 
@@ -1048,7 +1052,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="link link--green">смотреть все</a>
+                    <a href="calendar.html" class="link link--green">смотреть все</a>
                   </div>
 
                   <div class="events__items">
@@ -1449,11 +1453,11 @@
               <picture>
                 <source
                   srcset="
-                    ./img/territory/one.png   1x,
-                    ./img/territory/one2x.png 2x
+                    ./img/territory/one.webp   1x,
+                    ./img/territory/one2x.webp 2x
                   "
                 />
-                <img src="./img/territory/one.png" alt="территория" />
+                <img src="./img/territory/one.webp" alt="территория" loading="lazy"/>
               </picture>
             </div>
           </section>
@@ -1466,7 +1470,7 @@
 
                   <div class="topBox__content">
                     <a
-                      href="#"
+                      href="gallery.html"
                       aria-label="смотреть все фото и видео"
                       class="link link--gray"
                       >смотреть все</a
@@ -2077,7 +2081,7 @@
       <div class="modalBlock cardModal">
         <div class="modalBlock__inner">
           <div class="cardModal__img">
-            <img src="./img/mapModal/one.png" alt="карта территории" loading="lazy"/>
+            <img src="./img/mapModal/one.webp" width="500" height="500" alt="карта территории" loading="lazy"/>
           </div>
 
           <button class="modal-close">

@@ -672,12 +672,28 @@ h3,
   cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  position: relative;
+}
+.btnTab:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #039191;
+  top: 100%;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  scale: 0;
+  -webkit-transition: scale 0.5s;
+  transition: scale 0.5s;
 }
 .btnTab.active, .btnTab:hover {
   color: #039191;
 }
-.btnTab.active {
-  border-bottom: 1px solid #039191;
+.btnTab.active:before {
+  scale: 1;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 .open--menu {
@@ -1254,6 +1270,11 @@ h3,
       -ms-flex-direction: column;
           flex-direction: column;
   gap: clamp(1.5rem, 1.0951rem + 1.561vw, 2.5rem);
+}
+@media (max-width: 767px) {
+  .navigation__top {
+    display: none;
+  }
 }
 
 .modalBlock {

@@ -42,6 +42,12 @@
         }
     }
 
+    &__tabs-box {
+        .swiper-wrapper {
+            padding-bottom: 4px;
+        }
+    }
+
     @media(max-width:1330px) {
         .arrows-swiper {
             display: none;
