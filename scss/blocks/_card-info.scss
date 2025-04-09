@@ -1,0 +1,26 @@
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__img {
+        img {
+            width: 100%;
+            max-height: clamp(15.9375rem, 13.7264rem + 8.5246vw, 20.8125rem);
+            height: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__title {
+        font-size: clamp(2rem, 1.8866rem + 0.4372vw, 2.25rem);
+        line-height: 1.4;
+        font-family: 'LibelSuit';
+        text-transform: uppercase;
+    }
+}

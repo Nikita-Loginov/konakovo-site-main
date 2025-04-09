@@ -18,15 +18,15 @@ const swipers = [
       slidesPerView: 1.1,
       spaceBetween: 12,
 
-      breakpoints : {
+      breakpoints: {
         767: {
           slidesPerView: 2,
         },
-  
+
         450: {
           slidesPerView: 1.3,
         },
-      }
+      },
     },
   },
 ];
@@ -326,6 +326,30 @@ document.addEventListener("DOMContentLoaded", () => {
   //   },
   // })
 });
+
+const hoverPlacesCards = () => {
+  const items = document.querySelectorAll(".places-item");
+
+  items.forEach((item) => {
+    const btnsBox = item.querySelector(".places-item__btns");
+
+    if (btnsBox) {
+      item.addEventListener("mouseover", () => {
+        if (window.innerWidth > 1223) {
+          btnsBox.style.maxHeight = btnsBox.scrollHeight + "px";
+        }
+      });
+
+      item.addEventListener("mouseout", () => {
+        if (window.innerWidth > 1223) {
+          btnsBox.style.maxHeight = 0;
+        }
+      });
+    }
+  });
+};
+
+hoverPlacesCards();
 
 document.addEventListener("click", (e) => {
   handleClickBtnTab(e);

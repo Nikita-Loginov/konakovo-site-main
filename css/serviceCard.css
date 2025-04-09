@@ -607,6 +607,13 @@
           flex-direction: column;
   counter-reset: custom-number-list;
 }
+@media (min-width: 1023px) {
+  .serviceInfo__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
 
 .serviceInfo-item {
   padding: clamp(1.25rem, 1.1366rem + 0.4372vw, 1.5rem) 0;
@@ -624,11 +631,7 @@
   content: "0" counter(custom-number-list);
 }
 .serviceInfo-item__head {
-  max-width: 706px;
   width: 100%;
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 20px;
 }
 .serviceInfo-item__number {
   position: relative;
@@ -694,6 +697,22 @@
   font-weight: 400;
   font-family: "Involve";
 }
+@media (min-width: 1023px) {
+  .serviceInfo-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    border: none;
+    padding: 0;
+  }
+  .serviceInfo-item__content {
+    gap: 16px;
+  }
+}
 @media (max-width: 1023px) {
   .serviceInfo-item {
     -webkit-box-orient: vertical;
@@ -718,6 +737,130 @@
   .serviceInfo-item__content .button {
     width: 100%;
   }
+}
+
+.servicesMore--servicesCard .servicesMore__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1279px) {
+  .servicesMore--servicesCard .servicesMore__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .servicesMore--servicesCard .servicesMore__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 550px) {
+  .servicesMore--servicesCard .servicesMore__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.servicesMore--servicesCard .moreContent__btn {
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .servicesMore--servicesCard .moreContent__btn {
+    width: 100%;
+  }
+}
+.servicesMore__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(2rem, 1.7732rem + 0.8743vw, 2.5rem);
+}
+.servicesMore__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(1.5rem, 1.0464rem + 1.7486vw, 2.5rem);
+}
+.servicesMore__tabs-box .swiper-slide {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.servicesMore__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(1.5rem, 1.0464rem + 1.7486vw, 2.5rem);
+}
+.servicesMore__content-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.servicesMore__content-title {
+  font-size: 48px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.servicesMore .services-item__title {
+  font-size: clamp(2rem, 1.8866rem + 0.4372vw, 2.25rem);
+}
+.servicesMore__tabs-box .swiper-wrapper {
+  padding-bottom: 4px;
+}
+@media (max-width: 1330px) {
+  .servicesMore .arrows-swiper {
+    display: none;
+  }
+}
+
+.card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+.card-info__img img {
+  width: 100%;
+  max-height: clamp(15.9375rem, 13.7264rem + 8.5246vw, 20.8125rem);
+  height: 100%;
+}
+.card-info__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+.card-info__title {
+  font-size: clamp(2rem, 1.8866rem + 0.4372vw, 2.25rem);
+  line-height: 1.4;
+  font-family: "LibelSuit";
+  text-transform: uppercase;
 }
 
 .servicesAbout__list {

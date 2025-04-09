@@ -9,5 +9,11 @@
     display: flex;
     flex-direction: column;
     counter-reset: custom-number-list;
+
+    @media(min-width:1023px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
   }
 }
