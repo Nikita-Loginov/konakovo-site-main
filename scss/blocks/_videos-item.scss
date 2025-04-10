@@ -14,6 +14,7 @@
         width: 100%;
         height: clamp(10.9375rem, 8.8115rem + 8.1967vw, 15.625rem);
         transition: all .5s;
+        object-fit: cover;
     }
 
     &__actions {

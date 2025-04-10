@@ -105,7 +105,7 @@ function getGoodBigHtml(item) {
                           <p class="good-big__price">${item?.price}</p>
                         </div>
 
-                        <a href="#" class="link link--green">подробнее</a>
+                        <a href="room.html" class="link link--green">подробнее</a>
                       </div>
 
                       <div class="good-big__textbox">

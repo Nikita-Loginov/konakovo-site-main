@@ -63,7 +63,7 @@ const getHtmlBoxHead = (lenght) => {
 };
 
 const getItemServices = (item) => {
-  return `<a href="#" class="swiper-slide">
+  return `<a href="serviceCard.html" class="swiper-slide">
                         <div
                           class="services__slide services-item ${
                             item?.colorClass

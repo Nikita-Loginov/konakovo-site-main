@@ -559,3 +559,8 @@ h3,
     // border-bottom: 1px solid $accent-color;
   }
 }
+
+.fancybox__content {
+  width: 50vw !important;
+  height: auto !important;
+}

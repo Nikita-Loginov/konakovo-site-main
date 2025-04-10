@@ -140,6 +140,8 @@
   height: clamp(10.9375rem, 8.8115rem + 8.1967vw, 15.625rem);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .videos-item__actions {
   position: absolute;

@@ -696,8 +696,13 @@ h3,
           transform-origin: left;
 }
 
+.fancybox__content {
+  width: 50vw !important;
+  height: auto !important;
+}
+
 .open--menu {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .header {
@@ -706,6 +711,7 @@ h3,
   z-index: 66;
   left: 0;
   right: 0;
+  overflow: hidden;
   background-color: #fff;
   border-bottom: 1px solid #EFEFEF;
   -webkit-transition: all 0.5s;
@@ -1812,6 +1818,7 @@ body.showForm .reservation-form--scroll {
 
 .footer {
   padding: clamp(1.25rem, 0.9372rem + 1.206vw, 2rem) 0 clamp(1.125rem, 0.2908rem + 3.2161vw, 3.125rem);
+  border-top: 1px solid #EFEFEF;
 }
 .footer__inner {
   display: -webkit-box;
@@ -1955,7 +1962,7 @@ body.showForm .reservation-form--scroll {
           justify-content: space-between;
   gap: 20px;
 }
-.footer__copy-content {
+.footer__copy-content-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1963,15 +1970,45 @@ body.showForm .reservation-form--scroll {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
 }
-.footer__copy-content p {
-  font-size: 14px;
+.footer__copy-content-info p {
+  font-size: clamp(0.75rem, 0.6933rem + 0.2186vw, 0.875rem);
   letter-spacing: -0.01em;
 }
+.footer__copy-content-dev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 152px;
+}
+.footer__copy-content-dev img {
+  width: 100%;
+}
+.footer__copy-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: clamp(0.75rem, 0.1831rem + 2.1858vw, 2rem);
+}
 @media (max-width: 1023px) {
-  .footer {
-    border-top: 1px solid rgba(76, 76, 76, 0.2);
+  .footer__copy-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
   }
   .footer__top {
     -webkit-box-orient: vertical;
@@ -1994,7 +2031,7 @@ body.showForm .reservation-form--scroll {
             flex-direction: column;
   }
   .footer__content > * {
-    border-bottom: 1px solid rgba(76, 76, 76, 0.2);
+    border-bottom: 1px solid #EFEFEF;
     padding-bottom: 28px;
   }
   .footer__copy .footer__copy-logo {

@@ -86,11 +86,11 @@
   content: "";
   position: absolute;
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
   background-color: rgb(255, 255, 255);
   border-radius: 0px 0px 24px 24px;
   z-index: -1;
-  top: clamp(5.125rem, 4.6998rem + 1.6393vw, 6.0625rem);
+  top: 0;
   right: 0;
   left: 0;
   bottom: 0;
