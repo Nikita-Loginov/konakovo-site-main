@@ -699,6 +699,9 @@
   -ms-flex-line-pack: center;
       align-content: center;
 }
+.events__inner {
+  overflow: hidden;
+}
 .events__content {
   display: -webkit-box;
   display: -ms-flexbox;

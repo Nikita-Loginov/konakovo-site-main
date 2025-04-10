@@ -10,6 +10,10 @@
         align-content: center;
     }
 
+    &__inner {
+        overflow: hidden;
+    }
+
 
     &__content {
         display: flex;
