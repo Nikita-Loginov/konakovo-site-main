@@ -4,15 +4,13 @@
     min-height: calc(100vh - calc(clamp(5.125rem, 4.6998rem + 1.6393vw, 6.0625rem)));
     display: flex;
     justify-content: center;
+    overflow: hidden;
 
     .container {
         width: 100%;
         align-content: center;
     }
 
-    &__inner {
-        overflow: hidden;
-    }
 
 
     &__content {
