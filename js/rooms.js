@@ -210,6 +210,7 @@ function renderGoodBig(name) {
   document.querySelectorAll(".good-big__img").forEach((item) => {
     initSwiper(item, {
       loop: "true",
+      // effect: 'fade',
       navigation: {
         nextEl: ".goods .arrow-swiper.next",
         prevEl: ".goods .arrow-swiper.prev",

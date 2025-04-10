@@ -386,7 +386,6 @@
 }
 
 .about {
-  height: calc(100vh - 102px);
   width: 100vw;
   position: relative;
 }
@@ -416,7 +415,7 @@
 }
 .about__img-big {
   width: 50vw;
-  height: calc(100vh - 102px);
+  max-height: 555px;
 }
 .about__img-small {
   position: absolute;
@@ -448,13 +447,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 20px;
+  gap: 80px;
 }
 .about__info-textbox p {
-  font-weight: 500px;
+  font-weight: 500;
 }
 .about__info-list {
   display: -webkit-box;
@@ -489,7 +485,7 @@
     height: auto;
   }
   .about__img-big {
-    height: clamp(31.25rem, 20.7374rem + 21.9298vw, 37.5rem);
+    height: 100%;
   }
   .about__img-small {
     width: 35vw;
