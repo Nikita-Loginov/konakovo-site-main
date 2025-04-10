@@ -41,7 +41,296 @@
   </head>
   <body>
     <div class="wrapper wrapper--animation">
-      
+      <header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a
+        href="/"
+        aria-label="перейти на главную"
+        title="Конаково"
+        class="header__logo"
+      >
+        <img
+          width="150"
+          height="40"
+          class="header__logo-big"
+          src="./img/header/logo-big.svg"
+          alt="логотип Конаково"
+        />
+
+        <img
+          width="35"
+          height="35"
+          class="header__logo-small"
+          src="./img/header/logo-small.svg"
+          alt="логотип Конаково"
+        />
+      </a>
+
+      <address class="header__address">
+        <span class="header__address-icon">
+          <img src="./img/icons/geo.svg" alt="иконка локации" />
+        </span>
+
+        <span class="header__address-text">Тверская область</span>
+      </address>
+
+      <div class="menu">
+        <button class="burger-menu" aria-label="открыть/закрыть меню">
+          <span></span>
+        </button>
+
+        <div class="menu__content">
+          <nav class="menu__box">
+            <ul class="menu__list" aria-label="список пунктов меню">
+              <li class="menu__link">
+                <a
+                  href="rooms.html"
+                  aria-label="перейти на страницу Номерной
+                    фонд"
+                  title="Номерной
+                    фонд"
+                  class="menu__item"
+                  >Номерной <br />
+                  фонд</a
+                >
+              </li>
+
+              <li class="menu__link">
+                <a
+                  href="calendar.html"
+                  aria-label="перейти на страницу Календарь
+                    событий"
+                  title="Календарь
+                    событий"
+                  class="menu__item"
+                  >Календарь <br />
+                  событий</a
+                >
+              </li>
+
+              <li class="menu__link">
+                <a
+                  href="services.html"
+                  aria-label="перейти на страницу Услуги
+                  отеля"
+                  title="Услуги
+                  отеля"
+                  class="menu__item"
+                  >Услуги <br />
+                  отеля</a
+                >
+              </li>
+
+              <li class="menu__link">
+                <a
+                  href="organization.html"
+                  aria-label="перейти на страницу Организация
+                  мероприятий"
+                  title="Организация
+                  мероприятий"
+                  class="menu__item"
+                  >Организация <br />
+                  мероприятий</a
+                >
+              </li>
+
+              <li class="menu__link">
+                <a
+                  href="partners.html"
+                  aria-label="перейти на страницу Агентам
+                  и партнёрам"
+                  title="Агентам
+                  и партнёрам"
+                  class="menu__item"
+                  >Агентам <br />
+                  и партнёрам</a
+                >
+              </li>
+
+              <li class="menu__link">
+                <a
+                  href="contacts.html"
+                  aria-label="перейти на страницу Контакты
+                  и обратная связь"
+                  title="Контакты
+                  и обратная связь"
+                  class="menu__item"
+                  >Контакты <br />
+                  и обратная связь</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- <form class="menu__translation">
+              <p class="menu__translation-title">Сменить язык</p>
+  
+              <div class="menu__translation-checks">
+                <label class="menu__translation-check check">
+                  <div class="check__box">
+                    <input type="radio" name="translation" checked />
+  
+                    <span></span>
+                  </div>
+  
+                  <div class="check__text">Русский</div>
+                </label>
+  
+                <label class="menu__translation-check check">
+                  <div class="check__box">
+                    <input type="radio" name="translation" />
+  
+                    <span></span>
+                  </div>
+  
+                  <div class="check__text">Английский</div>
+                </label>
+              </div>
+            </form> -->
+
+          <div class="menu__details">
+            <ul class="social" aria-label="список соц сетей">
+              <li class="social__link">
+                <a
+                  href="#"
+                  aria-label="наша страница в телеграмм"
+                  title="телеграмм"
+                  class="social__item"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="20.000000"
+                    height="20.000000"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <defs />
+                    <path
+                      id="Vector"
+                      d="M10 0C4.48 0 0 4.48 0 10C0 15.51 4.48 20 10 20C15.51 20 20 15.51 20 10C20 4.48 15.51 0 10 0ZM14.64 6.8C14.48 8.37 13.83 12.21 13.51 13.98C13.37 14.73 13.08 14.98 12.82 15.01C12.25 15.07 11.8 14.64 11.25 14.26C10.37 13.69 9.87 13.32 9.01 12.76C8.03 12.12 8.67 11.76 9.23 11.17C9.39 11.03 11.94 8.69 12 8.48C12 8.45 12 8.42 11.99 8.39C11.98 8.36 11.97 8.33 11.94 8.3C11.89 8.26 11.8 8.28 11.73 8.28C11.64 8.3 10.25 9.23 7.51 11.07C7.12 11.35 6.76 11.48 6.44 11.48C6.07 11.46 5.39 11.28 4.89 11.1C4.26 10.91 3.76 10.8 3.8 10.44C3.82 10.26 4.07 10.08 4.55 9.89C7.46 8.62 9.41 7.78 10.37 7.39C13.16 6.23 13.73 6.03 14.1 6.03C14.19 6.03 14.37 6.05 14.5 6.14C14.6 6.23 14.62 6.33 14.64 6.42C14.62 6.48 14.64 6.66 14.64 6.8Z"
+                      fill="#039191"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social__link">
+                <a
+                  href="#"
+                  aria-label="наша страница в вацапе"
+                  title="вацап"
+                  class="social__item"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="20.000000"
+                    height="20.000000"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <defs />
+                    <path
+                      id="Vector"
+                      d="M10 0C15.52 0 20 4.47 20 10C20 15.52 15.52 20 10 20C8.23 20 6.49 19.53 4.96 18.64L0 20L1.35 15.03C0.46 13.5 -0.01 11.76 0 10C0 4.47 4.47 0 10 0ZM6.59 5.3L6.39 5.3C6.26 5.31 6.13 5.35 6.01 5.4C5.91 5.46 5.81 5.54 5.72 5.63C5.6 5.75 5.53 5.84 5.46 5.94C5.09 6.42 4.89 7.01 4.89 7.62C4.9 8.1 5.02 8.58 5.23 9.03C5.63 9.93 6.31 10.89 7.19 11.77C7.41 11.98 7.62 12.2 7.84 12.4C8.95 13.37 10.26 14.07 11.68 14.44L12.25 14.53C12.44 14.54 12.62 14.53 12.81 14.51C13.1 14.5 13.38 14.42 13.64 14.28C13.77 14.22 13.9 14.14 14.02 14.07C14.02 14.07 14.07 14.04 14.15 13.98C14.28 13.87 14.37 13.8 14.48 13.69C14.56 13.6 14.64 13.5 14.69 13.39C14.77 13.22 14.85 12.91 14.88 12.65C14.9 12.46 14.89 12.35 14.89 12.28C14.89 12.17 14.8 12.06 14.7 12.01L14.12 11.75C14.12 11.75 13.25 11.37 12.72 11.13C12.66 11.11 12.6 11.09 12.54 11.09C12.47 11.08 12.41 11.09 12.34 11.11C12.27 11.14 12.21 11.17 12.16 11.22C12.16 11.22 12.09 11.27 11.37 12.15C11.33 12.21 11.27 12.25 11.2 12.27C11.14 12.29 11.07 12.3 11 12.28C10.94 12.26 10.87 12.24 10.81 12.21C10.69 12.16 10.64 12.14 10.56 12.1C9.98 11.85 9.45 11.51 8.98 11.1C8.85 10.99 8.74 10.87 8.62 10.76C8.23 10.38 7.88 9.95 7.6 9.49L7.54 9.39C7.5 9.33 7.46 9.26 7.44 9.19C7.4 9.04 7.5 8.92 7.5 8.92C7.5 8.92 7.74 8.66 7.85 8.51C7.96 8.37 8.06 8.24 8.12 8.14C8.24 7.95 8.27 7.76 8.21 7.6C7.93 6.92 7.64 6.24 7.34 5.56C7.28 5.43 7.11 5.33 6.95 5.32C6.9 5.31 6.84 5.3 6.79 5.3C6.66 5.29 6.52 5.29 6.39 5.3L6.59 5.3Z"
+                      fill="#039191"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="menu__details-list">
+              <li class="menu__details-link">
+                <a
+                  href="tel:+74959746544"
+                  aria-label="позвонить по номеру : +7 (495) 974-65-44"
+                  class="menu__details-item"
+                  >+7 (495) 974-65-44</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <a href="#" class="link link--green">забронировать</a>
+        </div>
+      </div>
+
+      <div class="header__details">
+        <ul class="social" aria-label="список соц сетей">
+          <li class="social__link">
+            <a
+              href="#"
+              aria-label="наша страница в телеграмм"
+              title="телеграмм"
+              class="social__item"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="20.000000"
+                height="20.000000"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <defs />
+                <path
+                  id="Vector"
+                  d="M10 0C4.48 0 0 4.48 0 10C0 15.51 4.48 20 10 20C15.51 20 20 15.51 20 10C20 4.48 15.51 0 10 0ZM14.64 6.8C14.48 8.37 13.83 12.21 13.51 13.98C13.37 14.73 13.08 14.98 12.82 15.01C12.25 15.07 11.8 14.64 11.25 14.26C10.37 13.69 9.87 13.32 9.01 12.76C8.03 12.12 8.67 11.76 9.23 11.17C9.39 11.03 11.94 8.69 12 8.48C12 8.45 12 8.42 11.99 8.39C11.98 8.36 11.97 8.33 11.94 8.3C11.89 8.26 11.8 8.28 11.73 8.28C11.64 8.3 10.25 9.23 7.51 11.07C7.12 11.35 6.76 11.48 6.44 11.48C6.07 11.46 5.39 11.28 4.89 11.1C4.26 10.91 3.76 10.8 3.8 10.44C3.82 10.26 4.07 10.08 4.55 9.89C7.46 8.62 9.41 7.78 10.37 7.39C13.16 6.23 13.73 6.03 14.1 6.03C14.19 6.03 14.37 6.05 14.5 6.14C14.6 6.23 14.62 6.33 14.64 6.42C14.62 6.48 14.64 6.66 14.64 6.8Z"
+                  fill="#039191"
+                  fill-opacity="1.000000"
+                  fill-rule="nonzero"
+                />
+              </svg>
+            </a>
+          </li>
+
+          <li class="social__link">
+            <a
+              href="#"
+              aria-label="наша страница в вацапе"
+              title="вацап"
+              class="social__item"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="20.000000"
+                height="20.000000"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <defs />
+                <path
+                  id="Vector"
+                  d="M10 0C15.52 0 20 4.47 20 10C20 15.52 15.52 20 10 20C8.23 20 6.49 19.53 4.96 18.64L0 20L1.35 15.03C0.46 13.5 -0.01 11.76 0 10C0 4.47 4.47 0 10 0ZM6.59 5.3L6.39 5.3C6.26 5.31 6.13 5.35 6.01 5.4C5.91 5.46 5.81 5.54 5.72 5.63C5.6 5.75 5.53 5.84 5.46 5.94C5.09 6.42 4.89 7.01 4.89 7.62C4.9 8.1 5.02 8.58 5.23 9.03C5.63 9.93 6.31 10.89 7.19 11.77C7.41 11.98 7.62 12.2 7.84 12.4C8.95 13.37 10.26 14.07 11.68 14.44L12.25 14.53C12.44 14.54 12.62 14.53 12.81 14.51C13.1 14.5 13.38 14.42 13.64 14.28C13.77 14.22 13.9 14.14 14.02 14.07C14.02 14.07 14.07 14.04 14.15 13.98C14.28 13.87 14.37 13.8 14.48 13.69C14.56 13.6 14.64 13.5 14.69 13.39C14.77 13.22 14.85 12.91 14.88 12.65C14.9 12.46 14.89 12.35 14.89 12.28C14.89 12.17 14.8 12.06 14.7 12.01L14.12 11.75C14.12 11.75 13.25 11.37 12.72 11.13C12.66 11.11 12.6 11.09 12.54 11.09C12.47 11.08 12.41 11.09 12.34 11.11C12.27 11.14 12.21 11.17 12.16 11.22C12.16 11.22 12.09 11.27 11.37 12.15C11.33 12.21 11.27 12.25 11.2 12.27C11.14 12.29 11.07 12.3 11 12.28C10.94 12.26 10.87 12.24 10.81 12.21C10.69 12.16 10.64 12.14 10.56 12.1C9.98 11.85 9.45 11.51 8.98 11.1C8.85 10.99 8.74 10.87 8.62 10.76C8.23 10.38 7.88 9.95 7.6 9.49L7.54 9.39C7.5 9.33 7.46 9.26 7.44 9.19C7.4 9.04 7.5 8.92 7.5 8.92C7.5 8.92 7.74 8.66 7.85 8.51C7.96 8.37 8.06 8.24 8.12 8.14C8.24 7.95 8.27 7.76 8.21 7.6C7.93 6.92 7.64 6.24 7.34 5.56C7.28 5.43 7.11 5.33 6.95 5.32C6.9 5.31 6.84 5.3 6.79 5.3C6.66 5.29 6.52 5.29 6.39 5.3L6.59 5.3Z"
+                  fill="#039191"
+                  fill-opacity="1.000000"
+                  fill-rule="nonzero"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <!-- <button class="translation">
+            <span class="translation__text translation__text--ru">RU</span>
+  
+            <span class="translation__text translation__text--en">En</span>
+          </button> -->
+
+        <a href="#" class="link link--green">забронировать</a>
+      </div>
+    </div>
+  </div>
+</header>
+ 
       <div class="preloader">
   <div class="preloader__img">
     <svg
@@ -504,7 +793,7 @@
           </div>
         </section>
 
-        <!-- <div class="block-main">
+        <div class="block-main">
           <section class="about">
             <div class="about__inner">
               <div class="about__content">
@@ -1192,7 +1481,7 @@
             </div>
           </section>
 
-          <section class="events">
+          <!-- <section class="events">
             <div class="container">
               <div class="events__inner">
                 <div class="events__content">
@@ -1427,7 +1716,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
 
           <section class="offers">
             <div class="container">
@@ -2024,7 +2313,7 @@
               </div>
             </div>
           </section>
-        </div> -->
+        </div>
       </main>
 
       <!-- <form class="reservation-form reservation-form--scroll">
