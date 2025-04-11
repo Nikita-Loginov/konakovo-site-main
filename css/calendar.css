@@ -26,8 +26,13 @@
 .calendar .swiper__month .swiper-wrapper {
   padding-bottom: 4px;
 }
+.calendar .swiper__years .swiper-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .calendar__btn {
-  border: 1px solid #EFEFEF;
+  border: 1px solid #efefef;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,7 +47,7 @@
   min-height: 44px;
   border-radius: 12px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 16px;
   background-color: transparent;
   line-height: 1;
   text-transform: uppercase;
@@ -52,6 +57,10 @@
 .calendar__btn.active, .calendar__btn:hover {
   background-color: #039191;
   color: #fff;
+}
+.calendar__btn.currentYear {
+  min-height: 56px;
+  font-size: 20px;
 }
 .calendar__month {
   display: -webkit-box;
@@ -162,8 +171,8 @@
   border: 1px solid #039191;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
 }
 .check__box span:before {
   position: absolute;
