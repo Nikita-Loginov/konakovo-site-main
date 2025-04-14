@@ -14,9 +14,9 @@
   gap: clamp(1.5rem, -2.0615rem + 5.5703vw, 2.8125rem);
   position: absolute;
 
-  &:not(:first-of-type) {
-    position: absolute;
-    // top: 0;
+  &:first-of-type {
+    opacity: 1;
+    transform: translate(0);
   }
 
   &--gray {

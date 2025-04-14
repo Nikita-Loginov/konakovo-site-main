@@ -22,11 +22,11 @@ function animationCards() {
     },
   });
 
-  eventsItems.forEach((item, index) => {
+  Array.from(eventsItems).slice(1).forEach((item, index) => {
     animation.to(
       item,
       {
-        y: index * marginCard,
+        y: (index + 1) * marginCard,
         opacity: 1,
       },
       "+=0"

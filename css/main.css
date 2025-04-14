@@ -419,7 +419,7 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 25vw;
+  width: 24vw;
   aspect-ratio: 1/1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -952,8 +952,10 @@
   gap: clamp(1.5rem, -2.0615rem + 5.5703vw, 2.8125rem);
   position: absolute;
 }
-.events-item:not(:first-of-type) {
-  position: absolute;
+.events-item:first-of-type {
+  opacity: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
 }
 .events-item--gray {
   background-color: #eaecee;
