@@ -183,6 +183,8 @@
   width: 100%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  position: sticky;
+  top: 0;
 }
 .goods-sidebar__btn-top {
   display: -webkit-box;
