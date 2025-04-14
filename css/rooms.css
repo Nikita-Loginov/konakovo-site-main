@@ -517,6 +517,13 @@
   box-orient: vertical;
 }
 @media (max-width: 900px) {
+  .good-big {
+    position: static;
+  }
+  .good-big__img-box img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .good-big .arrows-swiper {
     display: none;
   }
