@@ -38,42 +38,39 @@
   </head>
   <body>
     <div class="wrapper">
-      @@include('../modules/header.html') @@include('../modules/preloader.html')
+      @@include('../modules/header.html') 
+      <!-- @@include('../modules/preloader.html') -->
 
       <main class="main">
-        <section class="promo promo--organization">
+        <section class="top-interior top-interior--organization top-interior--black">
           <div class="container">
-            <div class="promo__inner">
-              <div class="promo__items">
-                <div class="promo__content">
-                  <div class="promo__content-head">
-                    <h1 class="h2 promo__title">ОРганизация мероприятий</h1>
+            <div class="top-interior__inner">
+              <div class="top-interior__content">
 
-                    <div class="promo__textbox">
-                      <p>
-                        Отличительная особенность event — отеля Конаково Ривер
-                        Клаб — это опыт проведения выдающихся событий и гарантия
-                        того, что ваш бизнес мероприятие достигнет целей,
-                        поставленных Вашим руководством.
-                      </p>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="promo__img">
-                  <picture>
-                    <source
-                      srcset="
-                        ./img/promo/one.webp   1x,
-                        ./img/promo/one2x.webp 2x
-                      "
-                    />
-                    <img
-                      src="./img/promo/one.webp"
-                      alt="фотография мероприятия"
-                    />
-                  </picture>
-                </div>
+                <h1 class="top-interior__title">Организация мероприятий</h1>
+              </div>
+
+
+              <div class="top-interior__img">
+                <picture>
+                  <source
+                  media="(max-width: 500px)"
+                    srcset="
+                      ./img/top-interior/three-mobile.webp   1x,
+                    "
+                  />
+                  <source
+                    srcset="
+                      ./img/top-interior/three.webp   1x,
+                      ./img/top-interior/three2x.webp 2x
+                    "
+                  />
+                  <img
+                    src="./img/top-interior/three.webp"
+                    alt="фотография природв"
+                  />
+                </picture>
               </div>
             </div>
           </div>

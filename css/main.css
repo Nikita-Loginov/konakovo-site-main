@@ -266,6 +266,8 @@
 .room-item__img img {
   height: 100%;
   max-height: clamp(7.6875rem, -1.5253rem + 35.5191vw, 28rem);
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -431,6 +433,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   border: 2px solid rgba(255, 255, 255, 0.6);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .about__info {
   background-color: #e2dcd5;
@@ -622,6 +626,8 @@
 .house__images-box img {
   max-width: 333px;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .house__info {
   display: -webkit-box;
@@ -702,6 +708,8 @@
           flex-direction: column;
   gap: 40px;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 .banner-callout__content .link,
 .banner-callout__content .button {
@@ -726,6 +734,9 @@
 }
 .banner-callout__images img {
   max-width: 333px;
+  max-height: 370px;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 .banner-callout__images picture:not(:first-of-type) {
@@ -969,6 +980,7 @@
 }
 .events-item__img img {
   width: 100%;
+  aspect-ratio: 1/1;
 }
 .events-item__content {
   display: -webkit-box;
@@ -1439,6 +1451,9 @@
 .gallery__slide img {
   width: 100%;
   height: 100%;
+  max-height: 330px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .gallery__content {
   display: none;

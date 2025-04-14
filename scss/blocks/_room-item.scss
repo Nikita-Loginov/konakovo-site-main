@@ -36,7 +36,7 @@
     img {
         height: 100%;
         max-height: clamp(7.6875rem, -1.5253rem + 35.5191vw, 28rem);
-        // object-fit: cover;
+        object-fit: cover;
         width: 100%;
         transition: all .5s;
     }
