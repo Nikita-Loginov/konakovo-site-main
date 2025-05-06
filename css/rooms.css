@@ -82,7 +82,6 @@
   transition: all 0.5s;
 }
 .goods__detail {
-  padding-top: calc(clamp(2.5rem, 1.718rem + 3.0151vw, 4.375rem) * 1.2 + 20px);
   max-width: clamp(24.375rem, -71.3rem + 118.6667vw, 35.5rem);
 }
 .goods .more-buuton {

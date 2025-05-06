@@ -224,6 +224,9 @@
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   min-height: 235px;
+  max-width: 235px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 500px) {
   .calendar-item__img-box img {

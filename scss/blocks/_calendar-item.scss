@@ -30,6 +30,8 @@
       width: 100%;
       transition: all .5s;
       min-height: 235px;
+      max-width: 235px;
+      object-fit: cover;
 
       @media(max-width:500px) {
         object-fit: cover;

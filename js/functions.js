@@ -120,7 +120,6 @@ export const initContentMore = (options) => {
 
         container.append(itemBoxOne, itemBoxtwo)
       } else {
-        console.log('dsad')
         itemsToAdd.forEach((item) => {
           container.insertAdjacentHTML("beforeend", functions.getHtmlItem(item));
         });

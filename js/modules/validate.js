@@ -43,7 +43,6 @@ function initCustomSelects(form) {
 
     selectedOption.addEventListener("click", () => {
       classAction(select, "active", "toggle");
-      console.log('dsa')
     });
 
     document.addEventListener("click", (e) => {
