@@ -40,7 +40,7 @@
   <body>
     <div class="wrapper">
       @@include('../modules/header.html')
-      @@include('../modules/preloader.html')
+      <!-- @@include('../modules/preloader.html') -->
 
       <main class="main">
         <section class="photos moreContent">
@@ -546,7 +546,11 @@
             <div class="swiper videos__swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <a href="/video/one.mp4" class="videos__slide videos-item" data-fancybox='gallery-videos'>
+                  <div
+                    class="videos__slide videos-item modal-open"
+                    data-modal="videoModal"
+                    data-link-video="https://rutube.ru/play/embed/e6dd11fa634a901f766048f610c46991/"
+                  >
                     <div class="videos-item__box">
                       <div class="videos-item__img">
                         <picture>
@@ -580,11 +584,15 @@
                     <div class="videos-item__content">
                       <p>Клубный посёлок Конаково РиверКлаб</p>
                     </div>
-                  </a>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <a href="/video/one.mp4" class="videos__slide videos-item" data-fancybox='gallery-videos'>
+                  <div
+                    class="videos__slide videos-item modal-open"
+                    data-modal="videoModal"
+                    data-link-video="https://rutube.ru/play/embed/e6dd11fa634a901f766048f610c46991/"
+                  >
                     <div class="videos-item__box">
                       <div class="videos-item__img">
                         <picture>
@@ -618,11 +626,15 @@
                     <div class="videos-item__content">
                       <p>Клубный посёлок Конаково РиверКлаб</p>
                     </div>
-                  </a>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <a href="/video/one.mp4" class="videos__slide videos-item" data-fancybox='gallery-videos'>
+                  <div
+                    class="videos__slide videos-item modal-open"
+                    data-modal="videoModal"
+                    data-link-video="https://rutube.ru/play/embed/e6dd11fa634a901f766048f610c46991/"
+                  >
                     <div class="videos-item__box">
                       <div class="videos-item__img">
                         <picture>
@@ -656,11 +668,15 @@
                     <div class="videos-item__content">
                       <p>Клубный посёлок Конаково РиверКлаб</p>
                     </div>
-                  </a>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <a href="/video/one.mp4" class="videos__slide videos-item" data-fancybox='gallery-videos'>
+                  <div
+                    class="videos__slide videos-item modal-open"
+                    data-modal="videoModal"
+                    data-link-video="https://rutube.ru/play/embed/e6dd11fa634a901f766048f610c46991/"
+                  >
                     <div class="videos-item__box">
                       <div class="videos-item__img">
                         <picture>
@@ -694,11 +710,15 @@
                     <div class="videos-item__content">
                       <p>Клубный посёлок Конаково РиверКлаб</p>
                     </div>
-                  </a>
+                  </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <a href="/video/one.mp4" class="videos__slide videos-item" data-fancybox='gallery-videos'>
+                  <div
+                    class="videos__slide videos-item"
+                    data-modal="videoModal"
+                    data-link-video="https://rutube.ru/play/embed/e6dd11fa634a901f766048f610c46991/"
+                  >
                     <div class="videos-item__box">
                       <div class="videos-item__img">
                         <picture>
@@ -732,7 +752,7 @@
                     <div class="videos-item__content">
                       <p>Клубный посёлок Конаково РиверКлаб</p>
                     </div>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -876,6 +896,31 @@
           Найти номера
         </button>
       </form>
+
+      <div class="modalBlock videoModal">
+        <div class="modalBlock__inner">
+          <div class="modalBlock__content">
+            <button class="modal-close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M13.0568 14.6831C13.4714 15.1056 14.1437 15.1056 14.5584 14.6831C14.973 14.2606 14.973 13.5755 14.5584 13.153L9.51856 8.01752L14.6718 2.99981C15.0957 2.587 15.111 1.90214 14.7059 1.47012C14.3008 1.03811 13.6287 1.02255 13.2047 1.43536L8.0166 6.48705L2.94279 1.31689C2.52815 0.894369 1.85587 0.89437 1.44123 1.31689C1.02658 1.73941 1.02658 2.42445 1.44123 2.84697L6.48091 7.98236L1.32824 12.9995C0.904277 13.4124 0.889004 14.0972 1.29412 14.5292C1.69924 14.9612 2.37134 14.9768 2.7953 14.564L7.98287 9.51283L13.0568 14.6831Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+
+            <div class="videoModal__video">
+     
+            </div>
+          </div>
+        </div>
+      </div>
 
       @@include('../modules/gebotModal.html')
       @@include('../modules/successModal.html')

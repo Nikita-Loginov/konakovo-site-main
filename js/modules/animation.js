@@ -2,14 +2,14 @@ function getPosition(el, mean) {
   return el.getBoundingClientRect()[mean];
 }
 
-export function showForm() {
+export function showForm(block) {
   const reservationFormScroll = document.querySelector(
     ".reservation-form--scroll"
   );
 
+
   if (reservationFormScroll) {
     const firstSection = document.querySelectorAll("section")[0];
-
 
     const firstSectionOffsetBottom = getPosition(firstSection, "bottom");
 
@@ -21,23 +21,19 @@ export function showForm() {
   }
 }
 
-export function toggleFormWhenScrollFooter() {
+export function toggleBlockWhenScrollFooter(block) {
   const footer = document.querySelector(".footer");
-  const reservationFormScroll = document.querySelector(
-    ".reservation-form--scroll"
-  );
-  // const showForm = document.body.classList.contains("showForm");
 
-  if (footer && reservationFormScroll) {
+  if (footer && block) {
     const footerBottom = getPosition(footer, "bottom");
     const footerHeight = footer.clientHeight;
 
     if (footerBottom < window.innerHeight + footerHeight) {
-      reservationFormScroll.style.opacity = 0;
-      reservationFormScroll.style.visibility = "hidden";
+      block.style.opacity = 0;
+      block.style.visibility = "hidden";
     } else {
-      reservationFormScroll.style.opacity = 1;
-      reservationFormScroll.style.visibility = "visible";
+      block.style.opacity = 1;
+      block.style.visibility = "visible";
     }
   }
 }

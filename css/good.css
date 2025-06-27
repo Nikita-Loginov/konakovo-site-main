@@ -576,6 +576,7 @@
 }
 .callout__images {
   position: relative;
+  overflow: hidden;
 }
 .callout__img-small {
   grid-area: 1/1;
@@ -586,10 +587,13 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: 3;
 }
 .callout__img-big {
   width: 100%;
   height: 100%;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 @media (max-width: 767px) {
   .callout__inner {

@@ -3,6 +3,7 @@ import { photos } from "./data/goods.js";
 import { initContentMore } from "./functions.js";
 import { addClassDisabledBtn } from "./functions.js";
 
+const slidesBigSlider = document.querySelectorAll('.photos__swiper--big .gallery-photo').length;
 const swipers = [
   {
     selector: ".photos__swiper--small",
@@ -11,7 +12,6 @@ const swipers = [
     options: {
       loop: true,
       slidesPerView: 4,
-      initialSlide: 3,
       centeredSlides: true,
       spaceBetween: 20,
 
@@ -29,7 +29,7 @@ const swipers = [
     options: {
       loop: true,
       slidesPerView: 3,
-      initialSlide: 3,
+      initialSlide: slidesBigSlider,
       centeredSlides: true,
       spaceBetween: 20,
 
@@ -115,19 +115,19 @@ const contentMore = initContentMore({
   maxWidthInit: 600,
   functions: {
     getHtmlItem: (item) => {
-      return `<picture class="moreContent__item">
+      return `<a data-fancybox='gallery-photo-mobile' href="${item.imgSrc}"><picture class="moreContent__item">
                       <source
                         srcset="
-                          ${item.imgSrc}.${item.imgFormat}   1x,
-                          ${item.imgSrc}2x.${item.imgFormat} 2x
+                          ${item.imgSrc}1x,
+                          ${item.imgSrc} 2x
                         "
                       />
                       <img
-                        src="${item.imgSrc}.${item.imgFormat}"
+                        src="${item.imgSrc}"
                         height="250"
                         alt="фотография дома"
                       />
-                    </picture>`;
+                    </picture></a>`;
     },
   },
 });

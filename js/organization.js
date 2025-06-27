@@ -10,37 +10,36 @@ const initSwipers = () => {
       nextEl: ".organization .arrow-swiper.next",
       prevEl: ".organization .arrow-swiper.prev",
     },
-    breakpoints : {
-        1300 : {
-            slidesPerView: 4,
-        },
-        1024 : {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        767 : {
-            slidesPerView: 2.3,
-        },
-        550 : {
-            slidesPerView: 1.6,
-        }
+    breakpoints: {
+      1300: {
+        slidesPerView: 4,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      767: {
+        slidesPerView: 2.3,
+      },
+      550: {
+        slidesPerView: 1.6,
+      },
     },
     on: {
-        slideChange : (swiper) => {
-          addClassDisabledBtn(swiper)
-        }
-      }
+      slideChange: (swiper) => {
+        addClassDisabledBtn(swiper);
+      },
+    },
   });
 
-  initSwiper('.places__swiper', {
+  initSwiper(".places__swiper", {
     slidesPerView: 1.1,
 
     spaceBetween: 12,
-    loop : true,
+    loop: true,
 
-
-    breakpoints : {
-      1381 : {
+    breakpoints: {
+      1381: {
         slidesPerView: "auto",
         effect: "coverflow",
         coverflowEffect: {
@@ -52,23 +51,22 @@ const initSwipers = () => {
         },
       },
 
-      767 : {
+      767: {
         slidesPerView: 2,
         spaceBetween: 20,
       },
 
-      450 : {
+      450: {
         slidesPerView: 1.3,
-      }
+      },
     },
 
     navigation: {
       nextEl: ".places .arrow-swiper.next",
       prevEl: ".places .arrow-swiper.prev",
     },
-  })
+  });
 };
-
 
 document.addEventListener("DOMContentLoaded", () => {
   initSwipers();

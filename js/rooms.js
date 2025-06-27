@@ -1,11 +1,50 @@
 import { classAction } from "./modules/classActions.js";
 import { scrollStart } from "./modules/moreContent.js";
-import { renderImgs, renderTags, renderBtn, initSwiper, renderDescrGood } from "./modules/renderContent.js";
+import {
+  renderImgs,
+  renderTags,
+  renderBtn,
+  initSwiper,
+  renderDescrGood,
+} from "./modules/renderContent.js";
 import { goods } from "./data/goods.js";
 
-const firstActiveNameCategory = "room";
-const firstActiveNameGood = "1";
+const firstActiveNameCategory =
+  window.location.search.split("?").at(-1) || "room";
+let firstActiveNameGood = "2";
 let isMobile = window.innerWidth < 900;
+
+function addTabActive() {
+  const tabs = document.querySelectorAll(".goods-sidebar__btn");
+  const activeItemCurrent = Array.from(tabs).find(
+    (item) => {
+      console.log(item, firstActiveNameCategory)
+      return item.dataset.tabBtn === firstActiveNameCategory
+    }
+  );
+  const activeItemIndex = Array.from(tabs).findIndex((item) => {
+    return item.dataset.tabBtn === activeItemCurrent.dataset.tabBtn;
+  });
+
+  const bigItem = goods.find(
+    (item) => item.nameTabLink === activeItemCurrent.dataset.tabBtn
+  );
+
+  firstActiveNameGood = bigItem.nameTabBlock;
+
+  const text = activeItemCurrent.querySelector('.goods-sidebar__btn-name').textContent;
+
+  tabs.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+
+  tabs[activeItemIndex].classList.add("active");
+
+  document.querySelector(".goods__title").textContent = text;
+
+  renderGoods(firstActiveNameCategory);
+  renderGoodBig(firstActiveNameGood);
+}
 
 function getGoodMiniHtml(item, index) {
   const html = `<div class="good-item tab-btn ${
@@ -174,6 +213,7 @@ function renderGoodBig(name) {
   const box = document.querySelector(".goods__detail");
   box.innerHTML = "";
 
+  console.log(name);
 
   if (isMobile) {
     const { nameTabLink } = goods.find((item) => item.nameTabBlock === name);
@@ -198,7 +238,9 @@ function renderGoodBig(name) {
       });
     }
   } else {
-    const item = goods.find((item) => item.nameTabBlock === name);
+    const item = goods.find(
+      (item) => item.nameTabBlock.toString() === name.toString()
+    );
 
     if (item) {
       const html = getGoodBigHtml(item);
@@ -215,23 +257,19 @@ function renderGoodBig(name) {
         nextEl: ".goods .arrow-swiper.next",
         prevEl: ".goods .arrow-swiper.prev",
       },
-  
+
       pagination: {
         el: ".goods .swiper-pagination",
         clickable: true,
       },
     });
-  })
+  });
 
   document.querySelectorAll(".tags").forEach((item) => {
     initSwiper(item, {
       slidesPerView: "auto",
     });
-  })
-
-
-
-
+  });
 }
 
 document.addEventListener("click", (e) => {
@@ -293,12 +331,12 @@ document.addEventListener("click", (e) => {
 
 window.addEventListener("resize", () => {
   const newIsMobile = window.innerWidth < 900;
-  
+
   if (newIsMobile !== isMobile) {
     isMobile = newIsMobile;
     initBtnsSwiper();
     renderGoodBig(firstActiveNameGood);
-  };
+  }
 });
 
 function initBtnsSwiper() {
@@ -331,6 +369,6 @@ initSwiper(".rooms-banner__swiper", {
 });
 
 initBtnsSwiper();
-renderGoods(firstActiveNameCategory);
-renderGoodBig(firstActiveNameGood);
+addTabActive();
+
 toggleSidebar();

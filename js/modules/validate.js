@@ -19,38 +19,54 @@ function removeAllElementClass(elements, className) {
   });
 }
 
-function initCustomSelects(form) {
+let isDocumentListenerAttached = false;
+
+export function initCustomSelects(form) {
+  if (!form) return;
+
   const customSelects = form.querySelectorAll(".custom-select");
 
+  if (!customSelects.length) return;
+
   customSelects.forEach((select) => {
+  
+    if (select.dataset.inited === "true") return;
+    select.dataset.inited = "true";
+
     const selectedOption = select.querySelector(".selected-option");
     const optionsList = select.querySelector(".options-list");
     const realSelect = select.querySelector(".real-select");
     const options = optionsList.querySelectorAll("li");
 
     options.forEach((option) => {
-      option.addEventListener("click", () => {
-        selectedOption.value = option.textContent.trim();
-        realSelect.value = option.dataset.value;
-        classAction(select, "active", "toggle");
-
+      option.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log(option.textContent.trim(), selectedOption.value)
+        selectedOption.setAttribute('value',  option.textContent.trim())
+        classAction(select, "active", "remove");
         removeAllElementClass(options, "active");
         classAction(option, "active", "add");
-
-        triggerValidation(selectedOption);
       });
     });
 
-    selectedOption.addEventListener("click", () => {
-      classAction(select, "active", "toggle");
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!select.contains(e.target)) {
-        classAction(select, "active", "remove");
+    select.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (e.target.closest(".custom-select__active")) {
+        classAction(select, "active", "toggle");
       }
     });
   });
+
+  if (!isDocumentListenerAttached) {
+    document.addEventListener("click", (e) => {
+      document.querySelectorAll(".custom-select").forEach((select) => {
+        if (!select.contains(e.target)) {
+          classAction(select, "active", "remove");
+        }
+      });
+    });
+    isDocumentListenerAttached = true;
+  }
 }
 
 function handleFieldChange(event) {

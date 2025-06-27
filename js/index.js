@@ -2,6 +2,7 @@ import { removeImgTop, animationBlock, showForm } from "./modules/animation.js";
 import { classAction } from "./modules/classActions.js";
 import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
 import { initAnimation } from "./modules/animationCardEvents.js";
+import { initCustomSelects } from "./modules/validate.js";
 
 const swipers = [
   {
@@ -165,7 +166,21 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   handleAllSliders();
+  initCustomSelects(document.querySelector('.guests'))
 });
+
+
+document.addEventListener('click', (e) => {
+  if (e.target.closest('.reservation-form__box.guests')) {
+    const guests = e.target.closest('.reservation-form__box.guests');
+
+    guests.classList.add('open')
+  } else {
+    const guests = document.querySelector('.reservation-form__box.guests');
+
+    guests.classList.remove('open')
+  }
+})
 
 let resizeTimeout;
 window.addEventListener("resize", () => {

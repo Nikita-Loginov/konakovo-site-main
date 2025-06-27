@@ -34,6 +34,10 @@ document.addEventListener("click", (e) => {
   searcBlockTab(e)
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  Fancybox.bind("[data-fancybox='gallery-videos']", {});
+})
+
 function initSwipers() {
   const swiperPromo = new Swiper(".promo__swiper", {
     loop: true,

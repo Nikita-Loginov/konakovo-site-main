@@ -1,0 +1,161 @@
+.guests {
+  position: relative;
+
+  &.open {
+    .guests__form {
+      display: flex;
+    }
+  }
+
+  &__form {
+    cursor: default;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    background-color: #ffffff;
+    padding: 16px;
+    border: 1px solid #4c4c4c33;
+    box-shadow: 0px 0px 14px 0px #091e6526;
+    bottom: -5px;
+    transform: translateY(100%);
+    width: 344px;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    @media (max-width: 460px) {
+      width: 322px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    align-items: center;
+  }
+
+  &__add {
+    border: 1px solid #4c4c4c33;
+
+    &.disabled {
+      opacity: 0.6;
+    }
+
+    @media (max-width: 460px) {
+      padding-inline: 8px;
+    }
+  }
+}
+
+.guests-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #4c4c4c33;
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__close {
+    background-color: transparent;
+    * {
+      pointer-events: none;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__person-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  &__person-head {
+    font-weight: 500;
+  }
+
+  &__person-text {
+    font-weight: 400;
+    font-size: 14px;
+    color: #4c4c4cb2;
+  }
+
+  &__child-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .custom-select {
+      width: 124px;
+      font-weight: 500;
+
+      input {
+        font-weight: 500;
+        font-size: 16px;
+
+        &::placeholder {
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+}

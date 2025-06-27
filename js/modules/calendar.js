@@ -23,15 +23,14 @@ export function calendar() {
         days(dp) {
           if (dp.selectedDates.length) {
             let date = dp.selectedDates[0];
-            const box = dateMin.closest('.reservation-form__box')
-            const title = box.querySelector('.reservation-form__text')
+            const box = dateMin.closest(".reservation-form__box");
+            const title = box.querySelector(".reservation-form__text");
             title.textContent = dp.formatDate(date, "dd MMMM yyyy");
-            return `<small>
-                         ${dp.formatDate(date, "dd MMMM yyyy")}
-                      </small>`;
           }
 
-          return "Выберите дату";
+          const viewDate = dp.currentViewDate;
+          const formattedMonthYear = dp.formatDate(viewDate, "MMMM yyyy");
+          return `<small>${formattedMonthYear}</small>`;
         },
       },
     });
@@ -48,15 +47,14 @@ export function calendar() {
         days(dp) {
           if (dp.selectedDates.length) {
             let date = dp.selectedDates[0];
-            const box = dateMax.closest('.reservation-form__box')
-            const title = box.querySelector('.reservation-form__text')
+            const box = dateMax.closest(".reservation-form__box");
+            const title = box.querySelector(".reservation-form__text");
             title.textContent = dp.formatDate(date, "dd MMMM yyyy");
-            return `<small>
-                           ${dp.formatDate(date, "dd MMMM yyyy")}
-                        </small>`;
           }
 
-          return "Выберите дату";
+          const viewDate = dp.currentViewDate;
+          const formattedMonthYear = dp.formatDate(viewDate, "MMMM yyyy");
+          return `<small>${formattedMonthYear}</small>`;
         },
       },
     });

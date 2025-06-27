@@ -41,6 +41,12 @@ body {
         visibility: visible;
         transform: translateY(-30px);
         transition: all .5s;
+
+        .guests__form {
+            height: 325px;
+            transform: translateY(-100%);
+            top: -5px;
+        }
         
         .button {
             margin: 0;

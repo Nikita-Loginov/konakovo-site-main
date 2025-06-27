@@ -7,7 +7,8 @@
 
 .top {
   height: 100vh;
-  overflow: hidden;
+  overflow: visible;
+  overflow-x: visible;
   position: relative;
   top: calc(-1 * (clamp(5.125rem, 4.6998rem + 1.6393vw, 6.0625rem) + 40px));
 }
@@ -99,7 +100,7 @@
 .top .reservation-form {
   position: relative;
   z-index: 30;
-  max-width: 788px;
+  max-width: 888px;
   width: 100%;
   margin: 0 auto;
 }
@@ -181,7 +182,7 @@
     height: 100vh;
   }
   .top__title:before {
-    height: auto;
+    height: 100vh;
   }
 }
 @media (max-width: 1279px) {
@@ -404,6 +405,7 @@
 .about__img {
   position: relative;
   display: none;
+  overflow: hidden;
 }
 .about__img.active {
   display: -webkit-box;
@@ -414,6 +416,8 @@
 .about__img-big {
   width: 50vw;
   height: 100%;
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
 }
 .about__img-small {
   position: absolute;

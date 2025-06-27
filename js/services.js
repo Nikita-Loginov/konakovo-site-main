@@ -3,6 +3,7 @@ import { initSwiper } from "./modules/renderContent.js";
 import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
 import { classAction } from "./modules/classActions.js";
 import { addClassDisabledBtn } from "./functions.js";
+import { initContentMore } from "./functions.js";
 
 const CONFIG = {
   ACTIVE_TAB: 0,
@@ -163,8 +164,6 @@ const renderBtnTabs = (
 ) => {
   const box = document.querySelector(container);
 
-  clearHtmlBox(box);
-
   if (!serviceCategories) return;
 
   serviceCategories.forEach((item) => {
@@ -181,92 +180,6 @@ const renderBtnTabs = (
   });
 };
 
-const clearHtmlBox = (box) => {
-  box.innerHTML = "";
-};
-
-const renderSwiperBox = (
-  containerItems = ".servicesMore__items",
-  swiperBox = "servicesMore__swiper"
-) => {
-  const container = document.querySelector(containerItems);
-  clearHtmlBox(container);
-  const html = `<div class="swiper ${swiperBox}">
-                    <div class="swiper-wrapper">
-                      
-                    </div>
-                  </div>`;
-
-  container.insertAdjacentHTML("beforeend", html);
-};
-
-const renderInfoServices = (
-  containerItems = ".servicesMore__items",
-  containerHead = ".servicesMore__content-head"
-) => {
-  renderSwiperBox();
-  const boxHead = document.querySelector(containerHead);
-  const boxItems = document.querySelector(`${containerItems} .swiper-wrapper`);
-  if (!boxHead || !boxItems) return;
-
-  clearHtmlBox(boxHead);
-  clearHtmlBox(boxItems);
-
-  const activeNameCategory = serviceCategories[CONFIG.ACTIVE_TAB]?.name;
-  if (!activeNameCategory) return;
-
-  const items = serviceItems.filter((item) => {
-    return item.category === activeNameCategory;
-  });
-
-  boxHead.insertAdjacentHTML("beforeend", getHtmlBoxHead(items.length));
-
-  items.forEach((item) => {
-    const cardHtml = getItemServices(item);
-
-    boxItems.insertAdjacentHTML("beforeend", cardHtml);
-  });
-
-  clearSwiper();
-
-  swiperItems = initSwiper(".servicesMore__swiper", {
-    slidesPerView: 1.2,
-    spaceBetween: 12,
-
-    navigation: {
-      nextEl: `.servicesMore .arrow-swiper.next`,
-      prevEl: `.servicesMore .arrow-swiper.prev`,
-    },
-
-    breakpoints: {
-      1330: {
-        slidesPerView: 4,
-      },
-
-      876: {
-        slidesPerView: 2.4,
-      },
-
-      600: {
-        slidesPerView: 1.7,
-        spaceBetween: 20,
-      },
-    },
-
-    on: {
-      slideChange: (swiper) => {
-        addClassDisabledBtn(swiper);
-      },
-    },
-  });
-};
-
-const clearSwiper = () => {
-  if (!swiperItems) return;
-
-  swiperItems.destroy();
-  swiperItems = null;
-};
 
 const handleClickBtnTab = (e) => {
   const btn = e.target.closest(".servicesMore__tab");
@@ -274,57 +187,102 @@ const handleClickBtnTab = (e) => {
   if (!btn) return;
   const name = btn.dataset.btnTab;
   const itemIndex = serviceCategories.findIndex((item) => item.name === name);
+  const servicesMoreItem = document.querySelector(`.servicesMore__item.${name}`);
 
   if (itemIndex !== CONFIG.ACTIVE_TAB) {
     CONFIG.ACTIVE_TAB = itemIndex;
-    renderInfoServices();
+
     classAction(
       document.querySelector(".servicesMore__tab.active"),
       "active",
       "remove"
     );
+    classAction(
+      document.querySelector(".servicesMore__item.active"),
+      "active",
+      "remove"
+    );
+    classAction(servicesMoreItem, 'active', 'add');
     classAction(btn, "active", "add");
   }
+
+  const items = serviceItems.filter((item) => {
+    return item.category === name
+  })
+
+  initContentMore({
+    containerSelector: ".servicesMore__item.active .servicesMore__items",
+    data: [...items],
+    showCount: 4,
+    showCountMobile: 2,
+    maxWidthInitMobile: 675,
+    buttonTexts: {
+      expanded: "показать меньше",
+      collapsed: "показать еще",
+    },
+    maxWidthInit: 13300000,
+    loadMode: 'lazy',
+    functions: {
+      getHtmlItem: (item) => {
+        if (!item) return '';
+  
+        const imgBase = item.imgSrc || ''; 
+        const imgFormat = item.imgFormat || 'webp';
+        const imgSrc = `${imgBase}.${imgFormat}`; 
+        const imgSrc2x = `${imgBase}2x.${imgFormat}`; 
+        const name = item.name
+  
+        return `
+           <div class="services-item moreContent__item">
+                        <div class="services-item__img">
+                          <picture>
+                            <source
+                              srcset="
+                                ${imgSrc}         1x,
+                                ${imgSrc2x} 2x
+                              "
+                            />
+                            <img
+                              height="260"
+                              src=${imgSrc}
+                              alt=${name}
+                            />
+                          </picture>
+                        </div>
+
+                        <div class="services-item__content">
+                          <h3 class="services-item__title">
+                              ${name}
+                          </h3>
+                        </div>
+                      </div>
+        `;
+      },
+    },
+  
+  })
+
+  
+
 };
+
+const initialTabs = () => {
+    const location = window.location.search;
+    const name = location.split('?').at(-1)
+
+    const tab = document.querySelector(`[data-btn-tab="${name}"]`);
+    console.log(tab)
+    const servicesMoreItemActive = document.querySelector('.servicesMore__tab.active')
+    tab.click()
+
+}
+
+// document.querySelector('.header__logo').click();
 
 document.addEventListener("DOMContentLoaded", () => {
   renderBtnTabs();
-  renderInfoServices();
-
-  // initSwiper('.places__swiper', {
-  //   slidesPerView: 1.1,
-
-  //   spaceBetween: 12,
-  //   loop : true,
-
-  //   breakpoints : {
-  //     1381 : {
-  //       slidesPerView: "auto",
-  //       effect: "coverflow",
-  //       coverflowEffect: {
-  //         rotate: 0,
-  //         stretch: 0,
-  //         depth: 0,
-  //         modifier: 1,
-  //         slideShadows: false,
-  //       },
-  //     },
-
-  //     767 : {
-  //       slidesPerView: 2,
-  //       spaceBetween: 20,
-  //     },
-
-  //     450 : {
-  //       slidesPerView: 1.3,
-  //     }
-  //   },
-
-  //   navigation: {
-  //     nextEl: ".places .arrow-swiper.next",
-  //     prevEl: ".places .arrow-swiper.prev",
-  //   },
-  // })
+  // renderInfoServices();
+  initialTabs()
 });
 
 const hoverPlacesCards = () => {

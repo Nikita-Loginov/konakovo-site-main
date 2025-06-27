@@ -20,6 +20,9 @@ export const checkScrollY = (e) => {
     
     DOM.HEADER.classList.toggle(CONFIG.CLASS_SCROLL_BOTTOM, isScrollingDown);
     DOM.HEADER.classList.toggle(CONFIG.CLASS_SCROLL_TOP, !isScrollingDown);
+
+    document.body.classList.toggle(CONFIG.CLASS_SCROLL_BOTTOM, isScrollingDown);
+    document.body.classList.toggle(CONFIG.CLASS_SCROLL_TOP, !isScrollingDown);
     
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 }

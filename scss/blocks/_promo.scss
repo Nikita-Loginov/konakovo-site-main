@@ -28,7 +28,7 @@
 
   &__items {
     display: flex;
-    min-height:  clamp(21.875rem, -16.4568rem + 59.952vw, 37.5rem);
+    min-height: clamp(21.875rem, -16.4568rem + 59.952vw, 37.5rem);
     width: 100%;
     margin: 0 auto;
     justify-content: space-between;
@@ -50,7 +50,8 @@
   &__content-head {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    align-items: flex-start;
+    gap: 24px;
   }
 
   &__content-name {
@@ -65,7 +66,7 @@
     gap: 10px;
 
     p {
-        font-size: clamp(1rem, 0.8988rem + 0.3902vw, 1.25rem);
+      font-size: clamp(1rem, 0.8988rem + 0.3902vw, 1.25rem);
       line-height: 1.2;
       font-weight: 600;
       font-family: "Involve";
@@ -115,26 +116,26 @@
     }
   }
 
-  @media(max-width:1023px) {
+  @media (max-width: 1023px) {
     &__items {
-        min-height: 0;
-        gap: 32px;
-        flex-direction: column-reverse;
+      min-height: 0;
+      gap: 32px;
+      flex-direction: column-reverse;
     }
 
-    &__content ,
-    &__swiper-box{
-        max-width: 100%;
-        width: 100%;
+    &__content,
+    &__swiper-box {
+      max-width: 100%;
+      width: 100%;
     }
 
     &__swiper-box {
-        // max-height:  clamp(21.875rem, -16.4568rem + 59.952vw, 37.5rem);
+      // max-height:  clamp(21.875rem, -16.4568rem + 59.952vw, 37.5rem);
     }
 
     &__content {
-        background-color: transparent;
-        padding: 0;
+      background-color: transparent;
+      padding: 0;
     }
 
     &--organization {
@@ -147,29 +148,29 @@
     }
   }
 
-  @media(max-width:767px) {
+  @media (max-width: 767px) {
     &__content {
-        background-color: transparent;
-        padding: 0;
+      background-color: transparent;
+      padding: 0;
 
-        .link {
-            position: fixed;
-            left: 16px;
-            right: 16px;
-            bottom: 16px;
-            z-index: 4;
-        }
+      .link {
+        position: fixed;
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        z-index: 4;
+      }
     }
   }
 
-  @media(max-width:550px) {
+  @media (max-width: 550px) {
     .container {
-        padding: 0;
+      padding: 0;
     }
 
     &__content,
     .navigation__top {
-        padding: 0 clamp(1rem, 0.2285rem + 2.9744vw, 2.8125rem);
+      padding: 0 clamp(1rem, 0.2285rem + 2.9744vw, 2.8125rem);
     }
 
     .arrows-swiper {

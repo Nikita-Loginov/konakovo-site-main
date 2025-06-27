@@ -77,6 +77,34 @@
 
   }
 
+  &.videoModal {
+    .modalBlock__inner {
+      width: 90vw;
+      height: 80vh;
+      max-width: 100%;
+      padding: 20px;
+    }
+
+    .modalBlock__content,
+    .videoModal__video {
+      height: 100%;
+    }
+
+    .videoModal {
+      
+      &__video {
+        // width: 60vw;
+        // height: 50vh;
+   
+         iframe {
+           width: 100%;
+           height: 100%;
+         }
+       }
+    }
+
+  }
+
   &.succesModal {
     text-align: center;
 

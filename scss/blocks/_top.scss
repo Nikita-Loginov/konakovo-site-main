@@ -13,7 +13,9 @@
 
 .top {
   height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
+  overflow: visible;
+  overflow-x: visible;
 
   position: relative;
   top: calc(-1 * (clamp(5.125rem, 4.6998rem + 1.6393vw, 6.0625rem) + 40px));
@@ -113,7 +115,7 @@
   .reservation-form {
     position: relative;
     z-index: 30;
-    max-width: 788px;
+    max-width: 888px;
     width: 100%;
     margin: 0 auto;
   }
@@ -190,7 +192,7 @@
 
     &__title {
       &:before {
-        height: auto;
+        height: 100vh;
       }
     }
   }

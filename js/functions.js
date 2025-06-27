@@ -8,6 +8,8 @@ export const addClassDisabledBtn = (swiper) => {
   const { hostEl, isEnd, isBeginning } = swiper;
   const { CLASS_DISABLED } = CONFIG;
 
+  console.log(isEnd, isBeginning)
+
   const relative = hostEl.closest(".boxSlide");
   if (!relative) return;
   
@@ -30,6 +32,7 @@ export const initContentMore = (options) => {
     functions,
     showCountMobile,
     maxWidthInitMobile,
+    loadMode = 'click' // 'click' или 'lazy'
   } = options;
 
   let { showCount } = options;
@@ -42,6 +45,7 @@ export const initContentMore = (options) => {
   let isScreenMobile;
   updateScreenState();
   let fullItems = false;
+  let isLoading = false;
 
   const container = document.querySelector(containerSelector);
   if (!container) return;
@@ -52,8 +56,28 @@ export const initContentMore = (options) => {
   const moreContentInfo = moreContent.querySelector(".moreContent__info");
   if (!moreContentInfo) return;
 
+  const checkScrollPosition = () => {
+    if (isLoading || !isSmallScreen || loadMode !== 'lazy') return;
+
+    const containerRect = container.getBoundingClientRect();
+    const containerBottom = containerRect.bottom;
+    const windowHeight = window.innerHeight;
+
+    if (containerBottom - windowHeight < 300) {
+      loadMoreItems();
+    }
+  };
+
+  const loadMoreItems = () => {
+    if (isLoading || fullItems) return;
+    
+    isLoading = true;
+    renderContent();
+    isLoading = false;
+  };
+
   const renderBtn = () => {
-    if (data.length <= showCount) return;
+    if (data.length <= showCount || loadMode === 'lazy') return;
 
     const moreContentBtn = moreContentInfo.querySelector(".moreContent__btn");
     const items = container.querySelectorAll('.moreContent__item')
@@ -105,7 +129,6 @@ export const initContentMore = (options) => {
         itemBoxOne.classList.add('moreContent__item-box')
         itemBoxtwo.classList.add('moreContent__item-box')
 
-
         itemsToAdd.forEach((item, index) => {
           const htmlItem = functions.getHtmlItem(item);
           const tempDiv = document.createElement('div');
@@ -130,12 +153,18 @@ export const initContentMore = (options) => {
         endIndex = currentIndex + showCount;
       }
 
-      renderBtn();
+      if (loadMode === 'click') {
+        renderBtn();
+      }
+
       const items = container.querySelectorAll(".moreContent__item");
       const btnMore = moreContentInfo.querySelector('.moreContent__btn')
       const length = items.length;
-      if (length === data.length && btnMore) {
-        btnMore.classList.add('full')
+      if (length === data.length) {
+        fullItems = true;
+        if (btnMore) {
+          btnMore.classList.add('full')
+        }
       }
 
       firstRender = false;
@@ -149,7 +178,8 @@ export const initContentMore = (options) => {
   const handleButtonClick = (e) => {
     if (
       !e.target.closest(".moreContent__btn") ||
-      !moreContent.contains(e.target)
+      !moreContent.contains(e.target) ||
+      loadMode !== 'click'
     )
       return;
 
@@ -180,7 +210,7 @@ export const initContentMore = (options) => {
   const scrollTop = (element) => {
     const offsetY = element.getBoundingClientRect().top + scrollY - 110;
     window.scrollTo({
-      top : offsetY,
+      top: offsetY,
       behavior: "smooth",
     })
   };
@@ -188,12 +218,23 @@ export const initContentMore = (options) => {
   resetState(showCount);
   renderContent();
 
-  moreContent.addEventListener("click", handleButtonClick);
+  if (loadMode === 'click') {
+    moreContent.addEventListener("click", handleButtonClick);
+  } else if (loadMode === 'lazy') {
+    window.addEventListener("scroll", checkScrollPosition);
+    window.addEventListener("resize", checkScrollPosition);
+  }
+
   window.addEventListener("resize", handleResize);
 
   return {
     destroy: () => {
-      document.removeEventListener("click", handleButtonClick);
+      if (loadMode === 'click') {
+        moreContent.removeEventListener("click", handleButtonClick);
+      } else if (loadMode === 'lazy') {
+        window.removeEventListener("scroll", checkScrollPosition);
+        window.removeEventListener("resize", checkScrollPosition);
+      }
       window.removeEventListener("resize", handleResize);
       resetState(showCount);
     },
