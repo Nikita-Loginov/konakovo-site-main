@@ -53,6 +53,12 @@
     }
   }
 
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
   .accordeon__answer {
     width: calc(min($maxWidth-container, 100vw) - var(--gap-block) - var(--price-block-width) - 90px);
     overflow-x: auto;

@@ -994,6 +994,35 @@ body #booking-widget-863941 {
   border-right: 1px solid rgba(76, 76, 76, 0.2);
 }
 
+.default-list-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+  padding-left: 20px;
+}
+.default-list-ul li p {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.default-list-ul li p:before,
+.default-list-ul li p:first-child:before {
+  position: absolute;
+  left: -18px;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  background-color: #4c4c4c;
+  border-radius: 50%;
+  content: "";
+}
+
 @media (min-width: 992px) {
   body #booking-widget-863941 .booking-widget-863941__dropdown {
     top: calc(100% + 10px);

@@ -14,7 +14,6 @@ const swipers = [
     selector: ".price__mini-tabs.swiper",
     breakpoint: 7423423542567,
     options: {
-      loop: true,
       slidesPerView: 'auto',
       spaceBetween: 20,
     },
