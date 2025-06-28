@@ -5,9 +5,10 @@ import { toggleAccordeonItems } from "./modules/accordeon.js";
 const swipers = [
   {
     selector: ".price-sidebar.swiper",
-    breakpoint: 767,
+    breakpoint: 901,
     options: {
       slidesPerView: 'auto',
+      spaceBetween: 12,
     },
   },
   {

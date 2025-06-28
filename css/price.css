@@ -1,6 +1,11 @@
 .price {
-  --gap-block: 130px;
+  --gap-block: clamp(1.875rem, -6.6397rem + 17.762vw, 8.125rem);
   --price-block-width: 215px;
+}
+@media (max-width: 900px) {
+  .price {
+    --price-block-width: 100%;
+  }
 }
 .price__inner {
   display: -webkit-box;
@@ -39,7 +44,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 40px;
+  gap: clamp(1.5rem, 0.1377rem + 2.8419vw, 2.5rem);
 }
 .price__box.active {
   display: -webkit-box;
@@ -76,6 +81,19 @@
 @media (max-width: 1223px) {
   .price .accordeon__answer {
     width: calc(min(clamp(88.125rem, 83.1389rem + 10.4012vw, 92.5rem), 100vw) - var(--gap-block) - var(--price-block-width) - clamp(1rem, 0.2285rem + 2.9744vw, 2.8125rem) * 2);
+  }
+}
+@media (max-width: 900px) {
+  .price .accordeon__answer {
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .price__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 

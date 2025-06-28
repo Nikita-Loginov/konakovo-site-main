@@ -962,6 +962,45 @@ body #booking-widget-863941 {
 .tabs-media .tab-btn.active {
   color: #4c4c4c;
 }
+@media (max-width: 900px) {
+  .tabs-media {
+    max-width: 100%;
+    gap: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .tabs-media .swiper-slide:not(:last-child) .tab-btn {
+    padding-bottom: 12px;
+  }
+  .tabs-media .swiper-slide {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .tabs-media .swiper-slide .tab-btn {
+    padding: 12px;
+    border: 1px solid rgba(76, 76, 76, 0.2);
+    min-height: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    min-width: 158px;
+  }
+  .tabs-media .swiper-slide .tab-btn.active {
+    background-color: rgba(76, 76, 76, 0.2);
+  }
+}
 
 .table-main {
   border-collapse: separate;
