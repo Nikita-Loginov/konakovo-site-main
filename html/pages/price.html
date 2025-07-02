@@ -44,19 +44,21 @@
       <main class="main">
         <section class="price">
           <div class="container">
-            <div class="price__inner">
+            <div class="price__inner tabs-url">
               <h1 class="h2">Цены</h1>
 
               <div
                 class="price__content tabs-box"
+                data-url="tabOne"
                 data-tab-category="catalogy-btns"
               >
                 <div class="price-sidebar swiper">
                   <div class="swiper-wrapper tabs__btns tabs-media">
                     <div class="swiper-slide">
                       <div
-                        class="price-sidebar__btn active tab-btn h4"
+                        class="price-sidebar__btn tab-btn  h4"
                         data-btn-tab="accommodation"
+                        data-url-block="accommodation"
                       >
                         <span>пРОЖИВАНИЕ</span>
                       </div>
@@ -66,6 +68,7 @@
                       <div
                         class="price-sidebar__btn tab-btn h4"
                         data-btn-tab="services"
+                        data-url-block="services"
                       >
                         <span>уСЛУГИ</span>
                       </div>
@@ -74,46 +77,55 @@
                 </div>
 
                 <div class="price__info">
-                  <div class="price__boxs tabs-box" data-tab-category="time">
+                  <div
+                    class="price__boxs tabs-box"
+                    data-url="tabTwo"
+                    data-tab-category="time"
+                  >
                     <div
-                      class="price__box tab-item active"
+                      class="price__box tab-item "
                       data-block-tab="accommodation"
                       data-block-category="catalogy-btns"
                     >
                       <div class="price__mini-tabs swiper">
                         <div class="swiper-wrapper tabs__btns">
-                          <div class="swiper-slide">
+                          <!-- <div class="swiper-slide">
                             <div
-                              class="tab-btn btnTab active"
+                              class="tab-btn btnTab"
                               data-btn-tab="winter"
+                              data-url-block="winter"
                             >
                               <span>Зима</span>
                             </div>
-                          </div>
+                          </div> -->
 
-                          <div class="swiper-slide">
-                            <div class="tab-btn btnTab" data-btn-tab="spring">
+                          <!-- <div class="swiper-slide">
+                            <div class="tab-btn btnTab" data-btn-tab="spring"  data-url-block="spring">
                               <span>Весна</span>
                             </div>
-                          </div>
+                          </div> -->
 
                           <div class="swiper-slide">
-                            <div class="tab-btn btnTab" data-btn-tab="summer">
+                            <div
+                              class="tab-btn btnTab "
+                              data-btn-tab="summer"
+                              data-url-block="summer"
+                            >
                               <span>Лето</span>
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
-                            <div class="tab-btn btnTab" data-btn-tab="autumn">
+                          <!-- <div class="swiper-slide">
+                            <div class="tab-btn btnTab" data-btn-tab="autumn" data-url-block="autumn">
                               <span>Осень</span>
                             </div>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
 
                       <div class="price__boxs">
-                        <div
-                          class="price__box tab-item active"
+                        <!-- <div
+                          class="price__box tab-item "
                           data-block-tab="winter"
                           data-block-category="time"
                         >
@@ -8700,10 +8712,10 @@
                               1087746955493. Erid 2VtzqwFesnT.
                             </p>
                           </div>
-                        </div>
+                        </div> -->
 
                         <div
-                          class="price__box tab-item"
+                          class="price__box tab-item "
                           data-block-tab="summer"
                           data-block-category="time"
                         >
@@ -10080,7 +10092,7 @@
                                       </td>
 
                                       <td>
-                                        <p>400/2 500</p>
+                                        <p>4 000/2 500</p>
                                       </td>
 
                                       <td>
@@ -10214,7 +10226,7 @@
                                       </td>
 
                                       <td>
-                                        <p>400/2 500</p>
+                                        <p>4 000/2 500</p>
                                       </td>
 
                                       <td>
@@ -10348,7 +10360,7 @@
                                       </td>
 
                                       <td>
-                                        <p>400/2 500</p>
+                                        <p>4 000/2 500</p>
                                       </td>
 
                                       <td>
@@ -10474,7 +10486,7 @@
                                       </td>
 
                                       <td>
-                                        <p>400/2 500</p>
+                                        <p>4 000/2 500</p>
                                       </td>
 
                                       <td>
@@ -10600,7 +10612,7 @@
                                       </td>
 
                                       <td>
-                                        <p>400/2 500</p>
+                                        <p>4 000/2 500</p>
                                       </td>
 
                                       <td>
@@ -11493,7 +11505,11 @@
                                       </td>
 
                                       <td>
-                                        <p>30 000</p>
+                                        <p>24 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>29 000</p>
                                       </td>
 
                                       <td>
@@ -11501,19 +11517,15 @@
                                       </td>
 
                                       <td>
-                                        <p>45 000</p>
+                                        <p>34 000</p>
                                       </td>
 
                                       <td>
-                                        <p>40 000</p>
+                                        <p>39 000</p>
                                       </td>
 
                                       <td>
-                                        <p>45 000</p>
-                                      </td>
-
-                                      <td>
-                                        <p>55 000</p>
+                                        <p>44 000</p>
                                       </td>
 
                                       <td>
@@ -11521,7 +11533,27 @@
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>28 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>33 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>39 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>38 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>43 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>49 000</p>
                                       </td>
 
                                       <td>
@@ -11529,7 +11561,27 @@
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>32 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>37 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>43 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>42 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>47 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>53 000</p>
                                       </td>
 
                                       <td>
@@ -11537,67 +11589,27 @@
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>38 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>43 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>49 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>48 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>53 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
+                                        <p>59 000</p>
                                       </td>
 
                                       <td>
@@ -11605,7 +11617,7 @@
                                       </td>
                                     </tr>
 
-                                    <tr>
+                                    <!-- <tr>
                                       <td>
                                         <p>Лесная Вилла (КФК)</p>
                                       </td>
@@ -11737,7 +11749,7 @@
                                       <td>
                                         <p>-</p>
                                       </td>
-                                    </tr>
+                                    </tr> -->
 
                                     <tr>
                                       <td>
@@ -11895,7 +11907,11 @@
                                       </td>
 
                                       <td>
-                                        <p>35 000</p>
+                                        <p>29 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>34 000</p>
                                       </td>
 
                                       <td>
@@ -11903,19 +11919,15 @@
                                       </td>
 
                                       <td>
-                                        <p>50 000</p>
+                                        <p>39 000</p>
                                       </td>
 
                                       <td>
-                                        <p>50 000</p>
+                                        <p>44 000</p>
                                       </td>
 
                                       <td>
-                                        <p>55 000</p>
-                                      </td>
-
-                                      <td>
-                                        <p>65 000</p>
+                                        <p>49 000</p>
                                       </td>
 
                                       <td>
@@ -11923,87 +11935,87 @@
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>33 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>38 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>44 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>43 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>48 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>54 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>4 000/2 500</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>37 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>42 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>48 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>47 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>52 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>58 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>4 000/2 500</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>43 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>48 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>54 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>53 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>58 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>64 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>4 000/2 500</p>
                                       </td>
                                     </tr>
 
@@ -12143,7 +12155,7 @@
 
                                     <tr>
                                       <td>
-                                        <p>Марина Хаус Борис (КМК)</p>
+                                        <p>Марина Хаус (КМК)</p>
                                       </td>
 
                                       <td>
@@ -12163,7 +12175,11 @@
                                       </td>
 
                                       <td>
-                                        <p>35 000</p>
+                                        <p>29 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>34 000</p>
                                       </td>
 
                                       <td>
@@ -12171,19 +12187,15 @@
                                       </td>
 
                                       <td>
-                                        <p>50 000</p>
+                                        <p>39 000</p>
                                       </td>
 
                                       <td>
-                                        <p>50 000</p>
+                                        <p>44 000</p>
                                       </td>
 
                                       <td>
-                                        <p>55 000</p>
-                                      </td>
-
-                                      <td>
-                                        <p>65 000</p>
+                                        <p>49 000</p>
                                       </td>
 
                                       <td>
@@ -12191,7 +12203,27 @@
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>33 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>38 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>44 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>43 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>48 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>54 000</p>
                                       </td>
 
                                       <td>
@@ -12199,7 +12231,27 @@
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>37 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>42 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>48 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>47 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>52 000</p>
+                                      </td>
+
+                                      <td>
+                                        <p>58 000</p>
                                       </td>
 
                                       <td>
@@ -12207,67 +12259,27 @@
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>43 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>48 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>54 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>53 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
+                                        <p>58 000</p>
                                       </td>
 
                                       <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
-                                      </td>
-
-                                      <td>
-                                        <p>-</p>
+                                        <p>64 000</p>
                                       </td>
 
                                       <td>
@@ -12997,7 +13009,7 @@
                           </div>
                         </div>
 
-                        <div
+                        <!-- <div
                           class="price__box tab-item"
                           data-block-tab="autumn"
                           data-block-category="time"
@@ -17290,13 +17302,14 @@
                               1087746955493. Erid 2VtzqwFesnT.
                             </p>
                           </div>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                   </div>
 
                   <div
                     class="price__boxs tabs-box"
+                    data-url="tabTwo"
                     data-tab-category="services"
                   >
                     <div
@@ -17308,8 +17321,9 @@
                         <div class="swiper-wrapper tabs__btns">
                           <div class="swiper-slide">
                             <div
-                              class="tab-btn btnTab active"
+                              class="tab-btn btnTab"
                               data-btn-tab="corporate"
+                              data-url-block="corporate"
                             >
                               <span>КОРПОРАТИВНЫЕ</span>
                             </div>
@@ -17319,13 +17333,18 @@
                             <div
                               class="tab-btn btnTab"
                               data-btn-tab="addServices"
+                              data-url-block="addServices"
                             >
                               <span>ДОПОЛНИТЕЛЬНЫЕ</span>
                             </div>
                           </div>
 
                           <div class="swiper-slide">
-                            <div class="tab-btn btnTab" data-btn-tab="spa">
+                            <div
+                              class="tab-btn btnTab"
+                              data-btn-tab="spa"
+                              data-url-block="spa"
+                            >
                               <span>CПА-ЦЕНТРЫ И БАНИ</span>
                             </div>
                           </div>
@@ -17334,6 +17353,7 @@
                             <div
                               class="tab-btn btnTab"
                               data-btn-tab="anotherServices"
+                              data-url-block="anotherServices"
                             >
                               <span>пРОЧИЕ</span>
                             </div>
@@ -17341,9 +17361,42 @@
                         </div>
                       </div>
 
+                      <form class="form">
+                        <div class="form__input form__item search">
+                          <input
+                            type="search"
+                            name="search"
+                            placeholder="Какая услуга вам интересна?"
+                          />
+
+                          <span class="icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                            >
+                              <g clip-path="url(#clip0_2563_18797)">
+                                <path
+                                  d="M15.8026 14.8638L11.8232 10.8845C12.9077 9.5582 13.4408 7.86587 13.3125 6.15752C13.1841 4.44916 12.404 2.85549 11.1336 1.70615C9.86321 0.556815 8.19963 -0.0602641 6.487 -0.0174429C4.77436 0.0253784 3.1437 0.724823 1.93231 1.93622C0.720917 3.14761 0.0214721 4.77827 -0.0213491 6.4909C-0.0641703 8.20354 0.552908 9.86711 1.70225 11.1375C2.85159 12.408 4.44526 13.188 6.15361 13.3164C7.86196 13.4447 9.5543 12.9116 10.8806 11.8271L14.8599 15.8065C14.9856 15.9279 15.154 15.9951 15.3288 15.9936C15.5036 15.9921 15.6708 15.922 15.7944 15.7984C15.9181 15.6747 15.9882 15.5075 15.9897 15.3327C15.9912 15.1579 15.924 14.9895 15.8026 14.8638ZM6.66457 12.0018C5.60973 12.0018 4.57859 11.689 3.70153 11.103C2.82446 10.5169 2.14088 9.68399 1.73721 8.70945C1.33354 7.73491 1.22793 6.66256 1.43371 5.62799C1.6395 4.59343 2.14745 3.64312 2.89333 2.89724C3.63921 2.15136 4.58952 1.64341 5.62409 1.43762C6.65865 1.23183 7.73101 1.33745 8.70555 1.74112C9.68009 2.14478 10.513 2.82837 11.0991 3.70543C11.6851 4.5825 11.9979 5.61364 11.9979 6.66847C11.9963 8.08247 11.4339 9.43811 10.4341 10.438C9.4342 11.4378 8.07857 12.0002 6.66457 12.0018Z"
+                                  fill="#4C4C4C"
+                                  fill-opacity="0.7"
+                                />
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_2563_18797">
+                                  <rect width="16" height="16" fill="white" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </span>
+                        </div>
+                      </form>
+
                       <div class="price__boxs">
                         <div
-                          class="price__box tab-item active"
+                          class="price__box tab-item"
                           data-block-tab="corporate"
                           data-block-category="services"
                         >
@@ -27048,15 +27101,24 @@
 
                                     <tr>
                                       <td rowspan="2">
-                                        <p>Аренда судна с с экипажем для переправы на остров </p>
+                                        <p>
+                                          Аренда судна с с экипажем для
+                                          переправы на остров
+                                        </p>
                                       </td>
 
                                       <td rowspan="2">
-                                        <p>В зимнее время - воздушная <br> подушка, в летнее - катер</p>
+                                        <p>
+                                          В зимнее время - воздушная <br />
+                                          подушка, в летнее - катер
+                                        </p>
                                       </td>
 
                                       <td>
-                                        <p>1 поездка в одну сторону с 07:00 до 21:00</p>
+                                        <p>
+                                          1 поездка в одну сторону с 07:00 до
+                                          21:00
+                                        </p>
                                       </td>
 
                                       <td>
@@ -27066,7 +27128,10 @@
 
                                     <tr>
                                       <td>
-                                        <p>1 поездка в одну сторону с 21:00 до 07:00</p>
+                                        <p>
+                                          1 поездка в одну сторону с 21:00 до
+                                          07:00
+                                        </p>
                                       </td>
 
                                       <td>

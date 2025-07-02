@@ -73,6 +73,9 @@
           flex-direction: column;
   gap: 12px;
 }
+.price .search {
+  max-width: 686px;
+}
 .price .accordeon__answer {
   width: calc(min(clamp(88.125rem, 83.1389rem + 10.4012vw, 92.5rem), 100vw) - var(--gap-block) - var(--price-block-width) - 90px);
   overflow-x: auto;

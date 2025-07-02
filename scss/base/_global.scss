@@ -938,6 +938,31 @@ body #booking-widget-863941 {
   }
 }
 
+.search {
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .form__item input {
+    padding-right: 42px;
+  }
+
+  input {
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+      display: none;
+    }
+  }
+}
+
 @media (min-width: 992px) {
   body #booking-widget-863941 .booking-widget-863941__dropdown {
     top: calc(100% + 10px);

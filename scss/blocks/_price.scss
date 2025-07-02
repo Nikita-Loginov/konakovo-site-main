@@ -63,6 +63,10 @@
     gap: 12px;
   }
 
+  .search {
+    max-width: 686px;
+  }
+
   .accordeon__answer {
     width: calc(
       min($maxWidth-container, 100vw) - var(--gap-block) -
