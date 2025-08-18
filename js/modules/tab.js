@@ -28,6 +28,7 @@ function toggleClassesTabElements(elements) {
     const tabsBox = btn.closest(".tabs-box");
     const tabsBoxName = tabsBox.dataset.tabCategory;
 
+
     if (tabsBox.dataset.url) {
       const name = tabsBox.dataset.url;
 
@@ -97,20 +98,6 @@ function toggleClassesTabElements(elements) {
       classAction(btn, TAB__INFO.nameActiveClass, "add");
       classAction(block, TAB__INFO.nameActiveClass, "add");
 
-      const activeBtn = tabsBox.querySelector(
-        `.${TAB__INFO.nameTabBtn}.${TAB__INFO.nameActiveClass}.active`
-      );
-
-      // if (!activeBtn) {
-      //   const blockFind = block.querySelector(`.${TAB__INFO.nameTabBtn}`)
-      //   console.log(blockFind)
-      //   classAction(
-      //     blockFind,
-      //     TAB__INFO.nameActiveClass,
-      //     "add"
-      //   );
-      // }
-
       if (functionTab) {
         functionTab();
       }
@@ -135,25 +122,25 @@ function toggleClassesTabElements(elements) {
 export const setFirstActiveClasses = () => {
   const tabsUrl = document.querySelectorAll(".tabs-url");
 
-  tabsUrl.forEach((tabBox) => {
-    const firstBtnsBox = tabBox.querySelector(".tabs__btns");
+  const activateFirstTab = (container) => {
+    const tabsBtns = container.querySelector(".tabs__btns");
+    if (!tabsBtns) return;
 
-    if (!firstBtnsBox) return;
-
-    const firstBtn = firstBtnsBox.querySelector(`.${TAB__INFO.nameTabBtn}`);
+    const firstBtn = tabsBtns.querySelector(`.${TAB__INFO.nameTabBtn}`);
+    if (!firstBtn) return;
 
     const nameBox = firstBtn.dataset.btnTab;
-
     if (!nameBox) return;
 
     firstBtn.click();
 
-    // console.log(nameBox)
+    const contentBlock = document.querySelector(`[data-block-tab="${nameBox}"]`);
+    if (!contentBlock) return;
 
-    const block = document.querySelector(`[data-block-tab="${nameBox}"]`);
+    activateFirstTab(contentBlock);
+  };
 
-    const secondBtn = block.querySelector(`.${TAB__INFO.nameTabBtn}`);
-
-    secondBtn.click();
+  tabsUrl.forEach((tabBox) => {
+    activateFirstTab(tabBox);
   });
 };

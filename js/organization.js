@@ -1,6 +1,7 @@
 import { classAction } from "./modules/classActions.js";
 import { addClassDisabledBtn } from "./functions.js";
 import { initSwiper } from "./modules/renderContent.js";
+import { removeImgTop, animationBlock, showForm } from "./modules/animation.js";
 
 const initSwipers = () => {
   const organizationSwiper = new Swiper(".organization__swiper", {
@@ -40,7 +41,7 @@ const initSwipers = () => {
 
     breakpoints: {
       1381: {
-        slidesPerView: "auto",
+        slidesPerView: 3,
         effect: "coverflow",
         coverflowEffect: {
           rotate: 0,
@@ -68,6 +69,15 @@ const initSwipers = () => {
   });
 };
 
+document.addEventListener("scroll", () => {
+  removeImgTop();
+  animationBlock();
+  showForm();
+});
+
 document.addEventListener("DOMContentLoaded", () => {
+  removeImgTop();
+  animationBlock();
+  showForm();
   initSwipers();
 });

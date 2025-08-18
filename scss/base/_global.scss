@@ -170,6 +170,29 @@ h3,
   color: $title-color;
 }
 
+.p1 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  font-family: "Involve";
+}
+
+.empty {
+  background-color: #efefef;
+  padding: clamp(1.5rem, 0.2527rem + 4.8087vw, 4.25rem) 12px;
+  width: 100%;
+  text-align: center;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.75rem, 0.665rem + 0.3279vw, 0.9375rem);
+    max-width: clamp(18.75rem, 15.9153rem + 10.929vw, 25rem);
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .button,
 .link {
   display: flex;
@@ -226,6 +249,7 @@ h3,
       background-color: rgba(76, 76, 76, 0.2);
       pointer-events: none;
       color: rgba(76, 76, 76, 0.2);
+      opacity: 0.5;
     }
   }
 }
@@ -842,6 +866,39 @@ body #booking-widget-863941 {
     }
   }
 
+  &--big {
+    max-width: 100%;
+    gap: 0;
+    flex-direction: row;
+
+    .swiper-slide:not(:last-child) {
+      .tab-btn {
+        padding-bottom: 12px;
+      }
+    }
+
+    .swiper-slide {
+      width: fit-content;
+
+      .tab-btn {
+        padding: 12px;
+        border: 1px solid #4c4c4c33;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 8px;
+        min-width: 158px;
+
+        &.active {
+          background-color: #4c4c4c33;
+        }
+      }
+    }
+  }
+
   @media (max-width: 900px) {
     max-width: 100%;
     gap: 0;
@@ -869,7 +926,7 @@ body #booking-widget-863941 {
         min-width: 158px;
 
         &.active {
-          background-color: #4C4C4C33;
+          background-color: #4c4c4c33;
         }
       }
     }
@@ -887,12 +944,13 @@ body #booking-widget-863941 {
   table-layout: fixed;
 
   td {
-    padding: 15px 12px;
-    min-width: 107px;
+    padding: 15px clamp(0.3125rem, 0.1141rem + 0.765vw, 0.75rem);
     text-align: center;
-    width: fit-content;
-    white-space: nowrap;
-    border: 1px solid #4c4c4c33;
+    width: calc(100% / 7);
+    border: 1px solid rgba(76, 76, 76, 0.2);
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
 
     &.table-main__head {
       background-color: #4c4c4c33;
@@ -906,6 +964,34 @@ body #booking-widget-863941 {
 
     &:not(:last-child) {
       border-right: 1px solid #4c4c4c33;
+    }
+
+    & > *:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      counter-reset: list-mini;
+
+      li {
+        counter-increment: list-mini 1;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+
+        p {
+          &:first-child {
+            &:before {
+              content: counter(list-mini) ".";
+              margin-right: 6px;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -967,5 +1053,117 @@ body #booking-widget-863941 {
   body #booking-widget-863941 .booking-widget-863941__dropdown {
     top: calc(100% + 10px);
     bottom: auto;
+  }
+}
+
+.cookies {
+  position: fixed;
+  z-index: 999;
+  left: 24px;
+  bottom: 24px;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 384px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px 0px #0000000d, 0px 12px 12px 0px #0000000a,
+    0px 24px 16px 0px #00000008, 0px 0px 2px 0px #00000029;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  p {
+    font-family: "Involve";
+    font-size: 16px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    button {
+      width: fit-content;
+      padding-inline: 32px;
+    }
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+  }
+
+  a {
+    color: $accent-color;
+    font-weight: 500;
+  }
+
+  @media (max-width: 767px) {
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    background-color: #4c4c4c;
+    border-radius: 0;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+      color: #ffffff;
+      font-size: 12px;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    &__bottom {
+      button {
+        padding-inline: 19px;
+      }
+    }
+
+    .close {
+      display: none;
+    }
+  }
+}
+
+.medium-font {
+  font-weight: 500;
+}
+
+.involve-font {
+  font-family: "Involve";
+}
+
+.fz70-32 {
+  font-size: clamp(2rem, 1.0916rem + 3.5023vw, 4.375rem);
+}
+
+.fz36-24 {
+  font-size: clamp(1.5rem, 1.2131rem + 1.106vw, 2.25rem);
+}
+
+.arrow-link {
+  &__icon {
+    display: none;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 1223px) {
+    &__icon {
+      display: flex;
+    }
   }
 }

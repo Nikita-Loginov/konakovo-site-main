@@ -76,6 +76,19 @@
 .price .search {
   max-width: 686px;
 }
+.price .swiper--eat {
+  width: calc(min(clamp(88.125rem, 83.1389rem + 10.4012vw, 92.5rem), 100vw) - var(--gap-block) - var(--price-block-width) - 90px);
+}
+@media (max-width: 1223px) {
+  .price .swiper--eat {
+    width: calc(min(clamp(88.125rem, 83.1389rem + 10.4012vw, 92.5rem), 100vw) - var(--gap-block) - var(--price-block-width) - clamp(1rem, 0.2285rem + 2.9744vw, 2.8125rem) * 2);
+  }
+}
+@media (max-width: 900px) {
+  .price .swiper--eat {
+    width: 100%;
+  }
+}
 .price .accordeon__answer {
   width: calc(min(clamp(88.125rem, 83.1389rem + 10.4012vw, 92.5rem), 100vw) - var(--gap-block) - var(--price-block-width) - 90px);
   overflow-x: auto;

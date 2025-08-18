@@ -20,6 +20,14 @@ const swipers = [
       spaceBetween: 20,
     },
   },
+  {
+    selector: ".swiper--eat",
+    breakpoint: 7423423542567,
+    options: {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+    },
+  },
 ];
 
 document.addEventListener("click", (e) => {

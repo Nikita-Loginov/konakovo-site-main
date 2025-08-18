@@ -1,0 +1,29 @@
+.cart-block {
+  &__items {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: clamp(0.75rem, 0.0688rem + 1.421vw, 1.25rem);
+  }
+
+  &__item {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: clamp(14.375rem, -6.0602rem + 42.6288vw, 29.375rem);
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+        &:nth-child(3n + 1) {
+            grid-column: span 2;
+        }
+    }
+  }
+}

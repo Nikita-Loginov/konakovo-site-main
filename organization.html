@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="./css/organization.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper wrapper--animation">
       <header class="header">
   <div class="container">
     <div class="header__inner">
@@ -374,236 +374,499 @@
     </div>
   </div>
 </header>
- 
+
       
 
       <main class="main">
-        <section class="top-interior top-interior--organization top-interior--black">
-          <div class="container">
-            <div class="top-interior__inner">
-              <div class="top-interior__content">
+        <section class="top">
+          <div class="top__inner">
+            <div
+              class="top__content"
+              style="padding-bottom: 0; margin-bottom: auto"
+            >
+              <div class="top__head">
+                <p class="top__text">EVENT-ОТЕЛЬ КОНАКОВО РИВЕР КЛАБ</p>
 
-
-                <h1 class="top-interior__title">Организация мероприятий</h1>
+                <h1 class="top__title">
+                  Ваше место <br />
+                  для встреч с успехом
+                </h1>
               </div>
+            </div>
+          </div>
 
+          <div class="top__bottom">
+            <h2 class="top__bottom-title">
+              Ваше место <br />
+              для встреч с успехом
+            </h2>
 
-              <div class="top-interior__img">
+            <div class="top__bottom-details">
+              <p class="top__bottom-details-text">Подробнее об отеле</p>
+
+              <div class="top__bottom-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="44"
+                  height="42"
+                  viewBox="0 0 44 42"
+                  fill="none"
+                >
+                  <path
+                    d="M22 12V30.5M22 30.5L15 23M22 30.5L29 23"
+                    stroke="white"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    opacity="0.3"
+                    d="M13.5 1H9C4.58172 1 1 4.58172 1 9V33C1 37.4183 4.58172 41 9 41H13.5"
+                    stroke="#EDEDED"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    opacity="0.3"
+                    d="M30.5 1H35C39.4183 1 43 4.58172 43 9V33C43 37.4183 39.4183 41 35 41H30.5"
+                    stroke="#EDEDED"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="top__video">
+            <video
+              muted
+              loop
+              autoplay
+              playsinline
+              webkit-playsinline
+              x-webkit-airplay="allow"
+              preload="metadata"
+              poster="./img/top/one.webp"
+            >
+              <source src="./video/one.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </section>
+
+        <div class="block-main">
+          <section class="info-block">
+            <div class="info-block__inner">
+              <div class="info-block__img">
                 <picture>
                   <source
-                  media="(max-width: 500px)"
+                    media="(max-width: 1223px)"
                     srcset="
-                      ./img/top-interior/three-mobile.webp   1x,
+                      /img/organization/small-bg.webp   1x,
+                      /img/organization/small-bg2x.webp 2x
                     "
+                    type="image/webp"
                   />
+
                   <source
                     srcset="
-                      ./img/top-interior/three.webp   1x,
-                      ./img/top-interior/three2x.webp 2x
+                      /img/organization/bg.webp   1x,
+                      /img/organization/bg2x.webp 2x
                     "
+                    type="image/webp"
                   />
-                  <img
-                    src="./img/top-interior/three.webp"
-                    alt="фотография природв"
-                  />
+                  <img src="/img/organization/bg.webp" alt="фотография" />
                 </picture>
               </div>
-            </div>
-          </div>
-        </section>
 
-        <section class="organization boxSlide">
-          <div class="container">
-            <div class="organization__inner topBox">
-              <header class="topBox__header">
-                <h2 class="topBox__title">Организуем любое мероприятие!</h2>
+              <div class="info-block__content">
+                <div class="info-block__info">
+                  <p class="medium-font">Курорт Конаково Ривер Клаб — это:</p>
 
-                <div class="arrows-swiper">
-                  <button
-                    class="arrow-swiper prev disabled"
-                    aria-label="перемотать на предыдущий слайд"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      width="7.000000"
-                      height="14.000000"
-                      viewBox="0 0 7 14"
-                      fill="none"
-                    >
-                      <defs />
-                      <path
-                        id="Vector (Stroke)"
-                        d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
-                        fill="#FFFFFF"
-                        fill-opacity="1.000000"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
+                  <ul class="info-block__list">
+                    <li class="info-block__link">
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу 285 номеров"
+                        title="285 номеров"
+                        class="info-block__item fz36-24 arrow-link h5"
+                      >
+                        <span>285 номеров</span>
 
-                  <button
-                    class="arrow-swiper next"
-                    aria-label="перемотать на предыдущий слайд"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      width="7.000000"
-                      height="14.000000"
-                      viewBox="0 0 7 14"
-                      fill="none"
-                    >
-                      <defs />
-                      <path
-                        id="Vector (Stroke)"
-                        d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
-                        fill="#FFFFFF"
-                        fill-opacity="1.000000"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
+                        <span class="arrow-link__icon icon"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="17"
+                            viewBox="0 0 16 17"
+                            fill="none"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M4.2097 1.69393C4.48563 1.43188 4.92882 1.43591 5.19961 1.70294L10.3833 6.81464L10.3993 6.83284C11.2227 7.76839 11.197 9.16148 10.3385 10.0672L10.33 10.0762L5.20727 15.2894C4.94086 15.5605 4.49779 15.5713 4.21763 15.3135C3.93748 15.0557 3.92633 14.6269 4.19274 14.3558L9.31054 9.14744C9.68224 8.7513 9.69751 8.1413 9.34739 7.72742L4.20039 2.6519C3.92961 2.38488 3.93378 1.95598 4.2097 1.69393Z"
+                              fill="#4C4C4C"
+                              fill-opacity="0.4"
+                            /></svg
+                        ></span>
+                      </a>
+                    </li>
+
+                    <li class="info-block__link">
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу 7 залов от 10 до 350 участников"
+                        title="7 залов от 10 до 350 участников"
+                        class="info-block__item fz36-24 arrow-link h5"
+                      >
+                        <span>7 залов от 10 до 350 участников</span>
+
+                        <span class="arrow-link__icon icon"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="17"
+                            viewBox="0 0 16 17"
+                            fill="none"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M4.2097 1.69393C4.48563 1.43188 4.92882 1.43591 5.19961 1.70294L10.3833 6.81464L10.3993 6.83284C11.2227 7.76839 11.197 9.16148 10.3385 10.0672L10.33 10.0762L5.20727 15.2894C4.94086 15.5605 4.49779 15.5713 4.21763 15.3135C3.93748 15.0557 3.92633 14.6269 4.19274 14.3558L9.31054 9.14744C9.68224 8.7513 9.69751 8.1413 9.34739 7.72742L4.20039 2.6519C3.92961 2.38488 3.93378 1.95598 4.2097 1.69393Z"
+                              fill="#4C4C4C"
+                              fill-opacity="0.4"
+                            /></svg
+                        ></span>
+                      </a>
+                    </li>
+
+                    <li class="info-block__link">
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу 6 банкетных площадок"
+                        title="6 банкетных площадок"
+                        class="info-block__item fz36-24 arrow-link h5"
+                      >
+                        <span>6 банкетных площадок</span>
+
+                        <span class="arrow-link__icon icon"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="17"
+                            viewBox="0 0 16 17"
+                            fill="none"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M4.2097 1.69393C4.48563 1.43188 4.92882 1.43591 5.19961 1.70294L10.3833 6.81464L10.3993 6.83284C11.2227 7.76839 11.197 9.16148 10.3385 10.0672L10.33 10.0762L5.20727 15.2894C4.94086 15.5605 4.49779 15.5713 4.21763 15.3135C3.93748 15.0557 3.92633 14.6269 4.19274 14.3558L9.31054 9.14744C9.68224 8.7513 9.69751 8.1413 9.34739 7.72742L4.20039 2.6519C3.92961 2.38488 3.93378 1.95598 4.2097 1.69393Z"
+                              fill="#4C4C4C"
+                              fill-opacity="0.4"
+                            /></svg
+                        ></span>
+                      </a>
+                    </li>
+
+                    <li class="info-block__link">
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу 3 ресторана"
+                        title="3 ресторана"
+                        class="info-block__item fz36-24 arrow-link h5"
+                      >
+                        <span>3 ресторана</span>
+
+                        <span class="arrow-link__icon icon"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="17"
+                            viewBox="0 0 16 17"
+                            fill="none"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M4.2097 1.69393C4.48563 1.43188 4.92882 1.43591 5.19961 1.70294L10.3833 6.81464L10.3993 6.83284C11.2227 7.76839 11.197 9.16148 10.3385 10.0672L10.33 10.0762L5.20727 15.2894C4.94086 15.5605 4.49779 15.5713 4.21763 15.3135C3.93748 15.0557 3.92633 14.6269 4.19274 14.3558L9.31054 9.14744C9.68224 8.7513 9.69751 8.1413 9.34739 7.72742L4.20039 2.6519C3.92961 2.38488 3.93378 1.95598 4.2097 1.69393Z"
+                              fill="#4C4C4C"
+                              fill-opacity="0.4"
+                            /></svg></span
+                      ></a>
+                    </li>
+
+                    <li class="info-block__link">
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу 200 гектаров территории для активных программ"
+                        title="200 гектаров территории для активных программ"
+                        class="info-block__item fz36-24 arrow-link h5"
+                      >
+                        <span
+                          >200 гектаров территории для активных программ</span
+                        >
+
+                        <span class="arrow-link__icon icon"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="17"
+                            viewBox="0 0 16 17"
+                            fill="none"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M4.2097 1.69393C4.48563 1.43188 4.92882 1.43591 5.19961 1.70294L10.3833 6.81464L10.3993 6.83284C11.2227 7.76839 11.197 9.16148 10.3385 10.0672L10.33 10.0762L5.20727 15.2894C4.94086 15.5605 4.49779 15.5713 4.21763 15.3135C3.93748 15.0557 3.92633 14.6269 4.19274 14.3558L9.31054 9.14744C9.68224 8.7513 9.69751 8.1413 9.34739 7.72742L4.20039 2.6519C3.92961 2.38488 3.93378 1.95598 4.2097 1.69393Z"
+                              fill="#4C4C4C"
+                              fill-opacity="0.4"
+                            /></svg
+                        ></span>
+                      </a>
+                    </li>
+
+                    <li class="info-block__link">
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу река волга"
+                        title="река волга"
+                        class="info-block__item fz36-24 arrow-link h5"
+                      >
+                        <span>река волга</span>
+
+                        <span class="arrow-link__icon icon"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="17"
+                            viewBox="0 0 16 17"
+                            fill="none"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M4.2097 1.69393C4.48563 1.43188 4.92882 1.43591 5.19961 1.70294L10.3833 6.81464L10.3993 6.83284C11.2227 7.76839 11.197 9.16148 10.3385 10.0672L10.33 10.0762L5.20727 15.2894C4.94086 15.5605 4.49779 15.5713 4.21763 15.3135C3.93748 15.0557 3.92633 14.6269 4.19274 14.3558L9.31054 9.14744C9.68224 8.7513 9.69751 8.1413 9.34739 7.72742L4.20039 2.6519C3.92961 2.38488 3.93378 1.95598 4.2097 1.69393Z"
+                              fill="#4C4C4C"
+                              fill-opacity="0.4"
+                            /></svg
+                        ></span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-              </header>
 
-              <div class="organization__content">
-                <div class="swiper organization__swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="organization__slide promo-card">
-                        <div class="promo-card__content">
-                          <h4 class="promo-card__title">свадьба</h4>
-                        </div>
+                <div class="info-block__details">
+                  <p class="h2 involve-font medium-font fz70-32">
+                    наша mice-команда готова к вашим мероприятиям!
+                  </p>
 
-                        <div class="promo-card__img">
-                          <picture>
-                            <source
-                              srcset="
-                                ./img/organization/one.webp   1x,
-                                ./img/organization/one2x.webp 2x
-                              "
-                            />
-                            <img
-                              src="./img/organization/one.webp"
-                              alt="фотография свадьбы"
-                            />
-                          </picture>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="info-block__btns">
+                    <a
+                      href="#"
+                      title="бот для mice-запросов"
+                      class="button button--green"
+                      >бот для mice-запросов</a
+                    >
 
-                    <div class="swiper-slide">
-                      <div class="organization__slide promo-card">
-                        <div class="promo-card__content">
-                          <h4 class="promo-card__title">День рождения</h4>
-                        </div>
+                    <a href="#" title="Связаться" class="button button--white"
+                      >Связаться</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="organization boxSlide">
+            <div class="container">
+              <div class="organization__inner topBox">
+                <header class="topBox__header">
+                  <h2 class="topBox__title">Организуем любое мероприятие!</h2>
 
-                        <div class="promo-card__img">
-                          <picture>
-                            <source
-                              srcset="
-                                ./img/organization/two.webp   1x,
-                                ./img/organization/two2x.webp 2x
-                              "
-                            />
-                            <img
-                              src="./img/organization/two.webp"
-                              alt="фотография свадьбы"
-                            />
-                          </picture>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="arrows-swiper">
+                    <button
+                      class="arrow-swiper prev disabled"
+                      aria-label="перемотать на предыдущий слайд"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="7.000000"
+                        height="14.000000"
+                        viewBox="0 0 7 14"
+                        fill="none"
+                      >
+                        <defs />
+                        <path
+                          id="Vector (Stroke)"
+                          d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                          fill="#FFFFFF"
+                          fill-opacity="1.000000"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
 
-                    <div class="swiper-slide">
-                      <div class="organization__slide promo-card">
-                        <div class="promo-card__content">
-                          <h4 class="promo-card__title">Детский праздник</h4>
-                        </div>
+                    <button
+                      class="arrow-swiper next"
+                      aria-label="перемотать на предыдущий слайд"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="7.000000"
+                        height="14.000000"
+                        viewBox="0 0 7 14"
+                        fill="none"
+                      >
+                        <defs />
+                        <path
+                          id="Vector (Stroke)"
+                          d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                          fill="#FFFFFF"
+                          fill-opacity="1.000000"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </header>
 
-                        <div class="promo-card__img">
-                          <picture>
-                            <source
-                              srcset="
-                                ./img/organization/three.webp   1x,
-                                ./img/organization/three2x.webp 2x
-                              "
-                            />
-                            <img
-                              src="./img/organization/three.webp"
-                              alt="фотография свадьбы"
-                            />
-                          </picture>
-                        </div>
-                      </div>
-                    </div>
+                <div class="organization__content">
+                  <div class="swiper organization__swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="organization__slide promo-card">
+                          <div class="promo-card__content">
+                            <h4 class="promo-card__title">свадьба</h4>
+                          </div>
 
-                    <div class="swiper-slide">
-                      <div class="organization__slide promo-card">
-                        <div class="promo-card__content">
-                          <h4 class="promo-card__title">Дружеская вечеринка</h4>
-                        </div>
-
-                        <div class="promo-card__img">
-                          <picture>
-                            <source
-                              srcset="
-                                ./img/organization/four.webp   1x,
-                                ./img/organization/four2x.webp 2x
-                              "
-                            />
-                            <img
-                              src="./img/organization/four.webp"
-                              alt="фотография свадьбы"
-                            />
-                          </picture>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <div class="organization__slide promo-card">
-                        <div class="promo-card__content">
-                          <h4 class="promo-card__title">свадьба</h4>
-                        </div>
-
-                        <div class="promo-card__img">
-                          <picture>
-                            <source
-                              srcset="
-                                ./img/organization/one.webp   1x,
-                                ./img/organization/one2x.webp 2x
-                              "
-                            />
-                            <img
-                              src="./img/organization/one.webp"
-                              alt="фотография свадьбы"
-                            />
-                          </picture>
+                          <div class="promo-card__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./img/organization/one.webp   1x,
+                                  ./img/organization/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="./img/organization/one.webp"
+                                alt="фотография свадьбы"
+                              />
+                            </picture>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div class="swiper-slide">
-                      <div class="organization__slide promo-card">
-                        <div class="promo-card__content">
-                          <h4 class="promo-card__title">День рождения</h4>
+                      <div class="swiper-slide">
+                        <div class="organization__slide promo-card">
+                          <div class="promo-card__content">
+                            <h4 class="promo-card__title">День рождения</h4>
+                          </div>
+
+                          <div class="promo-card__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./img/organization/two.webp   1x,
+                                  ./img/organization/two2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="./img/organization/two.webp"
+                                alt="фотография свадьбы"
+                              />
+                            </picture>
+                          </div>
                         </div>
+                      </div>
 
-                        <div class="promo-card__img">
-                          <picture>
-                            <source
-                              srcset="
-                                ./img/organization/two.webp   1x,
-                                ./img/organization/two2x.webp 2x
-                              "
-                            />
-                            <img
-                              src="./img/organization/two.webp"
-                              alt="фотография свадьбы"
-                            />
-                          </picture>
+                      <div class="swiper-slide">
+                        <div class="organization__slide promo-card">
+                          <div class="promo-card__content">
+                            <h4 class="promo-card__title">Детский праздник</h4>
+                          </div>
+
+                          <div class="promo-card__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./img/organization/three.webp   1x,
+                                  ./img/organization/three2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="./img/organization/three.webp"
+                                alt="фотография свадьбы"
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="organization__slide promo-card">
+                          <div class="promo-card__content">
+                            <h4 class="promo-card__title">
+                              Дружеская вечеринка
+                            </h4>
+                          </div>
+
+                          <div class="promo-card__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./img/organization/four.webp   1x,
+                                  ./img/organization/four2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="./img/organization/four.webp"
+                                alt="фотография свадьбы"
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="organization__slide promo-card">
+                          <div class="promo-card__content">
+                            <h4 class="promo-card__title">свадьба</h4>
+                          </div>
+
+                          <div class="promo-card__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./img/organization/one.webp   1x,
+                                  ./img/organization/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="./img/organization/one.webp"
+                                alt="фотография свадьбы"
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="organization__slide promo-card">
+                          <div class="promo-card__content">
+                            <h4 class="promo-card__title">День рождения</h4>
+                          </div>
+
+                          <div class="promo-card__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./img/organization/two.webp   1x,
+                                  ./img/organization/two2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="./img/organization/two.webp"
+                                alt="фотография свадьбы"
+                              />
+                            </picture>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -611,272 +874,278 @@
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section class="places">
-          <div class="container">
-            <div class="places__inner topBox">
-              <header class="topBox__header">
-                <h2 class="topBox__title">Варианты площадок</h2>
+          <section class="places">
+            <div class="container">
+              <div class="places__inner topBox">
+                <header class="topBox__header">
+                  <h2 class="topBox__title">Варианты площадок</h2>
 
-                <div class="arrows-swiper">
-                  <button
-                    class="arrow-swiper prev"
-                    aria-label="перемотать на предыдущий слайд"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      width="7.000000"
-                      height="14.000000"
-                      viewBox="0 0 7 14"
-                      fill="none"
+                  <div class="arrows-swiper">
+                    <button
+                      class="arrow-swiper prev"
+                      aria-label="перемотать на предыдущий слайд"
                     >
-                      <defs />
-                      <path
-                        id="Vector (Stroke)"
-                        d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
-                        fill="#FFFFFF"
-                        fill-opacity="1.000000"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="7.000000"
+                        height="14.000000"
+                        viewBox="0 0 7 14"
+                        fill="none"
+                      >
+                        <defs />
+                        <path
+                          id="Vector (Stroke)"
+                          d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                          fill="#FFFFFF"
+                          fill-opacity="1.000000"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
 
-                  <button
-                    class="arrow-swiper next"
-                    aria-label="перемотать на предыдущий слайд"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      width="7.000000"
-                      height="14.000000"
-                      viewBox="0 0 7 14"
-                      fill="none"
+                    <button
+                      class="arrow-swiper next"
+                      aria-label="перемотать на предыдущий слайд"
                     >
-                      <defs />
-                      <path
-                        id="Vector (Stroke)"
-                        d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
-                        fill="#FFFFFF"
-                        fill-opacity="1.000000"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </header>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="7.000000"
+                        height="14.000000"
+                        viewBox="0 0 7 14"
+                        fill="none"
+                      >
+                        <defs />
+                        <path
+                          id="Vector (Stroke)"
+                          d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                          fill="#FFFFFF"
+                          fill-opacity="1.000000"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </header>
 
-              <div class="places__swiper-box">
-                <div class="swiper places__swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="places-item">
-                        <div class="places-item__content">
-                          <h3 class="places-item__title">Конференц-залы</h3>
+                <div class="places__swiper-box">
+                  <div class="swiper places__swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="places-item">
+                          <div class="places-item__content">
+                            <h3 class="places-item__title">Конференц-залы</h3>
 
-                          <a
-                            href="halls.html"
-                            aria-label="перейти к площадки"
-                            class="link link--white"
-                          >
-                            Подробнее
-                          </a>
+                            <a
+                              href="halls.html"
+                              aria-label="перейти к площадки"
+                              class="link link--white"
+                            >
+                              Подробнее
+                            </a>
+                          </div>
+
+                          <div class="places-item__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./img/places-item/one.webp   1x,
+                                  ./img/places-item/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="./img/places-item/one.webpng"
+                                alt="фотография зала"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </div>
                         </div>
+                      </div>
 
-                        <div class="places-item__img">
-                          <picture>
-                            <source
-                              srcset="
-                                ./img/places-item/one.webp 1x,
-                                ./img/places-item/one2x.webp 2x
-                              "
-                            />
-                            <img
-                              src="./img/places-item/one.webpng"
-                              alt="фотография зала"
-                              loading="lazy"
-                            />
-                          </picture>
+                      <div class="swiper-slide">
+                        <div class="places-item">
+                          <div class="places-item__content">
+                            <h3 class="places-item__title">
+                              Банкетные площадки
+                            </h3>
+
+                            <a
+                              href="halls.html"
+                              aria-label="перейти к площадки"
+                              class="link link--white"
+                            >
+                              Подробнее
+                            </a>
+                          </div>
+
+                          <div class="places-item__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./img/places-item/two.webp   1x,
+                                  ./img/places-item/two2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="./img/places-item/two.webp"
+                                alt="фотография зала"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="places-item">
+                          <div class="places-item__content">
+                            <h3 class="places-item__title">для тимбилдинга</h3>
+
+                            <a
+                              href="halls.html"
+                              aria-label="перейти к площадки"
+                              class="link link--white"
+                            >
+                              Подробнее
+                            </a>
+                          </div>
+
+                          <div class="places-item__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./img/places-item/three.webp   1x,
+                                  ./img/places-item/three2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="./img/places-item/three.webp"
+                                alt="фотография зала"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="places-item">
+                          <div class="places-item__content">
+                            <h3 class="places-item__title">Банкетный Зал</h3>
+
+                            <a
+                              href="halls.html"
+                              aria-label="перейти к площадки"
+                              class="link link--white"
+                            >
+                              Подробнее
+                            </a>
+                          </div>
+
+                          <div class="places-item__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  ./img/places-item/four.webp   1x,
+                                  ./img/places-item/four2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="./img/places-item/four.webp"
+                                alt="фотография зала"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </div>
                         </div>
                       </div>
                     </div>
-
-                    <div class="swiper-slide">
-                      <div class="places-item">
-                        <div class="places-item__content">
-                          <h3 class="places-item__title">Банкетные площадки</h3>
-
-                          <a
-                            href="halls.html"
-                            aria-label="перейти к площадки"
-                            class="link link--white"
-                          >
-                            Подробнее
-                          </a>
-                        </div>
-
-                        <div class="places-item__img">
-                          <picture>
-                            <source
-                              srcset="
-                                ./img/places-item/two.webp 1x,
-                                ./img/places-item/two2x.webp 2x
-                              "
-                            />
-                            <img
-                              src="./img/places-item/two.webp"
-                              alt="фотография зала"
-                              loading="lazy"
-                            />
-                          </picture>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <div class="places-item">
-                        <div class="places-item__content">
-                          <h3 class="places-item__title">для тимбилдинга</h3>
-
-                          <a
-                            href="halls.html"
-                            aria-label="перейти к площадки"
-                            class="link link--white"
-                          >
-                            Подробнее
-                          </a>
-                        </div>
-
-                        <div class="places-item__img">
-                          <picture>
-                            <source
-                              srcset="
-                                ./img/places-item/three.webp 1x,
-                                ./img/places-item/three2x.webp 2x
-                              "
-                            />
-                            <img
-                              src="./img/places-item/three.webp"
-                              alt="фотография зала"
-                              loading="lazy"
-                            />
-                          </picture>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <div class="places-item">
-                        <div class="places-item__content">
-                          <h3 class="places-item__title">Банкетный Зал</h3>
-
-                          <a
-                            href="halls.html"
-                            aria-label="перейти к площадки"
-                            class="link link--white"
-                          >
-                            Подробнее
-                          </a>
-                        </div>
-
-                        <div class="places-item__img">
-                          <picture>
-                            <source
-                              srcset="
-                                ./img/places-item/four.webp 1x,
-                                ./img/places-item/four2x.webp 2x
-                              "
-                            />
-                            <img
-                              src="./img/places-item/four.webp"
-                              alt="фотография зала"
-                              loading="lazy"
-                            />
-                          </picture>
-                        </div>
-                      </div>
-                    </div>
-
-
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section class="record">
-          <div class="container">
-            <div class="record__inner">
-              <div class="record__info">
-                <h2 class="record__title">Оставить заявку на организацию мероприятия</h2>
+          <section class="record">
+            <div class="container">
+              <div class="record__inner">
+                <div class="record__info">
+                  <h2 class="record__title">
+                    Оставить заявку на организацию мероприятия
+                  </h2>
+                </div>
+
+                <form novalidate class="form" data-form>
+                  <div class="form__inputs">
+                    <div class="form__input form__item">
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        pattern="[A-Za-zА-Яа-яЁё\s]*"
+                        data-title="Нельзя вводить цифры"
+                        data-empty="Ведите минимум один символ"
+                        minlength="1"
+                        aria-errormessage="name-errors"
+                        placeholder="Имя*"
+                      />
+
+                      <div class="form__errors" id="name-errors"></div>
+                    </div>
+
+                    <div class="form__input form__item">
+                      <input
+                        type="tel"
+                        name="tel"
+                        minlength="1"
+                        required
+                        pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}"
+                        data-title="телефон должен иметь вид +{7} (000) 000-00-00"
+                        data-empty="Ведите минимум один символ"
+                        aria-errormessage="tel-errors"
+                        placeholder="Телефон*"
+                      />
+
+                      <div class="form__errors" id="tel-errors"></div>
+                    </div>
+
+                    <div class="form__input form__item">
+                      <input type="email" name="email" placeholder="Email" />
+                    </div>
+
+                    <div class="form__item form__item--big">
+                      <textarea
+                        class="form__textarea form__item form__item--big"
+                        placeholder="Укажите ваш запрос"
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form__bottom">
+                    <div class="form__bottom-textbox">
+                      <p>
+                        Нажимая на кнопку, я соглашаюсь на обработку
+                        персональных данных
+                      </p>
+                    </div>
+
+                    <button
+                      class="button button--white modal-open disabled"
+                      data-modal="succesModal"
+                      type="submit"
+                    >
+                      отправить заявку
+                    </button>
+                  </div>
+                </form>
               </div>
-
-              <form novalidate class="form" data-form>
-                <div class="form__inputs">
-                  <div class="form__input form__item">
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      pattern="[A-Za-zА-Яа-яЁё\s]*"
-                      data-title="Нельзя вводить цифры"
-                      data-empty="Ведите минимум один символ"
-                      minlength="1"
-                      aria-errormessage="name-errors"
-                      placeholder="Имя*"
-                    />
-
-                    <div class="form__errors" id="name-errors"></div>
-                  </div>
-
-                  <div class="form__input form__item">
-                    <input
-                      type="tel"
-                      name="tel"
-                      minlength="1"
-                      required
-                      pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}"
-                      data-title="телефон должен иметь вид +{7} (000) 000-00-00"
-                      data-empty="Ведите минимум один символ"
-                      aria-errormessage="tel-errors"
-                      placeholder="Телефон*"
-                    />
-
-                    <div class="form__errors" id="tel-errors"></div>
-                  </div>
-
-                  <div class="form__item form__item--big">
-                    <textarea
-                      class="form__textarea form__item form__item--big"
-                      placeholder="Ваш вопрос?"
-                    ></textarea>
-                  </div>
-                </div>
-
-                <div class="form__bottom">
-                  <div class="form__bottom-textbox">
-                    <p>
-                      Нажимая на кнопку, я соглашаюсь на обработку персональных
-                      данных
-                    </p>
-                  </div>
-
-                  <button
-                    class="button button--white modal-open disabled"
-                    data-modal="succesModal"
-                    type="submit"
-                  >
-                    отправить заявку
-                  </button>
-                </div>
-              </form>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
 
       <form class="reservation-form reservation-form--scroll">

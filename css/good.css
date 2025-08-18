@@ -58,8 +58,7 @@
 }
 .goodTop .reservation-form__box-content {
   background-color: #fff;
-  -webkit-backdrop-filter: blur(0px);
-          backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
 }
 @media (max-width: 1023px) {
   .goodTop__img img {
@@ -428,6 +427,29 @@
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 4px;
+  }
+}
+
+.cart-block__items {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: clamp(0.75rem, 0.0688rem + 1.421vw, 1.25rem);
+}
+.cart-block__item {
+  width: 100%;
+}
+.cart-block__item img {
+  width: 100%;
+  height: clamp(14.375rem, -6.0602rem + 42.6288vw, 29.375rem);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1023px) {
+  .cart-block__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cart-block__item:nth-child(3n+1) {
+    grid-column: span 2;
   }
 }
 

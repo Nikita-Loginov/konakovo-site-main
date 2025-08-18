@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   handleAllSliders();
-  initCustomSelects(document.querySelector('.guests'))
+  initCustomSelects(document.querySelector('.guests'));
 });
 
 
@@ -177,6 +177,8 @@ document.addEventListener('click', (e) => {
     guests.classList.add('open')
   } else {
     const guests = document.querySelector('.reservation-form__box.guests');
+
+    if (!guests) return
 
     guests.classList.remove('open')
   }

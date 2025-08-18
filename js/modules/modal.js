@@ -14,6 +14,8 @@ function openModal() {
             modal.classList.remove("open");
           });
 
+
+         
           if (modalBlock.classList.contains("modalBlockTwo")) {
             getImgSrc(modalBtn, modalBlock);
           }
@@ -34,6 +36,8 @@ function openModal() {
 function getImgSrc(btn, modalBlock) {
   const img = btn.querySelector(".modal-img");
 
+  console.log(img)
+
   if (img) {
     const src = img.getAttribute("src");
 
@@ -52,6 +56,8 @@ const getVideoSrc = (btn, modalBlock) => {
 function setImgSrc(src, modalBlock) {
   const imgModalBlock = modalBlock.querySelector(".modalBlockTwo__img");
   imgModalBlock.textContent = "";
+
+ 
 
   const html = `
             <picture>

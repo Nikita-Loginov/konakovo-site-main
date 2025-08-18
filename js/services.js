@@ -4,6 +4,7 @@ import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
 import { classAction } from "./modules/classActions.js";
 import { addClassDisabledBtn } from "./functions.js";
 import { initContentMore } from "./functions.js";
+import { setDisabledArrow } from "./modules/swiper.js";
 
 const CONFIG = {
   ACTIVE_TAB: 0,
@@ -177,17 +178,48 @@ const renderBtnTabs = (
   initSwiper(tabSwiper, {
     slidesPerView: "auto",
     spaceBetween: 20,
+    navigation: {
+      nextEl: ".servicesMore .arrow-swiper.next",
+      prevEl: ".servicesMore .arrow-swiper.prev",
+    },
+    on: {
+      init: function (swiper) {
+        setDisabledArrow(swiper);
+      },
+      slideChange: function (swiper) {
+        setDisabledArrow(swiper);
+      },
+      resize: function (swiper) {
+        setDisabledArrow(swiper);
+      },
+    },
   });
 };
-
 
 const handleClickBtnTab = (e) => {
   const btn = e.target.closest(".servicesMore__tab");
 
   if (!btn) return;
+
   const name = btn.dataset.btnTab;
+
+  const baseUrl = window.location.origin + window.location.pathname;
+  const newUrl = `${baseUrl}?${name}`;
+
+  window.location.href = newUrl;
+};
+
+const initialTabs = () => {
+  const location = window.location.search;
+  const name = location.split("?").at(-1);
+
+  const tab = document.querySelector(`[data-btn-tab="${name}"]`)
+
   const itemIndex = serviceCategories.findIndex((item) => item.name === name);
-  const servicesMoreItem = document.querySelector(`.servicesMore__item.${name}`);
+  const servicesMoreItem = document.querySelector(
+    `.servicesMore__item.${name}`
+  );
+
 
   if (itemIndex !== CONFIG.ACTIVE_TAB) {
     CONFIG.ACTIVE_TAB = itemIndex;
@@ -202,13 +234,13 @@ const handleClickBtnTab = (e) => {
       "active",
       "remove"
     );
-    classAction(servicesMoreItem, 'active', 'add');
-    classAction(btn, "active", "add");
+    classAction(servicesMoreItem, "active", "add");
+    classAction(tab, "active", "add");
   }
 
   const items = serviceItems.filter((item) => {
-    return item.category === name
-  })
+    return item.category === name;
+  });
 
   initContentMore({
     containerSelector: ".servicesMore__item.active .servicesMore__items",
@@ -221,17 +253,17 @@ const handleClickBtnTab = (e) => {
       collapsed: "показать еще",
     },
     maxWidthInit: 13300000,
-    loadMode: 'lazy',
+    loadMode: "lazy",
     functions: {
       getHtmlItem: (item) => {
-        if (!item) return '';
-  
-        const imgBase = item.imgSrc || ''; 
-        const imgFormat = item.imgFormat || 'webp';
-        const imgSrc = `${imgBase}.${imgFormat}`; 
-        const imgSrc2x = `${imgBase}2x.${imgFormat}`; 
-        const name = item.name
-  
+        if (!item) return "";
+
+        const imgBase = item.imgSrc || "";
+        const imgFormat = item.imgFormat || "webp";
+        const imgSrc = `${imgBase}.${imgFormat}`;
+        const imgSrc2x = `${imgBase}2x.${imgFormat}`;
+        const name = item.name;
+
         return `
            <div class="services-item moreContent__item">
                         <div class="services-item__img">
@@ -259,30 +291,15 @@ const handleClickBtnTab = (e) => {
         `;
       },
     },
-  
-  })
-
-  
-
+  });
 };
-
-const initialTabs = () => {
-    const location = window.location.search;
-    const name = location.split('?').at(-1)
-
-    const tab = document.querySelector(`[data-btn-tab="${name}"]`);
-    console.log(tab)
-    const servicesMoreItemActive = document.querySelector('.servicesMore__tab.active')
-    tab.click()
-
-}
 
 // document.querySelector('.header__logo').click();
 
 document.addEventListener("DOMContentLoaded", () => {
   renderBtnTabs();
   // renderInfoServices();
-  initialTabs()
+  initialTabs();
 });
 
 const hoverPlacesCards = () => {

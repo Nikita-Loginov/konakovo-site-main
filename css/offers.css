@@ -80,8 +80,7 @@
 }
 .offers-item__bottom {
   background-color: rgba(76, 76, 76, 0.2);
-  -webkit-backdrop-filter: blur(7px);
-          backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
   padding: 16px 0 clamp(1rem, 0.6611rem + 1.3065vw, 1.8125rem) 16px;
 }
 .offers-item__textbox p {

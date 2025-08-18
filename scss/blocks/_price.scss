@@ -67,6 +67,25 @@
     max-width: 686px;
   }
 
+  .swiper--eat {
+    width: calc(
+      min($maxWidth-container, 100vw) - var(--gap-block) -
+        var(--price-block-width) - 90px
+    );
+
+    @media (max-width: 1223px) {
+      width: calc(
+        min($maxWidth-container, 100vw) - var(--gap-block) -
+          var(--price-block-width) -
+          (clamp(1rem, 0.2285rem + 2.9744vw, 2.8125rem) * 2)
+      );
+    }
+
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+  }
+
   .accordeon__answer {
     width: calc(
       min($maxWidth-container, 100vw) - var(--gap-block) -
