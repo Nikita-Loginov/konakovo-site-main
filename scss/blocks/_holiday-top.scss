@@ -1,0 +1,16 @@
+.holiday-top {
+  max-height: 100vh;
+  width: 100%;
+  background-color: $accent-color;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

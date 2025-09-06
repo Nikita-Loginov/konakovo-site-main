@@ -1,0 +1,42 @@
+.holaday-info {
+  --gap-info: 24px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  &__top,
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--gap-info);
+  }
+
+  &__top {
+    max-width: 756px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__imgs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 230px;
+    background-color: #b9b9b9;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+  }
+}

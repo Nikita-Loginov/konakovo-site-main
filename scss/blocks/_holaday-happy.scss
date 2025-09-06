@@ -1,0 +1,45 @@
+.holaday-happy {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 220px 20px 0;
+    border-bottom: 1px solid #4C4C4C33;
+
+    &:not(:first-child) {
+        border-top: 1px solid #4C4C4C33;
+    }
+  }
+
+  &__item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+  }
+
+  &__item-img {
+    max-width: 460px;
+    width: 100%;
+    height: 240px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+  }
+}

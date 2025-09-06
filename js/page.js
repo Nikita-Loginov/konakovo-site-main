@@ -7,6 +7,9 @@ import { setProccent } from "./modules/preloader.js";
 import { initFormValidation } from "./modules/validate.js";
 import { checkScrollY } from "./modules/header.js";
 import { renderMoreSwiper } from "./modules/renderAction.js";
+import { checkStorage } from "./modules/localStorage.js";
+import { initStorage } from "./modules/localStorage.js";
+import { getHeightHeader } from "./modules/header.js";
 
 calendar();
 setProccent();
@@ -19,6 +22,7 @@ toggleBlockWhenScrollFooter(document.querySelector(".link--fixed"));
 
 document.addEventListener("scroll", () => {
   toggleBlockWhenScrollFooter();
+  getHeightHeader()
 
   toggleBlockWhenScrollFooter(document.querySelector(".link--fixed"));
 });
@@ -72,6 +76,8 @@ const initFractionPagination = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  checkStorage();
+  getHeightHeader()
   const forms = document.querySelectorAll("[data-form]");
 
   forms.forEach((form) => {
@@ -86,3 +92,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("scroll", checkScrollY);
+
+document.addEventListener('click', initStorage);

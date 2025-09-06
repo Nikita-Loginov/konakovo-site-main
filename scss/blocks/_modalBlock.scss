@@ -203,6 +203,7 @@
     flex-direction: column;
     gap: 40px;
     transform: translateY(-200%);
+    transition: all .5s;
   }
 
   &__top {

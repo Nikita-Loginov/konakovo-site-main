@@ -59,33 +59,71 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <div class="cookies">
-      <div class="cookies__content">
-        <p>
-          Мы используем cookies, чтобы сайт работал лучше. Нажимая на кнопку
-          «Принять», вы соглашаетесь с
-          <a href="/privacy.html">политикой конфиденциальности</a> 
-        </p>
+    <div class="fixed-content">
+      <div class="cookies">
+        <div class="cookies__content">
+          <p>
+            Мы используем cookies, чтобы сайт работал лучше. Нажимая на кнопку
+            «Принять», вы соглашаетесь с
+            <a href="/privacy.html">политикой конфиденциальности</a> 
+          </p>
 
-        <button class="icon close" type="button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-          >
-            <path
-              d="M13.0568 14.6831C13.4714 15.1056 14.1437 15.1056 14.5584 14.6831C14.973 14.2606 14.973 13.5755 14.5584 13.153L9.51856 8.01752L14.6718 2.99981C15.0957 2.587 15.111 1.90214 14.7059 1.47012C14.3008 1.03811 13.6287 1.02255 13.2047 1.43536L8.0166 6.48705L2.94279 1.31689C2.52815 0.894369 1.85587 0.89437 1.44123 1.31689C1.02658 1.73941 1.02658 2.42445 1.44123 2.84697L6.48091 7.98236L1.32824 12.9995C0.904277 13.4124 0.889004 14.0972 1.29412 14.5292C1.69924 14.9612 2.37134 14.9768 2.7953 14.564L7.98287 9.51283L13.0568 14.6831Z"
-              fill="#4C4C4C"
-              fill-opacity="0.4"
-            />
-          </svg>
-        </button>
+          <button class="icon close" type="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+            >
+              <path
+                d="M13.0568 14.6831C13.4714 15.1056 14.1437 15.1056 14.5584 14.6831C14.973 14.2606 14.973 13.5755 14.5584 13.153L9.51856 8.01752L14.6718 2.99981C15.0957 2.587 15.111 1.90214 14.7059 1.47012C14.3008 1.03811 13.6287 1.02255 13.2047 1.43536L8.0166 6.48705L2.94279 1.31689C2.52815 0.894369 1.85587 0.89437 1.44123 1.31689C1.02658 1.73941 1.02658 2.42445 1.44123 2.84697L6.48091 7.98236L1.32824 12.9995C0.904277 13.4124 0.889004 14.0972 1.29412 14.5292C1.69924 14.9612 2.37134 14.9768 2.7953 14.564L7.98287 9.51283L13.0568 14.6831Z"
+                fill="#4C4C4C"
+                fill-opacity="0.4"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="cookies__bottom">
+          <button type="button" class="button button--green">Принять</button>
+        </div>
       </div>
 
-      <div class="cookies__bottom">
-        <button type="button" class="button button--green">Принять</button>
+      <div class="info-popup"  data-storage-key="hotel_notice"
+      data-storage-type="localstorage"
+      data-storage-days="30"
+      data-storage-remove="true"
+      data-storage-close>
+        <div class="info-popup__content">
+          <div class="info-popup__textbox">
+            <p><b>Уважаемые гости!</b></p>
+
+            <p>
+              На территории отеля возможны перебои с мобильным интернетом по
+              независящим от отеля причинам.
+            </p>
+
+            <p>Пожалуйста, пользуйтесь сетью WI-FI.</p>
+          </div>
+
+          <button class="icon close" data-storage-close type="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              style="pointer-events: none;"
+            >
+              <path
+                d="M13.0568 14.6831C13.4714 15.1056 14.1437 15.1056 14.5584 14.6831C14.973 14.2606 14.973 13.5755 14.5584 13.153L9.51856 8.01752L14.6718 2.99981C15.0957 2.587 15.111 1.90214 14.7059 1.47012C14.3008 1.03811 13.6287 1.02255 13.2047 1.43536L8.0166 6.48705L2.94279 1.31689C2.52815 0.894369 1.85587 0.89437 1.44123 1.31689C1.02658 1.73941 1.02658 2.42445 1.44123 2.84697L6.48091 7.98236L1.32824 12.9995C0.904277 13.4124 0.889004 14.0972 1.29412 14.5292C1.69924 14.9612 2.37134 14.9768 2.7953 14.564L7.98287 9.51283L13.0568 14.6831Z"
+                fill="#4C4C4C"
+                fill-opacity="0.4"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -453,10 +491,12 @@
                         '.top .booking-widget-863941__cell .booking-widget-863941__btn[type="submit"]'
                       );
 
-                      const boxRelative = document.querySelector('.top #booking-widget-container')
+                      const boxRelative = document.querySelector(
+                        ".top #booking-widget-container"
+                      );
 
-                      boxRelative.style.opacity = '1'
-                       boxRelative.style.visibility = 'м'
+                      boxRelative.style.opacity = "1";
+                      boxRelative.style.visibility = "м";
 
                       if (btn) {
                         btn.textContent = "Забронировать";
@@ -1892,7 +1932,12 @@
                   >
                     карта территории
 
-                    <img style="display: none;" class="modal-img" src="/img/territory/one.webp" alt="description" />
+                    <img
+                      style="display: none"
+                      class="modal-img"
+                      src="/img/territory/one.webp"
+                      alt="description"
+                    />
                   </button>
                 </div>
               </div>
@@ -1906,7 +1951,12 @@
               >
                 карта территории
 
-                <img style="display: none;" class="modal-img" src="/img/territory/one.webp" alt="description" />
+                <img
+                  style="display: none"
+                  class="modal-img"
+                  src="/img/territory/one.webp"
+                  alt="description"
+                />
               </button>
               <picture>
                 <source
@@ -2494,8 +2544,8 @@
       <div class="modalBlock cardModal modalBlockTwo">
         <div class="modalBlock__inner">
           <div class="modalBlockTwo__img cardModal__img">
-              <!-- <img class="modal-img" src="./img/offers/one.webp" alt="description" /> -->
-            </picture>
+            <!-- <img class="modal-img" src="./img/offers/one.webp" alt="description" /> -->
+            <!-- </picture> -->
           </div>
 
           <button class="modal-close">

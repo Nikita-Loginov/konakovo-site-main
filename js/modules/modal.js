@@ -14,8 +14,6 @@ function openModal() {
             modal.classList.remove("open");
           });
 
-
-         
           if (modalBlock.classList.contains("modalBlockTwo")) {
             getImgSrc(modalBtn, modalBlock);
           }
@@ -36,7 +34,7 @@ function openModal() {
 function getImgSrc(btn, modalBlock) {
   const img = btn.querySelector(".modal-img");
 
-  console.log(img)
+  console.log(img);
 
   if (img) {
     const src = img.getAttribute("src");
@@ -56,8 +54,6 @@ const getVideoSrc = (btn, modalBlock) => {
 function setImgSrc(src, modalBlock) {
   const imgModalBlock = modalBlock.querySelector(".modalBlockTwo__img");
   imgModalBlock.textContent = "";
-
- 
 
   const html = `
             <picture>
@@ -104,7 +100,23 @@ function closeModal() {
   });
 }
 
+const checkStartOpen = () => {
+  const modals = document.querySelectorAll('.modalBlock');
+
+  modals.forEach((modal) => {
+    if (modal.classList.contains('open') || modal.classList.contains('openFinish')) {
+      document.body.classList.add("open-modal");
+      document.documentElement.classList.add("open-modal");
+
+      if (modal.classList.contains('openFinish')) {
+        modal.classList.add('open')
+      }
+    }
+  })
+}
+
 export function initModal() {
+  checkStartOpen()
   openModal();
   closeModal();
 }

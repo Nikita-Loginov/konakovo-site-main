@@ -1,24 +1,24 @@
 .tags {
-    &__content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 40px;
-        border: 1px solid #D7D2CF;
-        border-radius: 8px;
-        padding: 10px 12px;
-        line-height: 1;
-        text-transform: uppercase;
-        font-size: clamp(0.875rem, 0.8192rem + 0.2151vw, 1rem);
-    }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    border: 1px solid #d7d2cf;
+    border-radius: 8px;
+    padding: 10px 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: clamp(0.875rem, 0.8192rem + 0.2151vw, 1rem);
+  }
 
-    .swiper-slide  {
-        width: fit-content;
-    }
+  .swiper-slide {
+    width: fit-content;
+  }
 
-    @media(max-width:550px) {
-        font-weight: 400;
-        text-transform: none;
-        font-family: 'Involve';
-    }
+  @media (max-width: 550px) {
+    font-weight: 400;
+    text-transform: none;
+    font-family: "Involve";
+  }
 }
