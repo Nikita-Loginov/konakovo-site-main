@@ -1,13 +1,20 @@
 .holiday-about {
-    &__inner {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 24px;
-    }
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+  }
 
-    &__info {
-        max-width: 686px;
-        width: 100%;
+  &__info {
+    width: 100%;
+  }
+
+  @media (max-width: 1023px) {
+    &__inner {
+      display: flex;
+      flex-direction: column;
     }
+  }
 }

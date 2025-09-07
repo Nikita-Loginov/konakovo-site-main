@@ -1,0 +1,68 @@
+.holiday-detail {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__swiper-box {
+    width: 100%;
+    min-width: 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: 600px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    background-color: $brown-color;
+    padding: 40px clamp(1rem, -0.434rem + 4.5889vw, 2.5rem);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 1.1415rem + 1.1472vw, 1.875rem);
+    justify-content: center;
+  }
+
+  &__info,
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 0.1635rem + 2.6769vw, 1.875rem);
+  }
+
+  &__footer {
+    // gap: clamp(1.5rem, 1.1415rem + 1.1472vw, 1.875rem);
+  }
+
+  @media(max-width:1023px) {
+    .container {
+      padding: 0;
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .swiper {
+      height: clamp(18.75rem, -5.1506rem + 76.4818vw, 43.75rem);
+
+      .arrows-swiper {
+        display: none;
+      }
+    }
+
+    &__img {
+      height: auto;
+    }
+  }
+}

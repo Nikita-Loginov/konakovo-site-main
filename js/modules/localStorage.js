@@ -30,8 +30,6 @@ const getStorage = (name, useLocalStorage = false) => {
 export const initStorage = (e) => {
   const { target } = e;
 
-  console.log(target)
-
   if (target.dataset.storageBtn !== undefined) {
     const element = target.closest("[data-storage-key]");
     if (!element) return;

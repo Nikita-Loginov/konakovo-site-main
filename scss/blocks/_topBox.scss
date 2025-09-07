@@ -14,19 +14,21 @@
     }
 
     &--center {
-        align-items: center;
-      }
+      align-items: center;
+    }
   }
 
   &--mini {
     gap: 20px;
+
+    @media(max-width:767px) {
+      gap: 24px;
+    }
   }
 
   &__textbox {
     text-align: right;
   }
-
-
 
   &__info-mini {
     max-width: 676px;

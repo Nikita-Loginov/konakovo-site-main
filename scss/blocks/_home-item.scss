@@ -1,0 +1,72 @@
+.home-item {
+  background-color: $brown-color-150;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: clamp(36.25rem, 29.0798rem + 22.9446vw, 43.75rem);
+
+  &__img {
+    width: 100%;
+    height: clamp(14.375rem, 8.9974rem + 17.2084vw, 20rem);
+    background-color: #ccc1c1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: clamp(1rem, 0.283rem + 2.2945vw, 1.75rem);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 1.022rem + 1.5296vw, 2rem);
+    flex:1;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 0.761rem + 0.7648vw, 1.25rem);
+    flex:1;
+  }
+
+  .textbox {
+    p {
+        overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      line-clamp: 4;
+      box-orient: vertical;
+    }
+  }
+
+  &__info-top,
+  &__info-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__footer {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  @media(max-width:767px) {
+    .h4 {
+      font-size: clamp(2rem, 1.044rem + 3.0593vw, 3rem);
+    }
+    
+    &__footer {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

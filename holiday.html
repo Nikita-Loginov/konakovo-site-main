@@ -386,6 +386,14 @@
           <div class="holiday-top__img">
             <picture>
               <source
+                media="(max-width: 767px)"
+                srcset="
+                  /img/holiday/one-media.webp   1x,
+                  /img/holiday/one-media2x.webp 2x
+                "
+              />
+
+              <source
                 srcset="/img/holiday/one.webp 1x, /img/holiday/one2x.webp 2x"
               />
               <img src="/img/holiday/one.webp" alt="фотография" />
@@ -470,7 +478,9 @@
         <section class="holaday-happy">
           <div class="container">
             <div class="holaday-happy__inner topBox topBox--mini">
-              <h2 class="h2">Представьте себе</h2>
+              <div class="topBox__header">
+                <h2 class="h2">Представьте себе</h2>
+              </div>
 
               <div class="holaday-happy__content">
                 <div class="holaday-happy__items">
@@ -546,7 +556,7 @@
           </div>
         </section>
 
-        <section class="holiday-about">
+         <section class="holiday-about">
           <div class="container">
             <div class="holiday-about__inner">
               <h2 class="h2">Мы подготовили для вас</h2>
@@ -904,6 +914,1507 @@
                       </a>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="holiday-rooms tabs-url tabs-box"
+          data-url="holiday-rooms"
+          data-tab-category="holiday-rooms"
+        >
+          <div class="container">
+            <div class="holiday-rooms__inner topBox">
+              <div class="holiday-rooms__top">
+                <h2 class="h2">Номерной фонд</h2>
+
+                <div class="swiper swiper--tabs">
+                  <div class="swiper-wrapper tabs__btns">
+                    <div class="swiper-slide">
+                      <div
+                        class="tab-btn btnTab"
+                        data-btn-tab="rooms"
+                        data-url-block="rooms"
+                        role="button"
+                      >
+                        <span>Номера</span>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div
+                        class="tab-btn btnTab"
+                        data-btn-tab="cottages"
+                        data-url-block="cottages"
+                        role="button"
+                      >
+                        <span>Коттеджи</span>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div
+                        class="tab-btn btnTab"
+                        data-btn-tab="glamping"
+                        data-url-block="glamping"
+                        role="button"
+                      >
+                        <span>Глэмпинг</span>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div
+                        class="tab-btn btnTab"
+                        data-btn-tab="island"
+                        data-url-block="island"
+                        role="button"
+                      >
+                        <span>Island</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="holiday-rooms__content">
+                <div class="holiday-rooms__items-box">
+                  <div
+                    class="holiday-rooms__items tab-item"
+                    data-block-tab="rooms"
+                    data-block-category="holiday-rooms"
+                  >
+                    <div class="home-item">
+                      <div class="home-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/homes/one.webp   1x,
+                              /img/homes/one2x.webp 2x
+                            "
+                          />
+                          <img src="/img/homes/one.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="home-item__content">
+                        <div class="home-item__info">
+                          <div class="home-item__info-top">
+                            <h3 class="h4">Баррель Борис</h3>
+
+                            <div class="textbox">
+                              <p>
+                                Бутик-модуль с панорамными окнами на основной
+                                территории отеля. Уникальный дизайн, близость
+                                к основному корпусу отеля, окно в потолке
+                                для наблюдением за звёздами!
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="home-item__info-bottom">
+                            <div class="tags-filters">
+                              <div class="filter-tag filter-tag--green">
+                                <p>- 10% до 1 ноября</p>
+                              </div>
+
+                              <div class="filter-tag filter-tag--brown">
+                                <p>2 основных места</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <footer class="home-item__footer">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Забронировать"
+                            title="Забронировать (30.12 - 02.01)"
+                            class="button button--green"
+                            >Забронировать (30.12 - 02.01)</a
+                          >
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу номера"
+                            title="Подробнее"
+                            class="button button--noBg"
+                            >Подробнее</a
+                          >
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="home-item">
+                      <div class="home-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/homes/two.webp   1x,
+                              /img/homes/two2x.webp 2x
+                            "
+                          />
+                          <img src="/img/homes/two.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="home-item__content">
+                        <div class="home-item__info">
+                          <div class="home-item__info-top">
+                            <h3 class="h4">Стандарт</h3>
+
+                            <div class="textbox">
+                              <p>
+                                Однокомнатные комфортабельные номера в основном
+                                корпусе, расположены на 1–4 этажах, с балконом,
+                                сочетают в себе уют, яркость дизайна,
+                                выразительные интерьеры с авторским
+                                декорированием стен и мебели.
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="home-item__info-bottom">
+                            <div class="tags-filters">
+                              <div class="filter-tag filter-tag--green">
+                                <p>- 10% до 1 ноября</p>
+                              </div>
+
+                              <div class="filter-tag filter-tag--brown">
+                                <p>2 основных места</p>
+                              </div>
+
+                              <div class="filter-tag filter-tag--brown">
+                                <p>Локация – Яхт-клуб</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <footer class="home-item__footer">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Забронировать"
+                            title="Забронировать (30.12 - 02.01)"
+                            class="button button--green"
+                            >Забронировать (30.12 - 02.01)</a
+                          >
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу номера"
+                            title="Подробнее"
+                            class="button button--noBg"
+                            >Подробнее</a
+                          >
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="home-item">
+                      <div class="home-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/homes/seven.webp   1x,
+                              /img/homes/seven2x.webp 2x
+                            "
+                          />
+                          <img src="/img/homes/seven.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="home-item__content">
+                        <div class="home-item__info">
+                          <div class="home-item__info-top">
+                            <h3 class="h4">Супериор</h3>
+
+                            <div class="textbox">
+                              <p>
+                                Однокомнатные уютные номера, которые расположены
+                                на 1-4 этажах, сочетают в себе уют, яркость
+                                дизайна, выразительные интерьеры с авторским
+                                декорированием стен и мебели.
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="home-item__info-bottom">
+                            <div class="tags-filters">
+                              <div class="filter-tag filter-tag--green">
+                                <p>- 10% до 1 ноября</p>
+                              </div>
+
+                              <div class="filter-tag filter-tag--brown">
+                                <p>2 основных места</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <footer class="home-item__footer">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Забронировать"
+                            title="Забронировать (30.12 - 02.01)"
+                            class="button button--green"
+                            >Забронировать (30.12 - 02.01)</a
+                          >
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу номера"
+                            title="Подробнее"
+                            class="button button--noBg"
+                            >Подробнее</a
+                          >
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="home-item">
+                      <div class="home-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/homes/eight.webp   1x,
+                              /img/homes/eight2x.webp 2x
+                            "
+                          />
+                          <img src="/img/homes/eight.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="home-item__content">
+                        <div class="home-item__info">
+                          <div class="home-item__info-top">
+                            <h3 class="h4">Делюкс Натури</h3>
+
+                            <div class="textbox">
+                              <p>
+                                Однокомнатные номера повышенной комфортности,
+                                располагаются в новом арт-отеле «Naturi».
+                                Все номера имеют балконы и обращены к Волге,
+                                номера первого этажа имеют прямой выход
+                                через собственный палисадник на терр…
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="home-item__info-bottom">
+                            <div class="tags-filters">
+                              <div class="filter-tag filter-tag--green">
+                                <p>- 10% до 1 ноября</p>
+                              </div>
+
+                              <div class="filter-tag filter-tag--brown">
+                                <p>2 основных места</p>
+                              </div>
+
+                              <div class="filter-tag filter-tag--brown">
+                                <p>Локация – Яхт-клуб</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <footer class="home-item__footer">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Забронировать"
+                            title="Забронировать (30.12 - 02.01)"
+                            class="button button--green"
+                            >Забронировать (30.12 - 02.01)</a
+                          >
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу номера"
+                            title="Подробнее"
+                            class="button button--noBg"
+                            >Подробнее</a
+                          >
+                        </footer>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="holiday-rooms__items tab-item"
+                    data-block-tab="cottages"
+                    data-block-category="holiday-rooms"
+                  >
+                    <div class="home-item">
+                      <div class="home-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/homes/three.webp   1x,
+                              /img/homes/three2x.webp 2x
+                            "
+                          />
+                          <img src="/img/homes/three.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="home-item__content">
+                        <div class="home-item__info">
+                          <div class="home-item__info-top">
+                            <h3 class="h4">Таунхаус Клео</h3>
+
+                            <div class="textbox">
+                              <p>
+                                Трехкомнатный двухэтажный таунхаус с собственным
+                                входом, в интерьере которого просматривается
+                                авторский почерк, индивидуальность и изящество,
+                                которые придают отдыху еще больше красок!
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="home-item__info-bottom">
+                            <div class="tags-filters">
+                              <div class="filter-tag filter-tag--green">
+                                <p>- 10% до 1 ноября</p>
+                              </div>
+
+                              <div class="filter-tag filter-tag--brown">
+                                <p>2 основных места</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <footer class="home-item__footer">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Забронировать"
+                            title="Забронировать (30.12 - 02.01)"
+                            class="button button--green"
+                            >Забронировать (30.12 - 02.01)</a
+                          >
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу номера"
+                            title="Подробнее"
+                            class="button button--noBg"
+                            >Подробнее</a
+                          >
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="home-item">
+                      <div class="home-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/homes/four.webp   1x,
+                              /img/homes/four2x.webp 2x
+                            "
+                          />
+                          <img src="/img/homes/four.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="home-item__content">
+                        <div class="home-item__info">
+                          <div class="home-item__info-top">
+                            <h3 class="h4">Марина Хаус</h3>
+
+                            <div class="textbox">
+                              <p>
+                                Трехкомнатный коттедж с панорамными окнами и
+                                просторной террасой на первой береговой линии. 2
+                                изолированные спальни, полностью оборудованная
+                                кухня-гостиная, санузел с душевой кабиной.
+                                Стильный, современный и миним...
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="home-item__info-bottom">
+                            <div class="tags-filters">
+                              <div class="filter-tag filter-tag--green">
+                                <p>- 10% до 1 ноября</p>
+                              </div>
+
+                              <div class="filter-tag filter-tag--brown">
+                                <p>2 основных места</p>
+                              </div>
+
+                              <div class="filter-tag filter-tag--brown">
+                                <p>Локация – Яхт-клуб</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <footer class="home-item__footer">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Забронировать"
+                            title="Забронировать (30.12 - 02.01)"
+                            class="button button--green"
+                            >Забронировать (30.12 - 02.01)</a
+                          >
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу номера"
+                            title="Подробнее"
+                            class="button button--noBg"
+                            >Подробнее</a
+                          >
+                        </footer>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="holiday-rooms__items tab-item"
+                    data-block-tab="glamping"
+                    data-block-category="holiday-rooms"
+                  >
+                    <div class="home-item">
+                      <div class="home-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/homes/six.webp   1x,
+                              /img/homes/six2x.webp 2x
+                            "
+                          />
+                          <img src="/img/homes/six.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="home-item__content">
+                        <div class="home-item__info">
+                          <div class="home-item__info-top">
+                            <h3 class="h4">Архбро</h3>
+
+                            <div class="textbox">
+                              <p>
+                                Находится рядом с мангальной площадкой и зоной
+                                отдыха, окна выходят прямо на Волгу. Созданы по
+                                принципу строительства яхт — максимальная
+                                эргономичность на малой площади. Окружен
+                                сосновым лесом! Находится рядом с мангальной
+                                площадкой и зоной отдыха, окна выходят прямо на
+                                Волгу. Созданы по принципу строительства яхт —
+                                максимальная эргономичность на малой площади.
+                                Окружен сосновым лесом!
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="home-item__info-bottom">
+                            <div class="tags-filters">
+                              <div class="filter-tag filter-tag--green">
+                                <p>- 10% до 1 ноября</p>
+                              </div>
+
+                              <div class="filter-tag filter-tag--brown">
+                                <p>2 основных места</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <footer class="home-item__footer">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Забронировать"
+                            title="Забронировать (30.12 - 02.01)"
+                            class="button button--green"
+                            >Забронировать (30.12 - 02.01)</a
+                          >
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу номера"
+                            title="Подробнее"
+                            class="button button--noBg"
+                            >Подробнее</a
+                          >
+                        </footer>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="holiday-rooms__items tab-item"
+                    data-block-tab="island"
+                    data-block-category="holiday-rooms"
+                  >
+                    <div class="home-item">
+                      <div class="home-item__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/homes/five.webp   1x,
+                              /img/homes/five2x.webp 2x
+                            "
+                          />
+                          <img src="/img/homes/five.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="home-item__content">
+                        <div class="home-item__info">
+                          <div class="home-item__info-top">
+                            <h3 class="h4">Остров Свободы</h3>
+
+                            <div class="textbox">
+                              <p>Ваш персональный остров Свободы!</p>
+                            </div>
+                          </div>
+
+                          <div class="home-item__info-bottom">
+                            <div class="tags-filters">
+                              <div class="filter-tag filter-tag--green">
+                                <p>- 10% до 1 ноября</p>
+                              </div>
+
+                              <div class="filter-tag filter-tag--brown">
+                                <p>2 основных места</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <footer class="home-item__footer">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Забронировать"
+                            title="Забронировать (30.12 - 02.01)"
+                            class="button button--green"
+                            >Забронировать (30.12 - 02.01)</a
+                          >
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу номера"
+                            title="Подробнее"
+                            class="button button--noBg"
+                            >Подробнее</a
+                          >
+                        </footer>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="holiday-banner">
+                  <div class="holiday-banner__content">
+                    <p class="h4">
+                      В КАЖДОМ НОМЕРЕ ДЕД МОРОЗ ОСТАВИЛ ДЛЯ ВАС НОВОГОДНИЙ
+                      ПОДАРОК!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="holiday-format tabs-box"
+          data-tab-category="holiday-format"
+        >
+          <div class="container">
+            <div class="holiday-format__inner topBox">
+              <div class="holiday-format__top">
+                <h2 class="h2">
+                  Выбирайте свой формат <br />
+                  самой главной ночи в году
+                </h2>
+
+                <div class="textbox">
+                  <p>
+                    Ведь только в Конаково Ривер Клаб есть предложение на любой
+                    вкус
+                  </p>
+                </div>
+              </div>
+
+              <div class="holiday-format__content">
+                <div class="holiday-format__swiper-box">
+                  <div class="swiper swiper--holiday-format">
+                    <div class="swiper-wrapper tabs__btns tabs__btns-big">
+                      <div class="swiper-slide">
+                        <div
+                          class="tab-btn tab-big tab-big--media active"
+                          data-btn-tab="ball"
+                          role="button"
+                        >
+                          <p class="h4 libel-font">ИЗЫСКАННЫЙ БАЛ</p>
+
+                          <p class="p1">банкет в Основном корпусе</p>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div
+                          class="tab-btn tab-big tab-big--media"
+                          data-btn-tab="air"
+                          role="button"
+                        >
+                          <p class="h4 libel-font">КРАСОЧНЫЙ OPEN AIR</p>
+
+                          <p class="p1">вечеринка в Волшебном лесу</p>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div
+                          class="tab-btn tab-big tab-big--media"
+                          data-btn-tab="party"
+                          role="button"
+                        >
+                          <p class="h4 libel-font">PARTY</p>
+
+                          <p class="p1">на персональном острове</p>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div
+                          class="tab-btn tab-big tab-big--media"
+                          data-btn-tab="famile"
+                          role="button"
+                        >
+                          <p class="h4 libel-font">СЕМЕЙНЫЙ НОВЫЙ ГОД</p>
+
+                          <p class="p1">в уютном коттедже</p>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div
+                          class="tab-btn tab-big tab-big--media"
+                          data-btn-tab="children"
+                          role="button"
+                        >
+                          <p class="h4 libel-font">ДЕТСКИЙ НОВЫЙ ГОД</p>
+
+                          <p class="p1">путешествие в сказку в детском клубе</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="holiday-format__items">
+                  <div
+                    class="holiday-format__item tab-item active"
+                    data-block-tab="ball"
+                    data-block-category="holiday-format"
+                    data-swiper="holiday-format"
+                  >
+                    <div class="swiper swiper--holiday-format-img">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="holiday-format__item-img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/homes/one.webp   1x,
+                                  /img/homes/one2x.webp 2x
+                                "
+                              />
+                              <img src="/img/homes/one.webp" alt="фотография" />
+                            </picture>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <div class="holiday-format__item-img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/homes/one.webp   1x,
+                                  /img/homes/one2x.webp 2x
+                                "
+                              />
+                              <img src="/img/homes/one.webp" alt="фотография" />
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="arrows-swiper arrows-swiper--position">
+                        <button class="arrow-swiper prev" type="button">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="7.000000"
+                            height="14.000000"
+                            viewBox="0 0 7 14"
+                            fill="none"
+                          >
+                            <defs></defs>
+                            <path
+                              id="Vector (Stroke)"
+                              d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                              fill="#FFFFFF"
+                              fill-opacity="1.000000"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+
+                        <button class="arrow-swiper next" type="button">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="7.000000"
+                            height="14.000000"
+                            viewBox="0 0 7 14"
+                            fill="none"
+                          >
+                            <defs></defs>
+                            <path
+                              id="Vector (Stroke)"
+                              d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                              fill="#FFFFFF"
+                              fill-opacity="1.000000"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div
+                        class="swiper-pagination swiper-pagination--position"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="holiday-format__item tab-item"
+                    data-block-tab="air"
+                    data-block-category="holiday-format"
+                    data-swiper="holiday-format"
+                  >
+                    <div class="swiper swiper--holiday-format-img">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="holiday-format__item-img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/homes/two.webp   1x,
+                                  /img/homes/two2x.webp 2x
+                                "
+                              />
+                              <img src="/img/homes/two.webp" alt="фотография" />
+                            </picture>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <div class="holiday-format__item-img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/homes/one.webp   1x,
+                                  /img/homes/one2x.webp 2x
+                                "
+                              />
+                              <img src="/img/homes/one.webp" alt="фотография" />
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="arrows-swiper arrows-swiper--position">
+                        <button class="arrow-swiper prev" type="button">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="7.000000"
+                            height="14.000000"
+                            viewBox="0 0 7 14"
+                            fill="none"
+                          >
+                            <defs></defs>
+                            <path
+                              id="Vector (Stroke)"
+                              d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                              fill="#FFFFFF"
+                              fill-opacity="1.000000"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+
+                        <button class="arrow-swiper next" type="button">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="7.000000"
+                            height="14.000000"
+                            viewBox="0 0 7 14"
+                            fill="none"
+                          >
+                            <defs></defs>
+                            <path
+                              id="Vector (Stroke)"
+                              d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                              fill="#FFFFFF"
+                              fill-opacity="1.000000"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div
+                        class="swiper-pagination swiper-pagination--position"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="holiday-format__item tab-item"
+                    data-block-tab="party"
+                    data-block-category="holiday-format"
+                    data-swiper="holiday-format"
+                  >
+                    <div class="swiper swiper--holiday-format-img">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="holiday-format__item-img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/homes/three.webp   1x,
+                                  /img/homes/three2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/homes/three.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <div class="holiday-format__item-img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/homes/one.webp   1x,
+                                  /img/homes/one2x.webp 2x
+                                "
+                              />
+                              <img src="/img/homes/one.webp" alt="фотография" />
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="arrows-swiper arrows-swiper--position">
+                        <button class="arrow-swiper prev" type="button">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="7.000000"
+                            height="14.000000"
+                            viewBox="0 0 7 14"
+                            fill="none"
+                          >
+                            <defs></defs>
+                            <path
+                              id="Vector (Stroke)"
+                              d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                              fill="#FFFFFF"
+                              fill-opacity="1.000000"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+
+                        <button class="arrow-swiper next" type="button">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="7.000000"
+                            height="14.000000"
+                            viewBox="0 0 7 14"
+                            fill="none"
+                          >
+                            <defs></defs>
+                            <path
+                              id="Vector (Stroke)"
+                              d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                              fill="#FFFFFF"
+                              fill-opacity="1.000000"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div
+                        class="swiper-pagination swiper-pagination--position"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="holiday-format__item tab-item"
+                    data-block-tab="famile"
+                    data-block-category="holiday-format"
+                    data-swiper="holiday-format"
+                  >
+                    <div class="swiper swiper--holiday-format-img">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="holiday-format__item-img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/homes/four.webp   1x,
+                                  /img/homes/four2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/homes/four.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <div class="holiday-format__item-img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/homes/one.webp   1x,
+                                  /img/homes/one2x.webp 2x
+                                "
+                              />
+                              <img src="/img/homes/one.webp" alt="фотография" />
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="arrows-swiper arrows-swiper--position">
+                        <button class="arrow-swiper prev" type="button">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="7.000000"
+                            height="14.000000"
+                            viewBox="0 0 7 14"
+                            fill="none"
+                          >
+                            <defs></defs>
+                            <path
+                              id="Vector (Stroke)"
+                              d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                              fill="#FFFFFF"
+                              fill-opacity="1.000000"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+
+                        <button class="arrow-swiper next" type="button">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="7.000000"
+                            height="14.000000"
+                            viewBox="0 0 7 14"
+                            fill="none"
+                          >
+                            <defs></defs>
+                            <path
+                              id="Vector (Stroke)"
+                              d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                              fill="#FFFFFF"
+                              fill-opacity="1.000000"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div
+                        class="swiper-pagination swiper-pagination--position"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="holiday-format__item tab-item"
+                    data-block-tab="children"
+                    data-block-category="holiday-format"
+                    data-swiper="holiday-format"
+                  >
+                    <div class="swiper swiper--holiday-format-img">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="holiday-format__item-img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/homes/six.webp   1x,
+                                  /img/homes/six2x.webp 2x
+                                "
+                              />
+                              <img src="/img/homes/six.webp" alt="фотография" />
+                            </picture>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <div class="holiday-format__item-img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/homes/one.webp   1x,
+                                  /img/homes/one2x.webp 2x
+                                "
+                              />
+                              <img src="/img/homes/one.webp" alt="фотография" />
+                            </picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="arrows-swiper arrows-swiper--position">
+                        <button class="arrow-swiper prev" type="button">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="7.000000"
+                            height="14.000000"
+                            viewBox="0 0 7 14"
+                            fill="none"
+                          >
+                            <defs></defs>
+                            <path
+                              id="Vector (Stroke)"
+                              d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                              fill="#FFFFFF"
+                              fill-opacity="1.000000"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+
+                        <button class="arrow-swiper next" type="button">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="7.000000"
+                            height="14.000000"
+                            viewBox="0 0 7 14"
+                            fill="none"
+                          >
+                            <defs></defs>
+                            <path
+                              id="Vector (Stroke)"
+                              d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                              fill="#FFFFFF"
+                              fill-opacity="1.000000"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div
+                        class="swiper-pagination swiper-pagination--position"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+       <section class="holiday-detail">
+          <div class="container">
+            <div class="holiday-detail__inner">
+              <div class="holiday-detail__swiper-box">
+                <div class="swiper swiper--holiday-detail">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="holiday-detail__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/holiday-detail/one.webp   1x,
+                              /img/holiday-detail/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/holiday-detail/one.webp"
+                            alt="фотография"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="holiday-detail__img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/holiday-detail/one.webp   1x,
+                                /img/holiday-detail/one2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/holiday-detail/one.webp"
+                              alt="фотография"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="arrows-swiper arrows-swiper--position">
+                    <button class="arrow-swiper prev" type="button">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="7.000000"
+                        height="14.000000"
+                        viewBox="0 0 7 14"
+                        fill="none"
+                      >
+                        <defs></defs>
+                        <path
+                          id="Vector (Stroke)"
+                          d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                          fill="#FFFFFF"
+                          fill-opacity="1.000000"
+                          fill-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+
+                    <button class="arrow-swiper next" type="button">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="7.000000"
+                        height="14.000000"
+                        viewBox="0 0 7 14"
+                        fill="none"
+                      >
+                        <defs></defs>
+                        <path
+                          id="Vector (Stroke)"
+                          d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                          fill="#FFFFFF"
+                          fill-opacity="1.000000"
+                          fill-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div
+                    class="swiper-pagination swiper-pagination--position"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="holiday-detail__content">
+                <div class="holiday-detail__info">
+                  <p class="h4 libel-font">Досуг и развлечения</p>
+
+                  <div class="textbox">
+                    <p class="involve-font medium-font">
+                      Всем нашим гостям доступна инфрастуктура и развлекательная
+                      программа отеля Конаково Ривер Клаб
+                    </p>
+                  </div>
+                </div>
+
+                <div class="holiday-detail__footer">
+                  <div class="tags-filters">
+                    <div class="filter-tag filter-tag--brown">
+                      <p>Рестораны</p>
+                    </div>
+
+                    <div class="filter-tag filter-tag--brown">
+                      <p>Бильярд</p>
+                    </div>
+
+                    <div class="filter-tag filter-tag--brown">
+                      <p>Детский клуб</p>
+                    </div>
+
+                    <div class="filter-tag filter-tag--brown">
+                      <p>Каток</p>
+                    </div>
+
+                    <div class="filter-tag filter-tag--brown">
+                      <p>Ледяная горка</p>
+                    </div>
+
+                    <div class="filter-tag filter-tag--brown">
+                      <p>Концертные программы</p>
+                    </div>
+
+                    <div class="filter-tag filter-tag--brown">
+                      <p>Новогодняя елка для детей</p>
+                    </div>
+
+                    <div class="filter-tag filter-tag--brown">
+                      <p>Квадроциклы и снегоходы</p>
+                    </div>
+
+                    <div class="filter-tag filter-tag--brown">
+                      <p>СПА</p>
+                    </div>
+
+                    <div class="filter-tag filter-tag--brown">
+                      <p>Банный комплекс</p>
+                    </div>
+
+                    <div class="filter-tag filter-tag--brown">
+                      <p>Зимняя рыбалка</p>
+                    </div>
+
+                    <div class="filter-tag filter-tag--brown">
+                      <p>Беговые лыжи</p>
+                    </div>
+
+                    <div class="filter-tag filter-tag--brown">
+                      <p>Спортивный зал</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery gallery--noNone">
+          <div class="container">
+            <div class="gallery__inner topBox">
+              <header class="topBox__header">
+                <h2 class="topBox__title">Фотографии отеля</h2>
+
+                <div class="topBox__content">
+                  <a
+                    href="gallery.html"
+                    aria-label="Забронировать номер"
+                    title="Забронировать номер"
+                    class="button button--green"
+                    >Забронировать номер</a
+                  >
+                </div>
+              </header>
+
+              <div class="gallery__swiper-box gallery__swiper-box--noNone">
+                <div class="arrows-swiper">
+                  <button
+                    class="arrow-swiper prev"
+                    aria-label="перемотать на предыдущий слайд"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="7.000000"
+                      height="14.000000"
+                      viewBox="0 0 7 14"
+                      fill="none"
+                    >
+                      <defs />
+                      <path
+                        id="Vector (Stroke)"
+                        d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+
+                  <button
+                    class="arrow-swiper next"
+                    aria-label="перемотать на предыдущий слайд"
+                    type="button"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="7.000000"
+                      height="14.000000"
+                      viewBox="0 0 7 14"
+                      fill="none"
+                    >
+                      <defs />
+                      <path
+                        id="Vector (Stroke)"
+                        d="M0.21 0.19C0.48 -0.07 0.92 -0.07 1.19 0.2L6.38 5.31L6.39 5.33C7.22 6.26 7.19 7.66 6.33 8.56L6.32 8.57L1.2 13.78C0.94 14.06 0.49 14.07 0.21 13.81C-0.07 13.55 -0.08 13.12 0.19 12.85L5.3 7.64C5.68 7.25 5.69 6.64 5.34 6.22L0.19 1.15C-0.08 0.88 -0.07 0.45 0.21 0.19Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="swiper gallery__swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="gallery__slide">
+                        <picture>
+                          <source
+                            srcset="
+                              ./img/gallery/one.webp   1x,
+                              ./img/gallery/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="./img/gallery/one.webp"
+                            alt="фотография дома"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="gallery__slide">
+                        <picture>
+                          <source
+                            srcset="
+                              ./img/gallery/two.webp   1x,
+                              ./img/gallery/two2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="./img/gallery/two.webp"
+                            alt="фотография дома"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="gallery__slide">
+                        <picture>
+                          <source
+                            srcset="
+                              ./img/gallery/three.webp   1x,
+                              ./img/gallery/three2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="./img/gallery/three.webp"
+                            alt="фотография дома"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="gallery__slide">
+                        <picture>
+                          <source
+                            srcset="
+                              ./img/gallery/four.webp   1x,
+                              ./img/gallery/four2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="./img/gallery/four.webp"
+                            alt="фотография дома"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="gallery__slide">
+                        <picture>
+                          <source
+                            srcset="
+                              ./img/gallery/five.webp   1x,
+                              ./img/gallery/five2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="./img/gallery/five.webp"
+                            alt="фотография дома"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="gallery__slide">
+                        <picture>
+                          <source
+                            srcset="
+                              ./img/gallery/six.webp   1x,
+                              ./img/gallery/six2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="./img/gallery/six.webp"
+                            alt="фотография дома"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="gallery__slide">
+                        <picture>
+                          <source
+                            srcset="
+                              ./img/gallery/seven.webp   1x,
+                              ./img/gallery/seven2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="./img/gallery/seven.webp"
+                            alt="фотография дома"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="gallery__slide">
+                        <picture>
+                          <source
+                            srcset="
+                              ./img/gallery/four.webp   1x,
+                              ./img/gallery/four2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="./img/gallery/four.webp"
+                            alt="фотография дома"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-pagination swiper-pagination--position"></div>
                 </div>
               </div>
             </div>

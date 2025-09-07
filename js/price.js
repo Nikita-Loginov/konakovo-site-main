@@ -1,7 +1,7 @@
 import { searcBlockTab } from "./modules/tab.js";
 import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
 import { toggleAccordeonItems } from "./modules/accordeon.js";
-import { setFirstActiveClasses } from "./modules/tab.js";
+import { setActiveClass } from "./modules/tab.js";
 
 const swipers = [
   {
@@ -45,51 +45,51 @@ document.addEventListener("DOMContentLoaded", () => {
   setActiveClass();
 });
 
-const setActiveClass = () => {
-  const url = new URL(window.location.href);
+// const setActiveClass = () => {
+//   const url = new URL(window.location.href);
 
-  if (url.searchParams.size) {
-    const searchs = url.search.slice(1).split("&");
+//   if (url.searchParams.size) {
+//     const searchs = url.search.slice(1).split("&");
 
-    if (searchs.length) {
-      for (let i = 0; i < searchs.length; i++) {
-        const item = searchs[i].split("=");
+//     if (searchs.length) {
+//       for (let i = 0; i < searchs.length; i++) {
+//         const item = searchs[i].split("=");
 
-        const category = item[0];
-        const name = item[1];
+//         const category = item[0];
+//         const name = item[1];
 
-        // console.log(category);
+//         // console.log(category);
 
-        if (!category || !name) return;
+//         if (!category || !name) return;
 
-        // const findItemBlock = document.querySelector(
-        //   `[data-url="${category}"]`
-        // );
+//         // const findItemBlock = document.querySelector(
+//         //   `[data-url="${category}"]`
+//         // );
 
-        // if (!findItemBlock) return;
+//         // if (!findItemBlock) return;
 
-        const findActiveBtnItem = document.querySelector(
-          `[data-url-block="${name}"]`
-        );
+//         const findActiveBtnItem = document.querySelector(
+//           `[data-url-block="${name}"]`
+//         );
 
-        const findActiveBlockItem = document.querySelector(
-          `[data-block-tab="${name}"]`
-        );
+//         const findActiveBlockItem = document.querySelector(
+//           `[data-block-tab="${name}"]`
+//         );
 
-        // console.log(findItemBlock, `[data-block-tab="${name}"]`)
+//         // console.log(findItemBlock, `[data-block-tab="${name}"]`)
 
-        if (findActiveBtnItem && findActiveBtnItem.dataset.btnTab) {
-          findActiveBtnItem.classList.add("active");
-          findActiveBlockItem.classList.add("active");
-        }
-      }
-    }
+//         if (findActiveBtnItem && findActiveBtnItem.dataset.btnTab) {
+//           findActiveBtnItem.classList.add("active");
+//           findActiveBlockItem.classList.add("active");
+//         }
+//       }
+//     }
 
-    return;
-  }
+//     return;
+//   }
 
-  setFirstActiveClasses()
-};
+//   setFirstActiveClasses()
+// };
 
 let resizeTimeout;
 window.addEventListener("resize", () => {

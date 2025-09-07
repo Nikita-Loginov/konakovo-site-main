@@ -1,28 +1,50 @@
 .filter-tag {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    min-height: 38px;
-    padding: 8px 12px;
-    background-color: #EBE6E2;
-    width: fit-content;
-    border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 12px;
+  background-color: #ebe6e2;
+  width: fit-content;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+
+  * {
     font-size: 14px;
     font-weight: 600;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &--green {
+    background-color: $accent-color;
 
     * {
-        font-size: 14px;
-        font-weight: 600;
+      color: #fff;
     }
+  }
 
-    &__icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-        flex-shrink: 0;
-        border-radius: 50%;
-        overflow: hidden;
+  &--brown {
+    background-color: #d4cabf;
+
+    * {
+      color: $main-color;
     }
+  }
+}
+
+.tags-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }

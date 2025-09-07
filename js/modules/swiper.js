@@ -56,7 +56,6 @@ function checkBreakpoint(breakpoint) {
 
 export function handleAllSliders() {
   slidersConfig.forEach((config) => {
-    console.log(config);
     if (config.breakpointMax && checkBreakpoint(config.breakpointMax)) {
       destroySwipersBySelector(config.selector);
       return;

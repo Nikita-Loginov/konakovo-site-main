@@ -13,4 +13,9 @@
       height: 100%;
     }
   }
+
+  @media(max-width:767px) {
+    max-height: auto;
+    height: clamp(26.875rem, -12.5679rem + 126.2172vw, 47.9375rem);;
+  }
 }

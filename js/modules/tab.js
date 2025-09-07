@@ -4,7 +4,14 @@ const TAB__INFO = {
   nameTabBtn: "tab-btn",
   nameTabBlock: "tab-item",
   nameActiveClass: "active",
+  isPopState: false,
 };
+
+window.addEventListener('popstate', function(event) {
+  TAB__INFO.isPopState = true;
+  console.log('dadas')
+  window.location.reload();
+});
 
 export function searcBlockTab(e, functionTab) {
   const { target } = e;
@@ -33,6 +40,14 @@ function toggleClassesTabElements(elements) {
       const name = tabsBox.dataset.url;
 
       const url = new URL(window.location.href);
+
+      if (!TAB__INFO.isPopState) {
+        url.searchParams.set(name, nameTab);
+
+        history.pushState({}, "", url);
+      } else {
+        isPopState = false;
+      }
 
       url.searchParams.set(name, nameTab);
 
@@ -102,6 +117,10 @@ function toggleClassesTabElements(elements) {
         functionTab();
       }
 
+      if (block.dataset.swiper) {
+        initSwiperTabs(block);
+      }
+
       return;
     }
 
@@ -143,4 +162,72 @@ export const setFirstActiveClasses = () => {
   tabsUrl.forEach((tabBox) => {
     activateFirstTab(tabBox);
   });
+};
+
+export const setActiveClass = () => {
+  const url = new URL(window.location.href);
+
+  if (url.searchParams.size) {
+    const searchs = url.search.slice(1).split("&");
+
+    if (searchs.length) {
+      for (let i = 0; i < searchs.length; i++) {
+        const item = searchs[i].split("=");
+
+        const category = item[0];
+        const name = item[1];
+
+        // console.log(category);
+
+        if (!category || !name) return;
+
+        // const findItemBlock = document.querySelector(
+        //   `[data-url="${category}"]`
+        // );
+
+        // if (!findItemBlock) return;
+
+        const findActiveBtnItem = document.querySelector(
+          `[data-url-block="${name}"]`
+        );
+
+        const findActiveBlockItem = document.querySelector(
+          `[data-block-tab="${name}"]`
+        );
+
+        // console.log(findItemBlock, `[data-block-tab="${name}"]`)
+
+        if (findActiveBtnItem && findActiveBtnItem.dataset.btnTab) {
+          findActiveBtnItem.classList.add("active");
+          findActiveBlockItem.classList.add("active");
+        }
+      }
+    }
+
+    return;
+  }
+
+  setFirstActiveClasses()
+};
+
+export const initSwiperTabs = (block) => {
+  if (!block) return;
+  
+  const swiper = block.querySelector(".swiper");
+
+  if (!swiper) return;
+
+  if (!swiper.swiper) {
+    new Swiper(swiper, {
+      loop: true,
+      pagination: {
+        el: swiper.querySelector(".swiper-pagination"),
+        clickable: true,
+      },
+      navigation: {
+        nextEl: swiper.querySelector(".arrow-swiper.next"),
+        prevEl: swiper.querySelector(".arrow-swiper.prev"),
+      },
+    });
+  }
 };
