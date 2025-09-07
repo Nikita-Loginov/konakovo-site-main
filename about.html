@@ -375,6 +375,92 @@
   </div>
 </header>
 
+<div
+  class="modalBlock textModal openFinish"
+  data-storage-key="hotel_notice"
+  data-storage-type="localstorage"
+  data-storage-days="30"
+  data-storage-remove="true"
+  data-storage-close
+>
+  <div class="modalBlock__inner">
+    <div class="modalBlock__top">
+      <button class="modal-close" data-storage-close>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          style="pointer-events: none;"
+        >
+          <path
+            d="M19.5852 22.0247C20.2072 22.6584 21.2156 22.6584 21.8375 22.0247C22.4595 21.3909 22.4595 20.3633 21.8375 19.7295L14.2778 12.0263L22.0076 4.49971C22.6436 3.8805 22.6665 2.8532 22.0588 2.20519C21.4511 1.55717 20.443 1.53383 19.807 2.15304L12.0249 9.73057L4.41419 1.97533C3.79222 1.34155 2.78381 1.34156 2.16184 1.97534C1.53987 2.60912 1.53987 3.63667 2.16184 4.27046L9.72137 11.9735L1.99236 19.4993C1.35642 20.1185 1.33351 21.1458 1.94119 21.7939C2.54886 22.4419 3.55702 22.4652 4.19296 21.846L11.9743 14.2692L19.5852 22.0247Z"
+            fill="#05ADAD"
+          />
+        </svg>
+      </button>
+
+      <div class="modalBlock__content">
+        <div class="modalBlock__textbox">
+          <p><b>Уважаемые гости!</b></p>
+
+          <p>На территории отеля возможны перебои с мобильным
+            интернетом по независящим от отеля причинам.</p>
+
+            <p>Пожалуйста, пользуйтесь
+              сетью WI-FI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modalBlock holidayModal openFinish"
+  data-storage-key="holiday_notice"
+  data-storage-type="localstorage"
+  data-storage-days="30"
+  data-storage-remove="true"
+  data-storage-close
+>
+  <div class="modalBlock__inner">
+    <div class="modalBlock__top">
+      <button class="modal-close" data-storage-close>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          style="pointer-events: none"
+        >
+          <path
+            d="M19.5852 22.0247C20.2072 22.6584 21.2156 22.6584 21.8375 22.0247C22.4595 21.3909 22.4595 20.3633 21.8375 19.7295L14.2778 12.0263L22.0076 4.49971C22.6436 3.8805 22.6665 2.8532 22.0588 2.20519C21.4511 1.55717 20.443 1.53383 19.807 2.15304L12.0249 9.73057L4.41419 1.97533C3.79222 1.34155 2.78381 1.34156 2.16184 1.97534C1.53987 2.60912 1.53987 3.63667 2.16184 4.27046L9.72137 11.9735L1.99236 19.4993C1.35642 20.1185 1.33351 21.1458 1.94119 21.7939C2.54886 22.4419 3.55702 22.4652 4.19296 21.846L11.9743 14.2692L19.5852 22.0247Z"
+            fill="#05ADAD"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div class="holidayModal__img">
+      <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            /img/holiday/one-media.webp   1x,
+            /img/holiday/one-media2x.webp 2x
+          "
+        />
+
+        <source srcset="/img/holiday/one.webp 1x, /img/holiday/one2x.webp 2x" />
+        <img src="/img/holiday/one.webp" alt="фотография" />
+      </picture>
+    </div>
+  </div>
+</div>
+
+
       <div class="preloader">
   <div class="preloader__img">
     <svg

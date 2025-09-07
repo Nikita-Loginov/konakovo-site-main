@@ -122,6 +122,10 @@ body {
   height: 100%;
 }
 
+html.open-modal body:before {
+  content: "";
+}
+
 body {
   font-size: 16px;
   line-height: 1.5;
@@ -2324,6 +2328,43 @@ body #booking-widget-863941 {
   .modalBlock.certificateModal.modalBlockTwo .modalBlockTwo__img {
     display: none;
   }
+}
+.modalBlock.holidayModal .modalBlock__inner {
+  max-width: 90vw;
+  padding: 0;
+  position: relative;
+}
+.modalBlock.holidayModal .modalBlock__inner .modalBlock__top {
+  position: absolute;
+  z-index: 10;
+  right: 24px;
+  top: 24px;
+}
+.modalBlock.holidayModal .modalBlock__inner .modalBlock__top .modal-close {
+  border-radius: 50%;
+  background-color: rgba(76, 76, 76, 0.6980392157);
+  border: 1px solid rgba(255, 255, 255, 0.1019607843);
+  width: 44px;
+  height: 44px;
+}
+.modalBlock.holidayModal .modalBlock__inner .modalBlock__top .modal-close svg,
+.modalBlock.holidayModal .modalBlock__inner .modalBlock__top .modal-close img {
+  width: 16px;
+  height: 16px;
+}
+.modalBlock.holidayModal .modalBlock__inner .modalBlock__top .modal-close svg path,
+.modalBlock.holidayModal .modalBlock__inner .modalBlock__top .modal-close img path {
+  fill: #fff;
+}
+.modalBlock.holidayModal .holidayModal__img {
+  width: 100%;
+  height: 70vh;
+}
+.modalBlock.holidayModal .holidayModal__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .modalBlock.open {
   opacity: 1;

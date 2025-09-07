@@ -94,6 +94,8 @@ function closeModal() {
     ) {
       const modalRelative = e.target.closest(".modalBlock");
       modalRelative.classList.remove("open");
+
+      if (document.querySelector('.modalBlock.open')) return
       document.body.classList.remove("open-modal");
       document.documentElement.classList.remove("open-modal");
     }

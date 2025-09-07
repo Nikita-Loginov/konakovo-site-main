@@ -41,7 +41,7 @@ function initMenu() {
 
 initMenu();
 maskTel();
-initModal();
+
 
 const initFractionPagination = () => {
   const swipers = document.querySelectorAll(".swiper");
@@ -76,7 +76,9 @@ const initFractionPagination = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+
   checkStorage();
+  initModal();
   getHeightHeader()
   const forms = document.querySelectorAll("[data-form]");
 

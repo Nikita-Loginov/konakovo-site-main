@@ -85,6 +85,7 @@ export const checkStorage = () => {
 
         if (element.classList.contains('modalBlock')) {
             document.body.classList.remove('open-modal')
+            document.documentElement.classList.remove('open-modal')
         }
       } else {
         element.style.display = "none";
