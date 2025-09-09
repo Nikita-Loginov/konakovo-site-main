@@ -1020,9 +1020,7 @@ body #booking-widget-863941 {
           flex-direction: column;
 }
 .tabs__btns-big .swiper-slide {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
 }
 .tabs__btns-big .swiper-slide:not(:first-of-type) .tab-big {
   padding-top: 20px;
@@ -1034,6 +1032,11 @@ body #booking-widget-863941 {
         -ms-flex-direction: row;
             flex-direction: row;
     padding-bottom: 5px !important;
+  }
+  .tabs__btns-big .swiper-slide {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .tabs__btns-big .swiper-slide:not(:first-of-type) .tab-big {
     padding-top: 0;
@@ -1530,6 +1533,35 @@ body #booking-widget-863941 {
   .fixed-content > * {
     max-width: 100%;
   }
+}
+
+.flake {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  z-index: 1;
+}
+.flake img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.flake--little {
+  width: 60px;
+  height: 60px;
+}
+.flake--middle {
+  width: 90px;
+  height: 90px;
+}
+.flake--middle-s {
+  width: 80px;
+  height: 80px;
+}
+.flake--little-s {
+  width: 50px;
+  height: 50px;
 }
 
 .open--menu {

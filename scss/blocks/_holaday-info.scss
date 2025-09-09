@@ -1,10 +1,12 @@
 .holaday-info {
   --gap-info: 24px;
+  --img-height : 230px;
 
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    position: relative;
   }
 
   &__top,
@@ -14,6 +16,8 @@
     align-items: center;
     text-align: center;
     gap: var(--gap-info);
+    position: relative;
+    z-index: 2;
   }
 
   &__top {
@@ -40,11 +44,33 @@
     }
   }
 
+  &__first-flake {
+    left: 10%;
+    top: -10px;
+  }
+
+  &__two-flake {
+   right: 10%;
+   bottom: calc(var(--img-height) + 70px)
+  }
+
   @media(max-width:1023px) {
     --gap-info: 20px;
+    --img-height: 0px;
 
     &__imgs {
       display: none;
+    }
+
+    &__first-flake {
+      left: 10px;
+      top: -50px;
+      width: 40px;
+      height: 40px;
+    }
+  
+    &__two-flake {
+     display: none;
     }
   }
 

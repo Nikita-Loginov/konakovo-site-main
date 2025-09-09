@@ -2,6 +2,10 @@
   --gap-items: 50px;
   --grid-template-columns: 2, 1fr;
 
+  &__inner {
+    position: relative;
+  }
+
   &__top,
   &__content {
     display: grid;
@@ -42,6 +46,16 @@
     }
   }
 
+  &__first-flake {
+    right: 21%;
+    top: -15px;
+  }
+
+  &__two-flake {
+    right: 10%;
+    top: 40%;
+  }
+
   @media (max-width: 1023px) {
     --gap-items: 24px;
     --grid-template-columns: 1, 1fr;
@@ -49,6 +63,15 @@
 
     .container {
       padding: 0;
+    }
+
+    &__first-flake {
+      right: 40px;
+      top: 90px;
+    }
+
+    &__two-flake {
+      display: none;
     }
 
     &__top,

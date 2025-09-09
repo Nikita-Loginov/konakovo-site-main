@@ -1417,6 +1417,9 @@
   }
 }
 
+.gallery__inner {
+  position: relative;
+}
 .gallery__swiper-box {
   position: relative;
 }
@@ -1463,6 +1466,14 @@
 .gallery .link--media,
 .gallery .button--media {
   display: none;
+}
+.gallery__one-flake {
+  right: 21%;
+  top: -35px;
+}
+.gallery__two-flake {
+  right: 48%;
+  top: 44px;
 }
 @media (max-width: 550px) {
   .gallery .arrows-swiper {
@@ -1555,6 +1566,19 @@
   }
   .gallery .arrows-swiper {
     display: none;
+  }
+  .gallery__one-flake {
+    right: 30px;
+    top: -55px;
+    width: 60px;
+    height: 60px;
+  }
+  .gallery__two-flake {
+    width: 40px;
+    height: 40px;
+    right: auto;
+    left: 30px;
+    top: -50px;
   }
 }
 @media (max-width: 767px) {

@@ -1,4 +1,8 @@
 .gallery {
+  &__inner {
+    position: relative;
+  }
+
   &__swiper-box {
     position: relative;
   }
@@ -45,6 +49,17 @@
     display: none;
   }
 
+
+  &__one-flake {
+    right: 21%;
+    top: -35px;
+  }
+
+  &__two-flake {
+    right: 48%;
+    top: 44px;
+  }
+
   @media (max-width: 550px) {
     .arrows-swiper {
       display: none;
@@ -73,6 +88,7 @@
         }
       }
     }
+
 
     &__content {
       display: grid;
@@ -160,6 +176,21 @@
 
     .arrows-swiper {
       display: none;
+    }
+
+    &__one-flake {
+     right: 30px;
+      top: -55px;
+      width: 60px;
+      height: 60px;
+    }
+  
+    &__two-flake {
+      width: 40px;
+      height: 40px;
+      right: auto;
+      left: 30px;
+      top: -50px;
     }
   }
 
