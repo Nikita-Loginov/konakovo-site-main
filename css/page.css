@@ -2138,7 +2138,7 @@ body #booking-widget-863941 {
   display: flex;
   gap: 8px;
 }
-.breadcrumbs__link {
+.breadcrumbs__link:not(:last-of-type) {
   padding-right: 16px;
   position: relative;
   display: -webkit-box;
@@ -2151,7 +2151,7 @@ body #booking-widget-863941 {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.breadcrumbs__link:before {
+.breadcrumbs__link:not(:last-of-type):before {
   position: absolute;
   content: "/";
   font-size: 14px;

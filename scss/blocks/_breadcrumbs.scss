@@ -1,28 +1,28 @@
 .breadcrumbs {
-    color:#4C4C4CB2;
-    font-size: 14px;
-    letter-spacing: calc(-1em / 100);
-    font-family: 'Involve';
+  color: #4c4c4cb2;
+  font-size: 14px;
+  letter-spacing: calc(-1em / 100);
+  font-family: "Involve";
 
-    &__list {
-        display: flex;
-        gap: 8px;
+  &__list {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__link {
+    &:not(:last-of-type) {
+    padding-right: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+      position: absolute;
+      content: "/";
+      font-size: 14px;
+      right: 0;
     }
-
-    &__link {
-        // &:not(:last-of-type) {
-            padding-right: 16px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            &:before {
-                position: absolute;
-                content:"/";
-                font-size: 14px;
-                right: 0;
-            }
-        // }
     }
+  }
 }
