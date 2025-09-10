@@ -453,6 +453,15 @@ h3,
   gap: 4px;
   bottom: 32px;
   z-index: 6;
+  left: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  right: 20px;
+  margin: 0 auto;
+}
+.swiper .swiper-pagination--position.swiper-pagination-horizontal-site {
+  bottom: 50px;
 }
 .swiper .swiper-pagination-bullet {
   background: rgba(255, 255, 255, 0.6);
