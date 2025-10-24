@@ -1,60 +1,61 @@
 .callout {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__content {
+    background-color: #e2dcd5;
+    padding: clamp(2.5rem, 0.7971rem + 3.5524vw, 3.75rem)
+      clamp(1rem, -0.2473rem + 4.8087vw, 3.75rem);
+    display: flex;
+    align-items: center;
+  }
+
+  &__info-box {
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(1.75rem, 1.4098rem + 1.3115vw, 2.5rem);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__images {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__img-small {
+    grid-area: 1 / 1;
+    width: 60%;
+    border: 2px solid #ffffff99;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+
+  &__img-big {
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+  }
+
+  @media (max-width: 767px) {
     &__inner {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    &__content {
-        background-color: #E2DCD5;
-        padding: clamp(2.5rem, 0.7971rem + 3.5524vw, 3.75rem) clamp(1rem, -0.2473rem + 4.8087vw, 3.75rem);;
-        display: flex;
-        align-items: center;
-    }
-
-    &__info-box {
-        max-width: 460px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: clamp(1.75rem, 1.4098rem + 1.3115vw, 2.5rem);
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
     }
 
     &__info {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+      gap: 16px;
     }
-
-    &__images {
-        position: relative;
-        overflow: hidden;
-    }
-
-    &__img-small {
-        grid-area: 1 / 1;
-        width: 60%;
-        border: 2px solid #FFFFFF99;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 3;
-    }
-
-    &__img-big {
-        width: 100%;
-        height: 100%;
-        filter: blur(5px);
-    }
-
-    @media(max-width:767px) {
-        &__inner {
-            grid-template-columns: repeat(1, 1fr);
-            gap: 20px;
-        }
-
-        &__info {
-            gap: 16px;
-        }
-    }
+  }
 }

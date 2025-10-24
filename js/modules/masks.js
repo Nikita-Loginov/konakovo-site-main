@@ -5,6 +5,10 @@ export function maskTel() {
     const maskOptions = {
       mask: "+{7} (000) 000-00-00",
     };
-    const mask = IMask(tel, maskOptions);
+
+    if (window.IMask) {
+      const mask = IMask(tel, maskOptions);
+    }
+   
   });
 }

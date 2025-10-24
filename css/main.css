@@ -294,17 +294,6 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-.services .swiper-pagination {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.services .swiper-pagination-bullet {
-  background: #efefef;
-}
-.services .swiper-pagination-bullet-active {
-  background: #05adad;
-}
 .services .swiper-slide--big {
   grid-column: span 2;
 }
@@ -799,7 +788,7 @@
 }
 
 .events {
-  background-color: #E2DCD5;
+  background-color: #e2dcd5;
   min-height: calc(100vh - clamp(5.125rem, 4.6998rem + 1.6393vw, 6.0625rem));
   display: -webkit-box;
   display: -ms-flexbox;
@@ -869,7 +858,7 @@
   display: none;
 }
 .events__slider-box .events-item {
-  background-color: #E2DCD5;
+  background-color: #e2dcd5;
   padding: clamp(1rem, 0.5787rem + 1.6244vw, 2rem);
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
@@ -938,12 +927,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .events .swiper-pagination-bullet {
-    background-color: #EFEFEF;
-  }
-  .events .swiper-pagination-bullet-active {
-    background-color: #039191;
   }
   .events .swiper-slide {
     height: auto;
@@ -1089,20 +1072,6 @@
   }
   .offers .swiper-slide--big {
     display: none;
-  }
-  .offers .swiper-pagination {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .offers .swiper-pagination-bullet {
-    background: #efefef;
-  }
-  .offers .swiper-pagination-bullet-active {
-    background: #05adad;
   }
   .offers__swiper-box .link {
     display: -webkit-box;
@@ -1302,118 +1271,6 @@
   }
   .discount__list {
     grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.territory {
-  position: relative;
-  padding: clamp(5.625rem, -7.0964rem + 19.8966vw, 10.4375rem) 40px;
-  max-width: clamp(88.125rem, 83.1389rem + 10.4012vw, 92.5rem);
-  background-color: #e2dcd5;
-  margin: 0 auto;
-  width: 100%;
-}
-.territory__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 40px;
-  position: relative;
-  z-index: 2;
-}
-.territory__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 16px;
-}
-.territory__title {
-  font-size: clamp(2.5rem, -4.0607rem + 13.6858vw, 8rem);
-  line-height: 1;
-}
-.territory__map {
-  position: absolute;
-  inset: 0;
-}
-.territory__map .link, .territory__map button {
-  display: none;
-}
-.territory__map img {
-  width: 100%;
-  height: 100%;
-}
-.territory .textbox {
-  max-width: 403px;
-}
-@media (max-width: 550px) {
-  .territory .textbox p {
-    line-height: 1.37;
-  }
-}
-@media (max-width: 1023px) {
-  .territory {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 7px;
-    background-color: transparent;
-    padding: 0;
-  }
-  .territory .container {
-    width: 100%;
-    padding-inline: 16px;
-  }
-  .territory .link, .territory .button {
-    display: none;
-  }
-  .territory__map {
-    position: relative;
-    min-height: 350px;
-  }
-  .territory__map .link, .territory__map .button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    top: 17px;
-    right: 16px;
-    left: 16px;
-  }
-  .territory__info {
-    gap: 16px;
-  }
-  .territory .textbox p {
-    font-weight: 400;
-    font-family: "Involve";
-  }
-  .territory img {
-    height: 100%;
-    min-height: 350px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-@media (max-width: 550px) {
-  .territory img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 80%;
-       object-position: 80%;
   }
 }
 

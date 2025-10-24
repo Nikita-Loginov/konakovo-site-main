@@ -26,8 +26,6 @@ document.addEventListener("click", (e) => {
       } else {
         childBox.children[childBox.children.length - 1].remove();
       }
-
-      initCustomSelects(guestsItem);
     }
 
     if (btnAdd) {
@@ -374,13 +372,4 @@ const renderItem = (index = 2) => {
 
   return html;
 };
-
-const initSelects = () => {
-  const forms = document.querySelectorAll('.guests__form');
-
-  forms.forEach((form) => {
-    initCustomSelects(form)
-  })
-}
-
 

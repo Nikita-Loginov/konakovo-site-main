@@ -4,7 +4,7 @@ import { maskTel } from "./modules/masks.js";
 import { calendar } from "./modules/calendar.js";
 import { initModal } from "./modules/modal.js";
 import { setProccent } from "./modules/preloader.js";
-import { initFormValidation } from "./modules/validate.js";
+import { initFormValidation, initCustomSelects } from "./modules/validate.js";
 import { checkScrollY } from "./modules/header.js";
 import { renderMoreSwiper } from "./modules/renderAction.js";
 import { checkStorage } from "./modules/localStorage.js";
@@ -95,4 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("scroll", checkScrollY);
 
-document.addEventListener('click', initStorage);
+document.addEventListener('click', (e) => {
+  initCustomSelects(e)
+  initStorage(e)
+});

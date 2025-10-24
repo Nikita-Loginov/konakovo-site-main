@@ -1,0 +1,59 @@
+.card-decor {
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdf9dc;
+  padding: 24px;
+  gap: 40px;
+  height: 100%;
+
+  &--green {
+    background-color: #eaf1ec;
+  }
+
+  &--gold {
+    background-color: #fdf9dc;
+  }
+
+  &--chocolate {
+    background-color: #f1ebd6;
+  }
+
+  &--coral {
+    background-color: #FAF7F4;
+  }
+
+  &--mini {
+    min-height: 0;
+    padding: 48px 24px;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #fff;
+
+    img,
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+}

@@ -16,12 +16,20 @@
     &--center {
       align-items: center;
     }
+
+    &--row {
+      flex-direction: column;
+    }
+
+    &--start {
+      align-items: flex-start;
+    }
   }
 
   &--mini {
     gap: 20px;
 
-    @media(max-width:767px) {
+    @media (max-width: 767px) {
       gap: 24px;
     }
   }
@@ -33,6 +41,10 @@
   &__info-mini {
     max-width: 676px;
     width: 100%;
+  }
+
+  &--row {
+    flex-direction: column;
   }
 
   @media (max-width: 767px) {

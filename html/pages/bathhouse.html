@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('../modules/head.html', { "links" :
+  ["./css/page.css","./css/bathhouse.css", "./css/lib/swiper.min.css"] })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+      <!-- @@include('../modules/preloader.html') -->
+
+      <main class="main main--noTop">
+        <section class="goodTop">
+          <div class="container">
+            <div class="goodTop__inner">
+              <div class="goodTop__content">
+                <h1 class="goodTop__title">Здесь время течет иначе</h1>
+
+                <p class="h5 libel-font" style="color: #fff">
+                  Мы подчиняемся ритму реки и шелесту сосен.
+                </p>
+              </div>
+            </div>
+
+            <div class="goodTop__img">
+              <picture>
+                <source
+                  srcset="
+                    ./img/goodTop/two.webp   1x,
+                    ./img/goodTop/two2x.webp 2x
+                  "
+                />
+                <img src="./img/goodTop/two.webp" alt="фотография бани" />
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="placeInfo swiper-arrow-none">
+          <div class="container">
+            <div class="placeInfo__inner">
+              <div class="placeInfo__content">
+                <header class="placeInfo__top">
+                  <h2 class="h2">Атмосфера места</h2>
+
+                  <div class="textbox">
+                    <p>
+                      Наша баня расположена в уникальном месте, где Волга
+                      встречается с вековым сосновым лесом. Это не просто
+                      парная, а уединенное пространство, созданное для глубокого
+                      восстановления. Здесь городской шум сменяется шелестом
+                      листвы, а суета — медитативным покоем.
+                    </p>
+                  </div>
+                </header>
+
+                <div class="placeInfo__info">
+                  <blockquote class="blockquote">
+                    <p>
+                      Каждый элемент — от выбора камней до аромата трав —
+                      работает на то, чтобы вы полностью отключились от внешнего
+                      мира и вернулись к себе.
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="placeInfo__swiper-box">
+                <div class="swiper swiper--placeInfo">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="placeInfo__item">
+                        <div class="placeInfo__item-img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/placeInfo/one.webp   1x,
+                                /img/placeInfo/one2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/placeInfo/one.webp"
+                              alt="фотография бани"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="placeInfo__item">
+                        <div class="placeInfo__item-img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/placeInfo/two.webp   1x,
+                                /img/placeInfo/two2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/placeInfo/two.webp"
+                              alt="фотография бани"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="placeInfo__item">
+                        <div class="placeInfo__item-img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/placeInfo/two.webp   1x,
+                                /img/placeInfo/two2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/placeInfo/two.webp"
+                              alt="фотография бани"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-arrows-box swiper-arrows-box--end">
+                    <button class="arrow-swiper prev">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M4.2097 1.19393C4.48563 0.93188 4.92882 0.935912 5.19961 1.20294L10.3833 6.31464L10.3993 6.33284C11.2227 7.26839 11.197 8.66148 10.3385 9.5672L10.33 9.57619L5.20727 14.7894C4.94086 15.0605 4.49779 15.0713 4.21763 14.8135C3.93748 14.5557 3.92633 14.1269 4.19274 13.8558L9.31054 8.64744C9.68224 8.2513 9.69751 7.6413 9.34739 7.22742L4.20039 2.1519C3.92961 1.88488 3.93378 1.45598 4.2097 1.19393Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </button>
+
+                    <button class="arrow-swiper next">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M4.2097 1.19393C4.48563 0.93188 4.92882 0.935912 5.19961 1.20294L10.3833 6.31464L10.3993 6.33284C11.2227 7.26839 11.197 8.66148 10.3385 9.5672L10.33 9.57619L5.20727 14.7894C4.94086 15.0605 4.49779 15.0713 4.21763 14.8135C3.93748 14.5557 3.92633 14.1269 4.19274 13.8558L9.31054 8.64744C9.68224 8.2513 9.69751 7.6413 9.34739 7.22742L4.20039 2.1519C3.92961 1.88488 3.93378 1.45598 4.2097 1.19393Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="territory territory--default">
+          <div class="container">
+            <div class="territory__inner">
+              <div class="territory__content">
+                <div class="territory__info">
+                  <h2 class="territory__title">маршрут</h2>
+
+                  <div class="textbox">
+                    <p>
+                      Бани расположены на острове Свободы! Вас заберет трансфер
+                      (катер или воздушная подушка) с главного причала отеля и
+                      доставит на остров, где вас встретят пармастера! Время в
+                      пути - 10 минут.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="territory__map">
+                <picture>
+                  <source
+                    media="(max-width: 600px)"
+                    srcset="./img/territory/two-media.svg"
+                  />
+                  <img
+                    src="./img/territory/two.svg"
+                    alt="территория"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="philosophy">
+          <div class="container">
+            <div class="topBox topBox--mini">
+              <div class="topBox__header topBox__header--row center">
+                <h2 class="h2">Философия мастера</h2>
+
+                <div class="textbox">
+                  <p>Все, что мы делаем, основано на пересечении трех сил:</p>
+                </div>
+              </div>
+
+              <div class="philosophy__content">
+                <div class="items-box items-box--three">
+                  <div class="card-decor card-decor--green">
+                    <div class="card-decor__details">
+                      <spaan class="card-decor__icon icon">
+                        <img
+                          src="/img/icons/nature.svg"
+                          alt="иконка цветочка"
+                        />
+                      </spaan>
+                    </div>
+
+                    <div class="card-decor__info">
+                      <p class="h5 libel-font">Природная мощь</p>
+
+                      <div class="textbox">
+                        <p>
+                          Мы используем энергию места, силу воды и чистоту
+                          воздуха как неотъемлемую часть каждой процедуры.
+                          Омовение в реке — обязательный элемент.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-decor card-decor--gold">
+                    <div class="card-decor__details">
+                      <spaan class="card-decor__icon icon">
+                        <img src="/img/icons/vapor.svg" alt="иконка цветочка" />
+                      </spaan>
+                    </div>
+
+                    <div class="card-decor__info">
+                      <p class="h5 libel-font">Аутентичность русской бани</p>
+
+                      <div class="textbox">
+                        <p>
+                          Мы чтим исконные традиции, создавая подлинную
+                          атмосферу, в которой тело и дух находят исцеление.
+                          Только березовые и дубовые веники.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-decor card-decor--chocolate">
+                    <div class="card-decor__details">
+                      <spaan class="card-decor__icon icon">
+                        <img
+                          src="/img/icons/bathhouse.svg"
+                          alt="иконка цветочка"
+                        />
+                      </spaan>
+                    </div>
+
+                    <div class="card-decor__info">
+                      <p class="h5 libel-font">Выверенное мастерство</p>
+
+                      <div class="textbox">
+                        <p>
+                          Каждая процедура — это точный, отточенный годами
+                          ритуал, который проводят опытные мастера, глубоко
+                          понимающие свое дело и пар.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slider-box-media">
+          <div class="container">
+            <div class="topBox">
+              <div
+                class="topBox__header topBox__header--row topBox__header--start"
+              >
+                <h2 class="h2">Что входит в стоимость любой программы:</h2>
+
+                <div class="textbox">
+                  <p>
+                    Основа вашего путешествия — забота о комфорте и полном
+                    погружении в атмосферу острова.
+                  </p>
+                </div>
+              </div>
+
+              <div class="slider-box-media__swiper-box">
+                <div class="swiper swiper--prices">
+                  <div class="swiper-wrapper items-box items-box--four">
+                    <div class="swiper-slide">
+                      <div
+                        class="card-decor card-decor--mini card-decor--coral"
+                      >
+                        <div class="card-decor__details">
+                          <spaan class="card-decor__icon icon">
+                            <img
+                              src="/img/icons/food.svg"
+                              alt="иконка цветочка"
+                            />
+                          </spaan>
+                        </div>
+
+                        <div class="card-decor__info">
+                          <p class="h5 libel-font">Приветственный стол</p>
+
+                          <div class="textbox">
+                            <p>Тёплый приём с травяным чаем и фруктами</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div
+                        class="card-decor card-decor--coral card-decor--mini"
+                      >
+                        <div class="card-decor__details">
+                          <spaan class="card-decor__icon icon">
+                            <img
+                              src="/img/icons/boat.svg"
+                              alt="иконка цветочка"
+                            />
+                          </spaan>
+                        </div>
+
+                        <div class="card-decor__info">
+                          <p class="h5 libel-font">Трансфер</p>
+
+                          <div class="textbox">
+                            <p>
+                              Трансфер на катере от причала до острова и обратно
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div
+                        class="card-decor card-decor--coral card-decor--mini"
+                      >
+                        <div class="card-decor__details">
+                          <spaan class="card-decor__icon icon">
+                            <img
+                              src="/img/icons/towel.svg"
+                              alt="иконка цветочка"
+                            />
+                          </spaan>
+                        </div>
+
+                        <div class="card-decor__info">
+                          <p class="h5 libel-font">Текстиль</p>
+
+                          <div class="textbox">
+                            <p>
+                              Фирменный банный текстиль (халат, полотенце,
+                              тапочки)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div
+                        class="card-decor card-decor--coral card-decor--mini"
+                      >
+                        <div class="card-decor__details">
+                          <spaan class="card-decor__icon icon">
+                            <img
+                              src="/img/icons/boat.svg"
+                              alt="иконка цветочка"
+                            />
+                          </spaan>
+                        </div>
+
+                        <div class="card-decor__info">
+                          <p class="h5 libel-font">лаунж-зона</p>
+
+                          <div class="textbox">
+                            <p>Доступ к зоне отдыха с видом на Волгу</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slider-box-media">
+          <div class="container">
+            <div class="slider-box-media__inner topBox">
+              <div class="topBox__header">
+                <h2 class="h2">Дополнительные услуги</h2>
+              </div>
+
+              <div class="slider-box-media__swiper-box">
+                <div class="swiper swiper--services">
+                  <div class="swiper-wrapper items-box items-box--three">
+                    <div class="swiper-slide">
+                      <div class="card-price">
+                        <header class="card-price__header">
+                          <p class="p1 libel-font uppercase-text">
+                            Ароматное путешествие
+                          </p>
+
+                          <div class="textbox">
+                            <p>
+                              Коллективный ароматный пар, с использованием
+                              четырех видов трав и комплиментом от банных
+                              мастеров. Продолжительность - до 20 минут
+                            </p>
+                          </div>
+                        </header>
+
+                        <footer class="card-price__footer">
+                          <p class="h5 uppercase-text libel-font brown-color">
+                            8 000 рублей
+                          </p>
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="card-price">
+                        <header class="card-price__header">
+                          <p class="p1 libel-font uppercase-text">
+                            Детское парение
+                          </p>
+
+                          <div class="textbox">
+                            <p>
+                              Классическое парение на умеренных температурах с
+                              частыми проветриваниями. Для детей от 3-х до 7-и
+                              лет. Продолжительность - до 15 минут
+                            </p>
+                          </div>
+                        </header>
+
+                        <footer class="card-price__footer">
+                          <p class="h5 uppercase-text libel-font brown-color">
+                            8 000 рублей
+                          </p>
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="card-price">
+                        <header class="card-price__header">
+                          <p class="p1 libel-font uppercase-text">
+                            Традиционное парение
+                          </p>
+
+                          <div class="textbox">
+                            <p>
+                              Классическое парение дубовыми вениками с одним
+                              переворотом, промежуточным проветриванием.
+                              Продолжительность - до 20 минут
+                            </p>
+                          </div>
+                        </header>
+
+                        <footer class="card-price__footer">
+                          <p class="h5 uppercase-text libel-font brown-color">
+                            7 500 рублей
+                          </p>
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="card-price">
+                        <header class="card-price__header">
+                          <p class="p1 libel-font uppercase-text">Фито-скраб</p>
+
+                          <div class="textbox">
+                            <p>
+                              Медово-солевой скраб с добавлением сбора луговых
+                              трав, приготовленный на нашей банной кухне.
+                              Продолжительность - до 20 минут
+                            </p>
+                          </div>
+                        </header>
+
+                        <footer class="card-price__footer">
+                          <p class="h5 uppercase-text libel-font brown-color">
+                            8 000 рублей
+                          </p>
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="card-price">
+                        <header class="card-price__header">
+                          <p class="p1 libel-font uppercase-text">
+                            Мыльный массаж
+                          </p>
+
+                          <div class="textbox">
+                            <p>
+                              Помывка березовыми вениками с густым мыльным
+                              раствором дегтярного мыла. Продолжительность - до
+                              20 минут
+                            </p>
+                          </div>
+                        </header>
+
+                        <footer class="card-price__footer">
+                          <p class="h5 uppercase-text libel-font brown-color">
+                            8 000 рублей
+                          </p>
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="card-price">
+                        <header class="card-price__header">
+                          <p class="p1 libel-font uppercase-text">
+                            Солевое выкатывание
+                          </p>
+
+                          <div class="textbox">
+                            <p>
+                              Коллективный ароматный пар, с использованием
+                              четырех видов трав и комплиментом от банных
+                              мастеров. Продолжительность - до 20 минут
+                            </p>
+                          </div>
+                        </header>
+
+                        <footer class="card-price__footer">
+                          <p class="h5 uppercase-text libel-font brown-color">
+                            8 000 рублей
+                          </p>
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="card-price">
+                        <header class="card-price__header">
+                          <p class="p1 libel-font uppercase-text">Массаж</p>
+
+                          <div class="textbox">
+                            <p>По придварительному согласованию</p>
+                          </div>
+                        </header>
+
+                        <footer class="card-price__footer">
+                          <p class="h5 uppercase-text libel-font brown-color">
+                            8 000 рублей
+                          </p>
+                        </footer>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="certificate-calculate">
+          <div class="container">
+            <div class="certificate-calculate__inner">
+              <form
+                class="certificate-form"
+                data-certificate-form
+                novalidate
+                data-form
+              >
+                <div class="certificate-form">
+                  <h2 class="h2">Подарочный сертификат</h2>
+
+                  <div class="certificate-form__content">
+                    <div class="certificate-form__info">
+                      <div class="certificate-form__inputs">
+                        <div class="form__input form__item">
+                          <input
+                            type="text"
+                            name="name"
+                            required
+                            pattern="[A-Za-zА-Яа-яЁё\s]*"
+                            data-title="Нельзя вводить цифры"
+                            data-empty="Ведите минимум один символ"
+                            minlength="1"
+                            aria-errormessage="name-errors"
+                            placeholder="Имя*"
+                          />
+
+                          <div class="form__errors" id="name-errors"></div>
+                        </div>
+
+                        <div class="form__input form__item">
+                          <input
+                            type="tel"
+                            name="tel"
+                            minlength="1"
+                            required
+                            pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}"
+                            data-title="телефон должен иметь вид +{7} (000) 000-00-00"
+                            data-empty="Ведите минимум один символ"
+                            aria-errormessage="tel-errors"
+                            placeholder="Телефон*"
+                          />
+
+                          <div class="form__errors" id="tel-errors"></div>
+                        </div>
+
+                        <div class="form__item">
+                          <div class="custom-select">
+                            <label
+                              class="custom-select__active custom-select__active--transparent"
+                            >
+                              <input
+                                minlength="1"
+                                class="selected-option"
+                                tabindex="0"
+                                data-empty="Выберите программу"
+                                required
+                                placeholder="Выбрать программу"
+                                readonly
+                              />
+
+                              <span class="custom-select__active-arrow">
+                                <img
+                                  src="./img/icons/arrowSelect.svg"
+                                  alt="иконка"
+                                />
+                              </span>
+                            </label>
+
+                            <ul class="options-list">
+                              <li data-value="1" data-name-id="divesWeekdays">
+                                <span
+                                  >Обрядовая программа "Погружения(пн-чт)"</span
+                                >
+
+                                <span class="options-list__arrow">
+                                  <img
+                                    src="./img/icons/arrowReady.svg"
+                                    alt="иконка"
+                                  />
+                                </span>
+                              </li>
+
+                              <li data-value="2" data-name-id="divesWeekend">
+                                <span
+                                  >Обрядовая программа "Погружения(пт-вс)"</span
+                                >
+
+                                <span class="options-list__arrow">
+                                  <img
+                                    src="./img/icons/arrowReady.svg"
+                                    alt="иконка"
+                                  />
+                                </span>
+                              </li>
+
+                              <li data-value="3" data-name-id="lifeWeekdays">
+                                <span
+                                  >Процедурная программа "Вкус жизни
+                                  (пн-чт)"</span
+                                >
+
+                                <span class="options-list__arrow">
+                                  <img
+                                    src="./img/icons/arrowReady.svg"
+                                    alt="иконка"
+                                  />
+                                </span>
+                              </li>
+
+                              <li data-value="4" data-name-id="lifeWeekend">
+                                <span
+                                  >Процедурная программа "Вкус жизни
+                                  (пт-вс)"</span
+                                >
+
+                                <span class="options-list__arrow">
+                                  <img
+                                    src="./img/icons/arrowReady.svg"
+                                    alt="иконка"
+                                  />
+                                </span>
+                              </li>
+
+                              <li
+                                data-value="5"
+                                data-name-id="сommunityWeekdays"
+                              >
+                                <span
+                                  >Коллективная программа "Община (пн-чт)"</span
+                                >
+
+                                <span class="options-list__arrow">
+                                  <img
+                                    src="./img/icons/arrowReady.svg"
+                                    alt="иконка"
+                                  />
+                                </span>
+                              </li>
+
+                              <li
+                                data-value="6"
+                                data-name-id="сommunityWeekend"
+                              >
+                                <span
+                                  >Коллективная программа "Община (пт-вс)"</span
+                                >
+
+                                <span class="options-list__arrow">
+                                  <img
+                                    src="./img/icons/arrowReady.svg"
+                                    alt="иконка"
+                                  />
+                                </span>
+                              </li>
+                            </ul>
+
+                            <select
+                              class="real-select"
+                              name="select-propgramm"
+                              required
+                            >
+                              <option value="" selected disabled>
+                                Выберите
+                              </option>
+                              <option value="1">
+                                Обрядовая программа "Погружения(пн-чт)"
+                              </option>
+
+                              <option value="2">
+                                Обрядовая программа "Погружения(пт-вс)""
+                              </option>
+
+                              <option value="3">
+                                Процедурная программа "Вкус жизни (пн-чт)"
+                              </option>
+
+                              <option value="4">
+                                Процедурная программа "Вкус жизни (пт-вс)"
+                              </option>
+
+                              <option value="5">
+                                Коллективная программа "Община (пн-чт)""
+                              </option>
+
+                              <option value="6">
+                                Коллективная программа "Община (пт-вс)"
+                              </option>
+                            </select>
+                          </div>
+
+                          <div class="form__errors"></div>
+                        </div>
+
+                        <div class="form__item">
+                          <div class="custom-select disabled" data-select-guests>
+                            <label
+                              class="custom-select__active custom-select__active--transparent"
+                            >
+                              <input
+                                class="selected-option"
+                                tabindex="0"
+                                placeholder="Кол-во гостей"
+                                readonly
+                              />
+
+                              <span class="custom-select__active-arrow">
+                                <img
+                                  src="./img/icons/arrowSelect.svg"
+                                  alt="иконка"
+                                />
+                              </span>
+                            </label>
+
+                            <ul class="options-list"></ul>
+
+                            <select class="real-select" name="select-guest">
+                              <option value="" selected disabled>
+                                Выберите
+                              </option>
+                            </select>
+                          </div>
+
+                          <div class="form__errors"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="certificate-form__footer">
+                      <div class="certificate-form__details">
+                        <p class="h5 libel-font" data-certificate-summ>
+                          Сумма: выбирите программу и кол-во гостей
+                        </p>
+
+                        <p
+                          class="p1 uppercase-text libel-font"
+                          data-certificate-time
+                          style="color: #4c4c4cb2"
+                        >
+                          продолжительность: выбирите программу и кол-во гостей
+                        </p>
+                      </div>
+
+                      <div class="certificate-form__footer-info">
+                        <button
+                          class="button button--green disabled"
+                          type="submit"
+                        >
+                          Купить
+                        </button>
+
+                        <p>
+                          Нажимая на кнопку, вы соглашаетесь на обработку
+                          персональных данных и политику конфиденциальности
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+              <div class="certificate-calculate__content">
+                <div class="images-to-image">
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/callout/one.webp   1x,
+                        ./img/callout/one2x.webp 2x
+                      "
+                    />
+                    <img
+                      class="images-to-image__small"
+                      src="./img/callout/one.webp"
+                      alt="фотография заката"
+                    />
+                  </picture>
+
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/callout/one.webp   1x,
+                        ./img/callout/one2x.webp 2x
+                      "
+                    />
+                    <img
+                      class="images-to-image__big"
+                      src="./img/callout/one.webp"
+                      alt="фотография заката"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @@include('../modules/gebotModal.html')
+      @@include('../modules/successModal.html')
+      @@include('../modules/footer.html')
+    </div>
+
+    <script src="./js/lib/swiper.min.js"></script>
+    <script src="./js/lib/imask.min.js"></script>
+    <script src="./js/page.js" type="module"></script>
+    <script src="./js/bathhouse.js" type="module"></script>
+  </body>
+</html>

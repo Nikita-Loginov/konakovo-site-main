@@ -1,0 +1,10 @@
+.certificate-calculate {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: #efefef;
+    padding: 40px;
+    align-items: center;
+  }
+}

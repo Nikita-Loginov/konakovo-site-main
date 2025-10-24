@@ -6,8 +6,6 @@ export function initFormValidation(form) {
 
   maskTel();
 
-  initCustomSelects(form);
-
   form.addEventListener("input", handleFieldChange);
   form.addEventListener("change", handleFieldChange);
   form.addEventListener("submit", handleFormSubmit);
@@ -21,47 +19,51 @@ function removeAllElementClass(elements, className) {
 
 let isDocumentListenerAttached = false;
 
-export function initCustomSelects(form) {
-  if (!form) return;
 
-  const customSelects = form.querySelectorAll(".custom-select");
+export function initCustomSelects(e) {
+  const select = e.target.closest(".custom-select");
+  if (!select) return;
 
-  if (!customSelects.length) return;
+  const selectedOption = select.querySelector(".selected-option");
+  const optionsList = select.querySelector(".options-list");
+  const realSelect = select.querySelector(".real-select");
+  const options = optionsList ? optionsList.querySelectorAll("li") : [];
 
-  customSelects.forEach((select) => {
-  
-    if (select.dataset.inited === "true") return;
+  if (e.target.closest(".custom-select__active")) {
+    classAction(select, "active", "toggle");
+  }
+
+  if (select.dataset.inited !== "true") {
     select.dataset.inited = "true";
 
-    const selectedOption = select.querySelector(".selected-option");
-    const optionsList = select.querySelector(".options-list");
-    const realSelect = select.querySelector(".real-select");
-    const options = optionsList.querySelectorAll("li");
-
     options.forEach((option) => {
-      option.addEventListener("click", (e) => {
-        e.preventDefault();
-        console.log(option.textContent.trim(), selectedOption.value)
-        selectedOption.setAttribute('value',  option.textContent.trim())
+      option.addEventListener("click", (ev) => {
+        ev.preventDefault();
+
+        const value = (option.dataset.value || "").replace(/\s+/g, " ").trim();
+        const nameId = (option.dataset.nameId || "").replace(/\s+/g, " ").trim();
+        const text = (option.textContent || "").replace(/\s+/g, " ").trim();
+
+        selectedOption.value = text;
+        selectedOption.setAttribute("value", text);
+        selectedOption.dataset.nameId = nameId;
+
+        if (realSelect) realSelect.value = value;
+
+        triggerValidation(selectedOption);
+
         classAction(select, "active", "remove");
         removeAllElementClass(options, "active");
         classAction(option, "active", "add");
       });
     });
-
-    select.addEventListener("click", (e) => {
-      e.preventDefault();
-      if (e.target.closest(".custom-select__active")) {
-        classAction(select, "active", "toggle");
-      }
-    });
-  });
+  }
 
   if (!isDocumentListenerAttached) {
-    document.addEventListener("click", (e) => {
-      document.querySelectorAll(".custom-select").forEach((select) => {
-        if (!select.contains(e.target)) {
-          classAction(select, "active", "remove");
+    document.addEventListener("click", (ev) => {
+      document.querySelectorAll(".custom-select.active").forEach((openSelect) => {
+        if (!openSelect.contains(ev.target)) {
+          classAction(openSelect, "active", "remove");
         }
       });
     });
@@ -69,13 +71,14 @@ export function initCustomSelects(form) {
   }
 }
 
+
 function handleFieldChange(event) {
   const field = event.target;
   const formItem = field.closest(".form__item");
 
   if (formItem) {
     validateField(field);
-    updateSubmitButton(field.closest(".form"));
+    updateSubmitButton(field.closest(".form, [data-form]"));
   }
 }
 
@@ -85,16 +88,13 @@ function validateField(field) {
   let isValid = true;
   let errorMessage = "";
 
-  // Валидация кастомного селекта
   if (field.classList.contains("selected-option")) {
     const realSelect = field
       .closest(".custom-select")
       .querySelector(".real-select");
     isValid = realSelect.value !== "";
     errorMessage = isValid ? "" : field.dataset.empty;
-  }
-  // Валидация обычных полей
-  else {
+  } else {
     if (field.validity.valueMissing) {
       errorMessage = field.dataset.empty;
       isValid = false;
@@ -134,6 +134,7 @@ function checkFormValidity(form) {
       const realSelect = field
         .closest(".custom-select")
         .querySelector(".real-select");
+
       return realSelect.value !== "";
     }
     return field.validity.valid;
@@ -145,7 +146,6 @@ function handleFormSubmit(event) {
   const form = event.target;
 
   if (checkFormValidity(form)) {
-    // Форма валидна, можно отправлять
     form.reset();
     resetSelect(form);
     updateSubmitButton(form);
@@ -155,10 +155,26 @@ function handleFormSubmit(event) {
   }
 }
 
-function resetSelect(form) {
-  const selectsRequired = form.querySelectorAll("select[required]");
+export function resetSelect(form) {
+  const customSelects = form.querySelectorAll(".custom-select");
 
-  selectsRequired.forEach((select) => {
-    select.value = "";
+  customSelects.forEach((select) => {
+    const realSelect = select.querySelector(".real-select");
+    const selectedOption = select.querySelector(".selected-option");
+    const options = select.querySelectorAll(".options-list li");
+
+    if (realSelect) {
+      realSelect.value = "";
+    }
+
+    if (selectedOption) {
+      selectedOption.value = "";
+      selectedOption.removeAttribute("value");
+      selectedOption.removeAttribute("data-name-id");
+    }
+
+    removeAllElementClass(options, "active");
+
+    classAction(select, "active", "remove");
   });
 }

@@ -298,13 +298,26 @@ h3,
     background-color: $accent-color;
   }
 
-  &.disabled {
+  &.disabled,
+  &.swiper-button-disabled {
     background-color: #4c4c4c33;
     pointer-events: none;
   }
 
   &.prev {
     rotate: -180deg;
+  }
+}
+
+.swiper-arrow-none {
+  &:has(.arrow-swiper.prev.swiper-button-disabled):has(
+      .arrow-swiper.next.swiper-button-disabled
+    ) {
+    .arrow-swiper.prev,
+    .arrow-swiper.next,
+    .swiper-arrows-box {
+      display: none;
+    }
   }
 }
 
@@ -317,6 +330,9 @@ h3,
   }
 
   .swiper-pagination {
+    display: flex;
+    justify-content: center;
+
     &--position {
       position: relative;
       display: flex;
@@ -336,7 +352,7 @@ h3,
   }
 
   .swiper-pagination-bullet {
-    background: rgba(255, 255, 255, 0.6);
+    background: #efefef;
     opacity: 1;
     margin: 0 4px;
     transition: all 0.5s;
@@ -572,6 +588,10 @@ h3,
     * {
       // pointer-events: none;
     }
+
+    &--transparent {
+      background-color: transparent;
+    }
   }
 
   &__active-arrow {
@@ -588,6 +608,27 @@ h3,
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+  }
+}
+
+.form__item {
+  .custom-select {
+    &__active {
+      input {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        color: #4c4c4c;
+        height: auto;
+        cursor: pointer;
+      }
+    }
   }
 }
 
@@ -723,6 +764,10 @@ h3,
         fill: #fff;
       }
     }
+  }
+
+  &--gray {
+    background-color: #4c4c4cb2;
   }
 
   img,
@@ -957,6 +1002,7 @@ body #booking-widget-863941 {
     @media (max-width: 1023px) {
       padding: 0;
       opacity: 1;
+      gap: 6px;
 
       &.active {
         position: relative;
@@ -978,7 +1024,8 @@ body #booking-widget-863941 {
       }
 
       & > *:not(:first-child) {
-        display: none;
+        font-weight: 600;
+        font-size: 16px;
       }
 
       & > *:first-of-type {
@@ -1120,6 +1167,10 @@ body #booking-widget-863941 {
       margin-bottom: 10px;
     }
 
+    p {
+      font-size: 11px;
+    }
+
     ul {
       display: flex;
       flex-direction: column;
@@ -1142,6 +1193,30 @@ body #booking-widget-863941 {
           }
         }
       }
+    }
+  }
+
+  &--four {
+    td {
+      width: calc(100% / 4);
+    }
+  }
+
+  &--six {
+    td {
+      width: calc(100% / 6);
+    }
+  }
+
+  &--ten {
+    td {
+      width: calc(100% / 10);
+    }
+  }
+
+  &--nine {
+    td {
+      width: calc(100% / 9);
     }
   }
 }
@@ -1414,5 +1489,113 @@ body #booking-widget-863941 {
   &--little-s {
     width: 50px;
     height: 50px;
+  }
+}
+
+.list-icon-small {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .icon {
+      display: flex;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-1.5px);
+    }
+  }
+}
+
+.swiper-arrows-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+
+  &--end {
+    justify-content: end;
+  }
+}
+
+.items-box {
+  --gap-items: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-items);
+
+  & > * {
+    flex: 1 1 calc(calc(100% / 2) - var(--gap-items) / 2);
+    min-width: 250px;
+  }
+
+  &--three > * {
+    flex: 1 1 calc(calc(100% / 3) - var(--gap-items) * 2 / 3);
+    min-width: 300px;
+  }
+
+  &--four > * {
+    flex: 1 1 calc(calc(100% / 4) - var(--gap-items) * 3 / 4);
+    min-width: 200px;
+  }
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+      min-width: 0;
+    }
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.slider-box-media {
+  .swiper-slide {
+    height: auto;
+  }
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+.brown-color {
+  color: #964611;
+}
+
+.images-to-image {
+  position: relative;
+  overflow: hidden;
+
+  &__small {
+    grid-area: 1 / 1;
+    width: 60%;
+    border: 2px solid #ffffff99;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+
+  &__big {
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
   }
 }

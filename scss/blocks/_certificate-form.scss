@@ -1,0 +1,36 @@
+.certificate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  &__content,
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__footer-info {
+    display: flex;
+   flex-direction: column;
+    gap: 12px;
+  }
+}

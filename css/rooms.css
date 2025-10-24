@@ -496,16 +496,6 @@
   right: 0;
   bottom: 10px;
 }
-.good-big .swiper-pagination-bullet {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 8px;
-  height: 8px;
-}
-.good-big .swiper .swiper-pagination-bullet-active {
-  width: 28px;
-}
 .good-big__textbox p {
   display: inline;
   overflow: hidden;
@@ -637,11 +627,6 @@
   display: -ms-flexbox;
   display: flex;
 }
-.rooms-banner__swiper-box .swiper-pagination-bullet {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
 .rooms-banner__slide {
   height: 100%;
   width: 100%;
@@ -656,7 +641,7 @@
           flex-direction: column;
   gap: clamp(1.75rem, 1.434rem + 1.2183vw, 2.5rem);
   padding: clamp(2.5rem, 2.2367rem + 1.0152vw, 3.125rem) clamp(1rem, 0.1047rem + 3.4518vw, 3.125rem);
-  background-color: #E2DCD5;
+  background-color: #e2dcd5;
   max-width: 568px;
 }
 .rooms-banner__top {

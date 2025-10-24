@@ -166,7 +166,6 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   handleAllSliders();
-  initCustomSelects(document.querySelector('.guests'));
 });
 
 

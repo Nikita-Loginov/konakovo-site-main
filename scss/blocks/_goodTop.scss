@@ -6,7 +6,7 @@
 
 .goodTop {
   width: 100vw;
-  min-height: calc(100vh - clamp(5.125rem, 4.6998rem + 1.6393vw, 6.0625rem));
+  min-height: calc(100vh - var(--header-height, 100px));
   position: relative;
   padding: 40px;
   display: flex;
