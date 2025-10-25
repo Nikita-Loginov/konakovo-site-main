@@ -14,8 +14,8 @@
 
   &:before {
     position: absolute;
-    inset:0;
-    content:"";
+    inset: 0;
+    content: "";
     background-color: #00000059;
     z-index: 1;
   }
@@ -50,25 +50,33 @@
   }
 
   &__title {
-    color:#fff;
+    color: #fff;
   }
+
+  &--center {
+    .container{
+      margin: auto 0;
+    }
+  }
+
+  
 
   .reservation-form {
     &__box-content {
-        background-color: #fff;
-        backdrop-filter: blur(0px);
+      background-color: #fff;
+      backdrop-filter: blur(0px);
     }
   }
 
-  @media(max-width:1023px) {
+  @media (max-width: 1023px) {
     &__img {
-        img {
-            object-position: 57%;
-        }
+      img {
+        object-position: 57%;
+      }
     }
   }
 
-  @media(max-width:767px) {
+  @media (max-width: 767px) {
     align-items: flex-end;
     min-height: 506px;
     padding: 44px 16px;

@@ -176,7 +176,7 @@ h3,
 }
 
 .h5 {
-  font-size: 36px;
+  font-size: clamp(1.25rem, 0.6853rem + 1.8824vw, 2.25rem);
   letter-spacing: calc(-1em / 25);
   line-height: 1;
   text-transform: uppercase;
@@ -1382,6 +1382,7 @@ body #booking-widget-863941 {
   font-size: clamp(1.5rem, 1.2131rem + 1.106vw, 2.25rem);
 }
 
+
 .arrow-link {
   &__icon {
     display: none;
@@ -1565,8 +1566,46 @@ body #booking-widget-863941 {
 }
 
 .slider-box-media {
+  overflow: hidden;
+
   .swiper-slide {
     height: auto;
+  }
+
+  .swiper-pagination-box {
+    display: none;
+  }
+
+  @media(max-width:767px) {
+    .swiper {
+      overflow: visible;
+      
+      .swiper-wrapper {
+        display: flex;
+        gap: 0;
+        flex-direction: row;
+       
+        flex-wrap: nowrap;
+
+        & > * {
+          min-width: 0;
+          flex: none;
+        }
+      }
+
+      .swiper-pagination-box {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.swiper-pagination-box {
+  padding-top: 20px;
+
+  &:has(.swiper-pagination.swiper-pagination-lock) {
+    display: none;
   }
 }
 

@@ -1,5 +1,4 @@
 import { initCounter } from "./counter.js";
-import { initCustomSelects } from "./validate.js";
 import { summPersons } from "./counter.js";
 
 document.addEventListener("click", (e) => {

@@ -470,7 +470,7 @@
       
 
       <main class="main main--noTop">
-        <section class="goodTop">
+        <section class="goodTop goodTop--center">
           <div class="container">
             <div class="goodTop__inner">
               <div class="goodTop__content">
@@ -484,6 +484,13 @@
 
             <div class="goodTop__img">
               <picture>
+                <source
+                  media="(max-width: 600px)"
+                  srcset="
+                    ./img/territory/two-media.webp 1x,
+                    ./img/goodTop/two-media2x.webp 2x
+                  "
+                />
                 <source
                   srcset="
                     ./img/goodTop/two.webp   1x,
@@ -862,6 +869,10 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="swiper-pagination-box">
+                    <div class="swiper-pagination"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1038,6 +1049,10 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="swiper-pagination-box">
+                    <div class="swiper-pagination"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1092,7 +1107,7 @@
                         </div>
 
                         <div class="form__item">
-                          <div class="custom-select">
+                          <div class="custom-select" data-select-programs>
                             <label
                               class="custom-select__active custom-select__active--transparent"
                             >
@@ -1239,8 +1254,11 @@
                           <div class="form__errors"></div>
                         </div>
 
-                        <div class="form__item">
-                          <div class="custom-select disabled" data-select-guests>
+                        <div class="form__item" data-select-guests-box>
+                          <div
+                            class="custom-select disabled"
+                            data-select-guests
+                          >
                             <label
                               class="custom-select__active custom-select__active--transparent"
                             >
@@ -1249,6 +1267,9 @@
                                 tabindex="0"
                                 placeholder="Кол-во гостей"
                                 readonly
+                                minlength="1"
+                                data-empty="Выберите кол-во гостей"
+                                required
                               />
 
                               <span class="custom-select__active-arrow">
@@ -1261,7 +1282,11 @@
 
                             <ul class="options-list"></ul>
 
-                            <select class="real-select" name="select-guest">
+                            <select
+                              class="real-select"
+                              name="select-guest"
+                              required
+                            >
                               <option value="" selected disabled>
                                 Выберите
                               </option>
@@ -1296,7 +1321,7 @@
                           Купить
                         </button>
 
-                        <p>
+                        <p style="font-size: clamp(0.75rem, 0.529rem + 0.7366vw, 1rem);">
                           Нажимая на кнопку, вы соглашаетесь на обработку
                           персональных данных и политику конфиденциальности
                         </p>
@@ -1335,6 +1360,116 @@
                       alt="фотография заката"
                     />
                   </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contacts-second">
+          <div class="container">
+            <div class="contacts-second__inner">
+              <div class="contacts-second__map" id="map"></div>
+
+              <div class="contacts-second__content">
+                <h2 class="h1">Контакты</h2>
+
+                <ul class="contacts-second__list" aria-label="список контактов">
+                  <li
+                    class="contacts-second__link contacts-second__link--small"
+                  >
+                    <p class="contacts-second__title">Отдел бронирования:</p>
+
+                    <div class="contacts-second__items">
+                      <a
+                        href="tel:+74951087093"
+                        title="+7 495 108-70-93"
+                        aria-label="позвонить нам по номеру +7 495 108-70-93"
+                        class="p1"
+                        >+7 495 108-70-93</a
+                      >
+
+                      <a
+                        href="tel:+790001311 8"
+                        title="++7 900 013 11 18"
+                        aria-label="позвонить нам по номеру +7 900 013 11 18"
+                        class="p1"
+                        >+7 900 013-11-18</a
+                      >
+                    </div>
+                  </li>
+
+                  <li
+                    class="contacts-second__link contacts-second__link--small"
+                  >
+                    <p class="contacts-second__title">
+                      Корпоративным клиентам:
+                    </p>
+
+                    <div class="contacts-second__items">
+                      <a
+                        href="tel:+74956262343"
+                        title="+7 495 626-23-43"
+                        aria-label="позвонить нам по номеру +7 495 626-23-43"
+                        class="p1"
+                        >+7 495 626-23-43</a
+                      >
+                    </div>
+                  </li>
+
+                  <li class="contacts-second__link">
+                    <p class="contacts-second__title">Информационный центр:</p>
+
+                    <div class="contacts-second__items">
+                      <a
+                        href="mailto:info@konakovo.com"
+                        title="info@konakovo.com"
+                        aria-label="написать нам на почту info@konakovo.com"
+                        class="p1"
+                        >info@konakovo.com</a
+                      >
+                    </div>
+                  </li>
+
+                  <li class="contacts-second__link">
+                    <p class="contacts-second__title">почта</p>
+
+                    <div class="contacts-second__items">
+                      <a
+                        href="mailto:info@konakovo.com"
+                        title="info@konakovo.com"
+                        aria-label="написать нам на почту info@konakovo.com"
+                        class="p1"
+                        >info@konakovo.com</a
+                      >
+                    </div>
+                  </li>
+
+                  <li class="contacts-second__link">
+                    <p class="contacts-second__title">адрес</p>
+
+                    <div class="contacts-second__items">
+                      <a
+                        href="https://yandex.ru/maps/?ll=36.767978,56.992723&amp;mode=search&amp;text=171256,%20Тверская%20обл.,%20г.%20Конаково,%20ул.%20Пригородная,%20дом%2070"
+                        title="171256, Тверская обл., г.&nbsp;Конаково, ул.&nbsp;Пригородная, дом 70"
+                        aria-label="наш адрес '171256, Тверская обл., г. Конаково, ул. Пригородная, дом 70"
+                        target="_blank"
+                        class="p1"
+                        >171256, Тверская обл., г. Конаково, ул. Пригородная,
+                        дом 70</a
+                      >
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="contacts-second__details">
+                  <a
+                    target="_blank"
+                    href="https://yandex.ru/maps/?ll=36.767978,56.992723&amp;mode=search&amp;text=171256,%20Тверская%20обл.,%20г.%20Конаково,%20ул.%20Пригородная,%20дом%2070"
+                    aria-label="посмотреть нас на карте"
+                    class="link link--white"
+                    >Посмотреть на яндекс картах</a
+                  >
                 </div>
               </div>
             </div>
@@ -1814,5 +1949,43 @@
     <script src="./js/lib/imask.min.js"></script>
     <script src="./js/page.js" type="module"></script>
     <script src="./js/bathhouse.js" type="module"></script>
+
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c2765d90-45c6-41ca-8f27-ff02846b6779&gt;"
+      type="text/javascript"
+    ></script>
+
+    <script>
+      ymaps.ready(function () {
+        var myMap = new ymaps.Map(
+            "map",
+            {
+              center: [56.76051, 36.742209],
+              zoom: 14,
+            },
+            {
+              searchControlProvider: "yandex#search",
+            }
+          ),
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+          myPlacemark = new ymaps.Placemark(
+            myMap.getCenter(),
+            {
+              hintContent: "Конаково Ривер Клаб",
+              balloonContent: "Конаково Ривер Клаб",
+            },
+            {
+              iconLayout: "default#image",
+              iconImageHref: "/img/header/logo-small.svg",
+              iconImageSize: [35, 35],
+              iconImageOffset: [20, -25],
+            }
+          );
+
+        myMap.geoObjects.add(myPlacemark);
+      });
+    </script>
   </body>
 </html>

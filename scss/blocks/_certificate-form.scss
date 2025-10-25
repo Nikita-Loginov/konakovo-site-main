@@ -1,7 +1,7 @@
 .certificate-form {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: clamp(1.5rem, 1.279rem + 0.7366vw, 1.75rem);
 
   &__content,
   &__info {
@@ -13,7 +13,7 @@
   &__inputs {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: clamp(0.5rem, 0.058rem + 1.4733vw, 1rem);
   }
 
   &__footer {

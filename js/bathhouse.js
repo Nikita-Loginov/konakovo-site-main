@@ -14,6 +14,30 @@ const swipers = [
       },
     },
   },
+  {
+    selector: ".swiper--prices",
+    breakpoint: 767,
+    options: {
+      ...SWIPER_DATA.CARDS_ITEMS,
+      pagination: {
+        el: ".swiper--prices .swiper-pagination",
+        clickable: true,
+      },
+  
+    },
+  },
+  {
+    selector: ".swiper--services",
+    breakpoint: 767,
+    options: {
+      ...SWIPER_DATA.CARDS_ITEMS,
+      pagination: {
+        el: ".swiper--services .swiper-pagination",
+        clickable: true,
+      },
+  
+    },
+  },
 ];
 
 export const initSwipers = () => {

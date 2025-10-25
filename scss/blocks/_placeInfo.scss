@@ -11,13 +11,13 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: clamp(2rem, 1.7176rem + 0.9412vw, 2.5rem);
   }
 
   &__top {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: clamp(1.25rem, 0.5441rem + 2.3529vw, 2.5rem);
   }
 
   &__swiper-box {
@@ -27,7 +27,7 @@
 
   &__item {
     background-color: #313130;
-    height: 400px;
+    height: clamp(13.75rem, 7.3971rem + 21.1765vw, 25rem);
     overflow: hidden;
   }
 
@@ -39,6 +39,15 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+    }
+  }
+
+  @media(max-width:1023px) {
+    --gap-inner: 32px;
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
     }
   }
 }

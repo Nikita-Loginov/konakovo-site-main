@@ -1,12 +1,12 @@
 .card-decor {
-  min-height: 440px;
+  min-height: clamp(16rem, 9.5059rem + 21.6471vw, 27.5rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #fdf9dc;
   padding: 24px;
-  gap: 40px;
+  gap:  clamp(0.75rem, -0.2382rem + 3.2941vw, 2.5rem);
   height: 100%;
 
   &--green {
@@ -27,7 +27,7 @@
 
   &--mini {
     min-height: 0;
-    padding: 48px 24px;
+    padding: clamp(1.5rem, 0.6529rem + 2.8235vw, 3rem) 24px;
   }
 
   &__details {
@@ -54,6 +54,10 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 32px;
+    gap: clamp(0.75rem, 0.0441rem + 2.3529vw, 2rem);
+  }
+
+  @media(max-width:767px) {
+    min-height: 0;
   }
 }

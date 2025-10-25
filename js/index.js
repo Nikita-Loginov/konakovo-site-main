@@ -2,7 +2,6 @@ import { removeImgTop, animationBlock, showForm } from "./modules/animation.js";
 import { classAction } from "./modules/classActions.js";
 import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
 import { initAnimation } from "./modules/animationCardEvents.js";
-import { initCustomSelects } from "./modules/validate.js";
 
 const swipers = [
   {

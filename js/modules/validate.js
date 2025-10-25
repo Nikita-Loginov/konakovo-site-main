@@ -19,7 +19,6 @@ function removeAllElementClass(elements, className) {
 
 let isDocumentListenerAttached = false;
 
-
 export function initCustomSelects(e) {
   const select = e.target.closest(".custom-select");
   if (!select) return;
@@ -29,6 +28,15 @@ export function initCustomSelects(e) {
   const realSelect = select.querySelector(".real-select");
   const options = optionsList ? optionsList.querySelectorAll("li") : [];
 
+  if (selectedOption && !selectedOption.dataset.listenerAdded) {
+    selectedOption.dataset.listenerAdded = "true";
+    
+    selectedOption.addEventListener("click", (ev) => {
+      classAction(select, "active", "toggle");
+      ev.stopPropagation();
+    });
+  }
+
   if (e.target.closest(".custom-select__active")) {
     classAction(select, "active", "toggle");
   }
@@ -37,8 +45,8 @@ export function initCustomSelects(e) {
     select.dataset.inited = "true";
 
     options.forEach((option) => {
-      option.addEventListener("click", (ev) => {
-        ev.preventDefault();
+      option.addEventListener("click", (e) => {
+        e.preventDefault();
 
         const value = (option.dataset.value || "").replace(/\s+/g, " ").trim();
         const nameId = (option.dataset.nameId || "").replace(/\s+/g, " ").trim();
@@ -52,25 +60,27 @@ export function initCustomSelects(e) {
 
         triggerValidation(selectedOption);
 
-        classAction(select, "active", "remove");
         removeAllElementClass(options, "active");
         classAction(option, "active", "add");
+
+        classAction(select, "active", "remove");
       });
     });
   }
 
   if (!isDocumentListenerAttached) {
-    document.addEventListener("click", (ev) => {
-      document.querySelectorAll(".custom-select.active").forEach((openSelect) => {
-        if (!openSelect.contains(ev.target)) {
-          classAction(openSelect, "active", "remove");
-        }
-      });
+    document.addEventListener("click", (e) => {
+      document
+        .querySelectorAll(".custom-select.active")
+        .forEach((openSelect) => {
+          if (!openSelect.contains(e.target)) {
+            classAction(openSelect, "active", "remove");
+          }
+        });
     });
     isDocumentListenerAttached = true;
   }
 }
-
 
 function handleFieldChange(event) {
   const field = event.target;
@@ -126,7 +136,7 @@ function updateSubmitButton(form) {
   classAction(submitButton, "disabled", formIsValid ? "remove" : "add");
 }
 
-function checkFormValidity(form) {
+export function checkFormValidity(form) {
   const requiredFields = form.querySelectorAll("[required]");
 
   return Array.from(requiredFields).every((field) => {
@@ -155,8 +165,8 @@ function handleFormSubmit(event) {
   }
 }
 
-export function resetSelect(form) {
-  const customSelects = form.querySelectorAll(".custom-select");
+export function resetSelect(el) {
+  const customSelects = el.querySelectorAll(".custom-select");
 
   customSelects.forEach((select) => {
     const realSelect = select.querySelector(".real-select");
@@ -172,6 +182,8 @@ export function resetSelect(form) {
       selectedOption.removeAttribute("value");
       selectedOption.removeAttribute("data-name-id");
     }
+
+    select.removeAttribute("data-inited");
 
     removeAllElementClass(options, "active");
 
