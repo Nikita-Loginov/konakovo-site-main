@@ -7,4 +7,13 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+}
+
+.programs__inner {
+  display: grid;
+  grid-template-columns: auto 568px;
+  gap: 20px;
+}
+.programs__info {
+  width: 100%;
 }/*# sourceMappingURL=bathhouse.css.map */

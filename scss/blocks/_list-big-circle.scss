@@ -1,0 +1,30 @@
+.list-big-circle {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  counter-reset: list;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    counter-increment: list 1;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #964611;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background-color: #fff;
+    border-radius: 50%;
+
+    &:before {
+      content: counter(list);
+    }
+  }
+}

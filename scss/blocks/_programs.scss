@@ -1,0 +1,11 @@
+.programs {
+  &__inner {
+    display: grid;
+    grid-template-columns: auto 568px;
+    gap: 20px;
+  }
+
+  &__info {
+    width: 100%;
+  }
+}

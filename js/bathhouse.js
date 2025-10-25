@@ -1,6 +1,8 @@
 import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
 import { SWIPER_DATA } from "./swiper/index.js";
 import { initCertificateCalculate } from "./modules/certificateCalculate.js";
+import { getHtmlProgrammCard } from "./modules/renderContent.js";
+import { programsData } from "./data/programs.js";
 
 const swipers = [
   {
