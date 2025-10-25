@@ -20,9 +20,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #4C4C4CB2;
+      background-color: #4c4c4cb2;
       flex-shrink: 0;
-      border: 1px solid #FFFFFF1A;
+      border: 1px solid #ffffff1a;
       border-radius: 50%;
       position: absolute;
       z-index: 3;
@@ -58,7 +58,7 @@
         }
       }
 
-      @media(max-width:930px) {
+      @media (max-width: 930px) {
         &__inner {
           padding: 0 0 32px;
           max-width: 500px;
@@ -74,7 +74,6 @@
         }
       }
     }
-
   }
 
   &.videoModal {
@@ -91,18 +90,16 @@
     }
 
     .videoModal {
-      
       &__video {
         // width: 60vw;
         // height: 50vh;
-   
-         iframe {
-           width: 100%;
-           height: 100%;
-         }
-       }
-    }
 
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
   }
 
   &.succesModal {
@@ -136,9 +133,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #4C4C4CB2;
+      background-color: #4c4c4cb2;
       flex-shrink: 0;
-      border: 1px solid #FFFFFF1A;
+      border: 1px solid #ffffff1a;
       border-radius: 50%;
       position: absolute;
       z-index: 3;
@@ -164,19 +161,19 @@
         color: #4c4c4c;
         height: auto;
         cursor: pointer;
-      
+
         &::placeholder {
           color: #4c4c4c;
-        }  
+        }
       }
     }
 
     &.modalBlockTwo {
-      @media(max-width:930px) {
+      @media (max-width: 930px) {
         .modalBlockTwo__inner {
           padding: 16px;
         }
-        
+
         .modalBlockTwo__img {
           display: none;
         }
@@ -185,7 +182,6 @@
   }
 
   &.holidayModal {
-   
     .modalBlock__inner {
       max-width: 90vw;
       padding: 0;
@@ -199,8 +195,8 @@
 
         .modal-close {
           border-radius: 50%;
-          background-color: #4C4C4CB2;
-          border: 1px solid #FFFFFF1A;
+          background-color: #4c4c4cb2;
+          border: 1px solid #ffffff1a;
           width: 44px;
           height: 44px;
 
@@ -218,19 +214,105 @@
     }
 
     .holidayModal {
-
       &__img {
-       width: 100%;
-       height: 70vh;
-
-       img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-       }
+        height: 70vh;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &.imgsSwiperModal {
+    .modalBlock__inner {
+      height: 90vh;
+      max-width: 90vw;
+      width: 100%;
+      background-color: #fff;
+      padding: 12px 32px;
+
+      @media (max-width: 767px) {
+        height: 50vh;
+        max-width: fit-content;
       }
     }
 
+    .modalBlock__top {
+      position: absolute;
+      z-index: 10;
+      right: 12px;
+      top: 12px;
+
+      .modal-close {
+        width: clamp(1.875rem, 1.1015rem + 2.5783vw, 2.75rem);
+        height: clamp(1.875rem, 1.1015rem + 2.5783vw, 2.75rem);
+        background-color: #4c4c4cb2;
+        border-radius: 50%;
+
+        svg,
+        img {
+          width: 16px;
+          height: 16px;
+
+          path {
+            fill: #fff;
+          }
+        }
+      }
+    }
+
+    .imgsSwiperModal {
+      &__img {
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      &__swiper-box {
+        width: 100%;
+        height: 100%;
+
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .swiper-pagination-box {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      .swiper-arrows-box {
+        display: none;
+      }
+
+      .swiper-pagination-box {
+        display: flex;
+        justify-content: center;
+      }
+
+      .swiper-pagination-box {
+        padding: 0;
+        position: relative;
+        bottom: 0px;
+        z-index: 10;
+      }
+
+      .swiper {
+        padding-bottom: 10px;
+      }
+    }
   }
 
   &.open {
@@ -252,7 +334,7 @@
     flex-direction: column;
     gap: 40px;
     transform: translateY(-200%);
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   &__top {

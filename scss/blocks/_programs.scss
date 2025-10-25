@@ -1,11 +1,44 @@
 .programs {
   &__inner {
     display: grid;
-    grid-template-columns: auto 568px;
+    grid-template-columns: auto clamp(31.25rem, 17.0879rem + 22.1498vw, 35.5rem);
     gap: 20px;
   }
 
   &__info {
     width: 100%;
+    position: sticky;
+    top: var(--header-height, 103px);
+    height: fit-content;
+  }
+
+  &__items-media {
+    display: none;
+  }
+
+  @media(max-width:1023px) {
+    &__items-media {
+      display: grid;
+    }
+
+    &__items,
+    &__info {
+      display: none;
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-presentation {
+      &--big {
+        .card-presentation {
+          &__img {
+            height: clamp(12.5rem, -0.7597rem + 44.1989vw, 27.5rem);
+          }
+        }
+      }
+    }
   }
 }

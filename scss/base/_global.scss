@@ -168,7 +168,7 @@ h3,
 }
 
 .h4 {
-  font-size: 48px;
+  font-size: clamp(2.5rem, 2.058rem + 1.4733vw, 3rem);
   letter-spacing: calc(-1em / 25);
   line-height: 1;
   text-transform: uppercase;
@@ -321,6 +321,34 @@ h3,
 
   &.prev {
     rotate: -180deg;
+  }
+
+  &--big {
+    width: 44px;
+    height: 44px;
+
+    img,
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &--noBg {
+    background-color: transparent;
+    border: 1px solid #4C4C4C;
+
+    path {
+      fill: #4C4C4C;
+    }
+
+    &:hover {
+      background-color: #000;
+
+      path {
+        fill: #fff;
+      }
+    }
   }
 }
 
@@ -1539,6 +1567,31 @@ body #booking-widget-863941 {
   &--end {
     justify-content: end;
   }
+
+  &--absolute {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    z-index: 2;
+    right: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .arrow-swiper {
+      position: absolute;
+
+      &.prev {
+        left: 0;
+      }
+
+      &.next {
+        right: 0;
+      }
+    }
+  }
 }
 
 .items-box {
@@ -1620,7 +1673,7 @@ body #booking-widget-863941 {
   padding-top: 20px;
 
   &:has(.swiper-pagination.swiper-pagination-lock) {
-    display: none;
+    display: none !important;
   }
 }
 
