@@ -589,7 +589,7 @@
                           </button>
 
                           <a
-                            href="#"
+                           href="https://shop.hotbot.ai/konakovo/" target="_blank"
                             title="Забронировать"
                             aria-label="Перейти к бронированию"
                             class="button button--white"
@@ -737,7 +737,7 @@
                           </button>
 
                           <a
-                            href="#"
+                           href="https://shop.hotbot.ai/konakovo/" target="_blank"
                             title="Забронировать"
                             aria-label="Перейти к бронированию"
                             class="button button--white"
@@ -873,7 +873,7 @@
                           </button>
 
                           <a
-                            href="#"
+                           href="https://shop.hotbot.ai/konakovo/" target="_blank"
                             title="Забронировать"
                             aria-label="Перейти к бронированию"
                             class="button button--white"
@@ -1025,7 +1025,7 @@
                           </button>
 
                           <a
-                            href="#"
+                           href="https://shop.hotbot.ai/konakovo/" target="_blank"
                             title="Забронировать"
                             aria-label="Перейти к бронированию"
                             class="button button--white"
@@ -1360,7 +1360,14 @@
                 data-form
               >
                 <div class="certificate-form">
-                  <h2 class="h2">Подарочный сертификат</h2>
+                  <div class="certificate-form__block">
+                    <h2 class="h2">Подарочный сертификат</h2>
+
+                    <div class="textbox">
+                      <p>*При покупке сертификата скидка</p>
+                    </div>
+                  </div>
+                  
 
                   <div class="certificate-form__content">
                     <div class="certificate-form__info">
@@ -1423,7 +1430,7 @@
                             <ul class="options-list">
                               <li data-value="1" data-name-id="divesWeekdays">
                                 <span
-                                  >Обрядовая программа "Погружения(пн-чт)"</span
+                                  >Обрядовая программа "Погружения"</span
                                 >
 
                                 <span class="options-list__arrow">
@@ -1434,7 +1441,7 @@
                                 </span>
                               </li>
 
-                              <li data-value="2" data-name-id="divesWeekend">
+                              <!-- <li data-value="2" data-name-id="divesWeekend">
                                 <span
                                   >Обрядовая программа "Погружения(пт-вс)"</span
                                 >
@@ -1445,12 +1452,12 @@
                                     alt="иконка"
                                   />
                                 </span>
-                              </li>
+                              </li> -->
 
                               <li data-value="3" data-name-id="lifeWeekdays">
                                 <span
                                   >Процедурная программа "Вкус жизни
-                                  (пн-чт)"</span
+                                "</span
                                 >
 
                                 <span class="options-list__arrow">
@@ -1461,7 +1468,7 @@
                                 </span>
                               </li>
 
-                              <li data-value="4" data-name-id="lifeWeekend">
+                              <!-- <li data-value="4" data-name-id="lifeWeekend">
                                 <span
                                   >Процедурная программа "Вкус жизни
                                   (пт-вс)"</span
@@ -1473,14 +1480,14 @@
                                     alt="иконка"
                                   />
                                 </span>
-                              </li>
+                              </li> -->
 
                               <li
                                 data-value="5"
                                 data-name-id="сommunityWeekdays"
                               >
                                 <span
-                                  >Коллективная программа "Община (пн-чт)"</span
+                                  >Коллективная программа "Община"</span
                                 >
 
                                 <span class="options-list__arrow">
@@ -1491,7 +1498,7 @@
                                 </span>
                               </li>
 
-                              <li
+                              <!-- <li
                                 data-value="6"
                                 data-name-id="сommunityWeekend"
                               >
@@ -1505,7 +1512,7 @@
                                     alt="иконка"
                                   />
                                 </span>
-                              </li>
+                              </li> -->
                             </ul>
 
                             <select
@@ -1606,8 +1613,9 @@
 
                       <div class="certificate-form__footer-info">
                         <button
-                          class="button button--green disabled"
+                          class="button button--green disabled modal-open"
                           type="submit"
+                          data-modal="succesModal"
                         >
                           Купить
                         </button>

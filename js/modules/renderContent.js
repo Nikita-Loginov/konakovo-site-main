@@ -260,7 +260,7 @@ export const getHtmlProgrammCard = (data) => {
             ${
               linkBrone
                 ? `
-              <a href="${linkBrone}" title="Забронировать" aria-label="Перейти к бронированию" class="button button--white">
+              <a href="${linkBrone}" target="_blank" title="Забронировать" aria-label="Перейти к бронированию" class="button button--white">
                 Забронировать
               </a>
             `

@@ -1,42 +1,49 @@
 function openModal() {
-  document.addEventListener('click', (e) => {
-    const modalBtn = e.target.closest('.modal-open');
-    
+  document.addEventListener("click", (e) => {
+    const modalBtn = e.target.closest(".modal-open");
+
     if (!modalBtn) return;
 
     const nameModal = modalBtn.dataset.modal;
     if (!nameModal) return;
 
     const modalBlock = document.querySelector(`.${nameModal}`);
+    
     if (!modalBlock) return;
 
-    const modals = document.querySelectorAll('.modalBlock');
-    
-    modals.forEach((modal) => {
-      modal.classList.remove('open');
-    });
+    const modals = document.querySelectorAll(".modalBlock");
 
-    if (modalBlock.classList.contains('modalBlockTwo')) {
-      getImgSrc(modalBtn, modalBlock);
-    }
+    if (modalBtn.getAttribute("type") === "submit") return;
 
-    if (modalBlock.classList.contains('videoModal')) {
-      getVideoSrc(modalBtn, modalBlock);
-    }
-
-    modalBlock.classList.add('open');
-    document.body.classList.add('open-modal');
-    document.documentElement.classList.add('open-modal');
+    openModalStep(modalBtn, modals, modalBlock);
   });
 }
 
+export function openModalStep(modalBtn, modals, modalBlock) {
+  modals.forEach((modal) => {
+    modal.classList.remove("open");
+  });
+
+  if (modalBlock.classList.contains("modalBlockTwo")) {
+    getImgSrc(modalBtn, modalBlock);
+  }
+
+  if (modalBlock.classList.contains("videoModal")) {
+    getVideoSrc(modalBtn, modalBlock);
+  }
+
+  modalBlock.classList.add("open");
+  document.body.classList.add("open-modal");
+  document.documentElement.classList.add("open-modal");
+}
+
 function getImgSrc(btn, modalBlock) {
-  const img = btn.querySelector('.modal-img');
+  const img = btn.querySelector(".modal-img");
 
   console.log(img);
 
   if (img) {
-    const src = img.getAttribute('src');
+    const src = img.getAttribute("src");
     setImgSrc(src, modalBlock);
   }
 }
@@ -49,8 +56,8 @@ const getVideoSrc = (btn, modalBlock) => {
 };
 
 function setImgSrc(src, modalBlock) {
-  const imgModalBlock = modalBlock.querySelector('.modalBlockTwo__img');
-  imgModalBlock.textContent = '';
+  const imgModalBlock = modalBlock.querySelector(".modalBlockTwo__img");
+  imgModalBlock.textContent = "";
 
   const html = `
             <picture>
@@ -59,14 +66,14 @@ function setImgSrc(src, modalBlock) {
             </picture>
             `;
 
-  imgModalBlock.insertAdjacentHTML('beforeend', html);
+  imgModalBlock.insertAdjacentHTML("beforeend", html);
 }
 
 const setVideoSrc = (src, modalBlock) => {
   if (!src) return;
 
-  const blockVideo = modalBlock.querySelector('.videoModal__video');
-  blockVideo.innerHTML = '';
+  const blockVideo = modalBlock.querySelector(".videoModal__video");
+  blockVideo.innerHTML = "";
 
   const html = ` <iframe
                 width="720"
@@ -79,32 +86,38 @@ const setVideoSrc = (src, modalBlock) => {
                 allowfullscreen
               ></iframe>`;
 
-  blockVideo.insertAdjacentHTML('beforeend', html);
+  blockVideo.insertAdjacentHTML("beforeend", html);
 };
 
 function closeModal() {
-  document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modalBlock') || e.target.closest('.modal-close')) {
-      const modalRelative = e.target.closest('.modalBlock');
-      modalRelative.classList.remove('open');
+  document.addEventListener("click", (e) => {
+    if (
+      e.target.classList.contains("modalBlock") ||
+      e.target.closest(".modal-close")
+    ) {
+      const modalRelative = e.target.closest(".modalBlock");
+      modalRelative.classList.remove("open");
 
-      if (document.querySelector('.modalBlock.open')) return;
-      document.body.classList.remove('open-modal');
-      document.documentElement.classList.remove('open-modal');
+      if (document.querySelector(".modalBlock.open")) return;
+      document.body.classList.remove("open-modal");
+      document.documentElement.classList.remove("open-modal");
     }
   });
 }
 
 const checkStartOpen = () => {
-  const modals = document.querySelectorAll('.modalBlock');
+  const modals = document.querySelectorAll(".modalBlock");
 
   modals.forEach((modal) => {
-    if (modal.classList.contains('open') || modal.classList.contains('openFinish')) {
-      document.body.classList.add('open-modal');
-      document.documentElement.classList.add('open-modal');
+    if (
+      modal.classList.contains("open") ||
+      modal.classList.contains("openFinish")
+    ) {
+      document.body.classList.add("open-modal");
+      document.documentElement.classList.add("open-modal");
 
-      if (modal.classList.contains('openFinish')) {
-        modal.classList.add('open');
+      if (modal.classList.contains("openFinish")) {
+        modal.classList.add("open");
       }
     }
   });

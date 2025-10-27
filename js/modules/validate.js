@@ -1,5 +1,6 @@
 import { maskTel } from "./masks.js";
 import { classAction } from "./classActions.js";
+import { openModalStep } from "./modal.js";
 
 export function initFormValidation(form) {
   if (!form) return;
@@ -30,7 +31,7 @@ export function initCustomSelects(e) {
 
   if (selectedOption && !selectedOption.dataset.listenerAdded) {
     selectedOption.dataset.listenerAdded = "true";
-    
+
     selectedOption.addEventListener("click", (ev) => {
       classAction(select, "active", "toggle");
       ev.stopPropagation();
@@ -49,7 +50,9 @@ export function initCustomSelects(e) {
         e.preventDefault();
 
         const value = (option.dataset.value || "").replace(/\s+/g, " ").trim();
-        const nameId = (option.dataset.nameId || "").replace(/\s+/g, " ").trim();
+        const nameId = (option.dataset.nameId || "")
+          .replace(/\s+/g, " ")
+          .trim();
         const text = (option.textContent || "").replace(/\s+/g, " ").trim();
 
         selectedOption.value = text;
@@ -159,6 +162,19 @@ function handleFormSubmit(event) {
     form.reset();
     resetSelect(form);
     updateSubmitButton(form);
+
+    const btnModal = event.target.querySelector(
+      'button[type="submit"].modal-open, button[type="submit"].modal-close'
+    );
+    const nameModal = btnModal.dataset.modal;
+
+    if (btnModal && nameModal) {
+      openModalStep(
+        btnModal,
+        document.querySelectorAll(`.modalBlock`),
+        document.querySelector(`.${nameModal}`)
+      );
+    }
   } else {
     const requiredFields = form.querySelectorAll("[required]");
     requiredFields.forEach((field) => validateField(field));
