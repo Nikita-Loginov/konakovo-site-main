@@ -54,12 +54,10 @@
   }
 
   &--center {
-    .container{
-      margin: auto 0;
+    .container {
+      margin: auto auto;
     }
   }
-
-  
 
   .reservation-form {
     &__box-content {

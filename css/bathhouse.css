@@ -44,4 +44,21 @@
   .programs .card-presentation--big .card-presentation__img {
     height: clamp(12.5rem, -0.7597rem + 44.1989vw, 27.5rem);
   }
+}
+
+.brone__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (max-width: 767px) {
+  .brone__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }/*# sourceMappingURL=bathhouse.css.map */

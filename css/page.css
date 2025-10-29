@@ -343,6 +343,7 @@ h3,
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
+  gap: 10px;
 }
 .button--green,
 .link--green {
@@ -406,7 +407,7 @@ h3,
 .button--noBg-white,
 .link--noBg-white {
   color: #fff;
-  border-color: #EFEFEF;
+  border-color: #efefef;
 }
 .button--noBg-white:hover,
 .link--noBg-white:hover {
@@ -417,6 +418,18 @@ h3,
 .link--noBg-white.disabled {
   pointer-events: none;
   opacity: 0.6;
+}
+.button .icon,
+.link .icon {
+  width: 20px;
+  height: 20px;
+}
+.button .icon img,
+.button .icon svg,
+.link .icon img,
+.link .icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .arrow-swiper {
@@ -460,10 +473,10 @@ h3,
 }
 .arrow-swiper--noBg {
   background-color: transparent;
-  border: 1px solid #4C4C4C;
+  border: 1px solid #4c4c4c;
 }
 .arrow-swiper--noBg path {
-  fill: #4C4C4C;
+  fill: #4c4c4c;
 }
 .arrow-swiper--noBg:hover {
   background-color: #000;
@@ -1536,6 +1549,10 @@ body #booking-widget-863941 {
 }
 
 .fz36-24 {
+  font-size: clamp(1.5rem, 1.2131rem + 1.106vw, 2.25rem);
+}
+
+.fz48-32 {
   font-size: clamp(1.5rem, 1.2131rem + 1.106vw, 2.25rem);
 }
 
@@ -3146,7 +3163,7 @@ body.showForm .reservation-form--scroll {
   color: #fff;
 }
 .goodTop--center .container {
-  margin: auto 0;
+  margin: auto auto;
 }
 .goodTop .reservation-form__box-content {
   background-color: #fff;
@@ -4272,6 +4289,39 @@ body.showForm .reservation-form--scroll {
 }
 .list-big-circle__icon:before {
   content: counter(list);
+}
+
+.card-simple {
+  background-color: #efefef;
+  padding: 20px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 12px;
+  min-height: clamp(11.0625rem, 10.2507rem + 2.7059vw, 12.5rem);
+}
+.card-simple__content, .card-simple__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .card-details {

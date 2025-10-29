@@ -1,0 +1,18 @@
+.card-simple {
+  background-color: #efefef;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: clamp(11.0625rem, 10.2507rem + 2.7059vw, 12.5rem);
+
+  &__content,
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
