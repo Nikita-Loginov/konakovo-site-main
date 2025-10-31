@@ -182,6 +182,7 @@
   }
 
   &.holidayModal {
+    inset: 0;
     .modalBlock__inner {
       max-width: 90vw;
       padding: 0;

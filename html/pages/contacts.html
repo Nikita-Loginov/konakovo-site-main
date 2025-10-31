@@ -1,44 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="Конаково, Активный отдых, Спорт, Рыбалка, Яхта"
-    />
-    <meta
-      name="description"
-      content="Конаково Ривер Клаб — это место на берегу Волги для активного отдыха, занятий спортом, охотой и рыбалкой."
-    />
-    <title>«Konakovo River Club» — event-отель — Официальный сайт</title>
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/img/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/img/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/img/favicon/favicon-16x16.png"
-    />
-    <!-- <link rel="manifest" href="/img/favicon/site.webmanifest" /> -->
-    <link href="./css/lib/air-datepicker.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/page.css" />
-    <link rel="stylesheet" href="./css/contacts.css" />
-  </head>
+  @@include('../modules/head.html', { "links" : ["./css/page.css",
+  "./css/lib/swiper.min.css", '/css/page.css', './css/contacts.css']})
   <body>
     <div class="wrapper">
-      @@include('../modules/header.html')
-      @@include('../modules/preloader.html')
+      @@include('../modules/header.html') 
+      <!-- @@include('../modules/preloader.html') -->
 
       <main class="main">
         <section class="connect">
@@ -535,13 +502,17 @@
 
                 <ul class="requisite__list">
                   <li class="requisite__link">
+                    <p>Фактический и юридический адрес:</p>
+
                     <p>
-                      Фактический и юридический адрес:
+                      171256, Россия, Тверская область, г. Конаково,
+                      ул. Пригородная, дом 70
                     </p>
 
-                    <p>171256, Россия, Тверская область, г. Конаково, ул. Пригородная, дом 70</p>
-
-                    <p>Тел./Факс: +7 495 108-70-93, +7 495 626-23-43, +7 495 626-23-34</p>
+                    <p>
+                      Тел./Факс: +7 495 108-70-93, +7 495 626-23-43,
+                      +7 495 626-23-34
+                    </p>
 
                     <p>ИНН 7708677096</p>
 
@@ -553,14 +524,11 @@
                   </li>
 
                   <li class="requisite__link">
-                    <p>
-                      407 028 107 630 000 012 96 
-                    </p>
+                    <p>407 028 107 630 000 012 96</p>
 
                     <p>301 018 107 000 000 006 79</p>
 
-                    <p> 042
-                      809 679</p>
+                    <p>042 809 679</p>
                   </li>
                 </ul>
               </div>

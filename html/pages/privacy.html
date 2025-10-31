@@ -1,44 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="Конаково, Активный отдых, Спорт, Рыбалка, Яхта"
-    />
-    <meta
-      name="description"
-      content="Конаково Ривер Клаб — это место на берегу Волги для активного отдыха, занятий спортом, охотой и рыбалкой."
-    />
-    <title>«Konakovo River Club» — event-отель — Официальный сайт</title>
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/img/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/img/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/img/favicon/favicon-16x16.png"
-    />
-    <!-- <link rel="manifest" href="/img/favicon/site.webmanifest" /> -->
-    <link href="./css/lib/air-datepicker.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/page.css" />
-    <link rel="stylesheet" href="./css/privacy.css" />
-  </head>
+  @@include('../modules/head.html', { "links" :
+  ["./css/lib/air-datepicker.css", '/css/page.css',
+  './css/privacy.css']})
   <body>
     <div class="wrapper">
-      @@include('../modules/header.html')
-      @@include('../modules/preloader.html')
+      @@include('../modules/header.html') 
+      <!-- @@include('../modules/preloader.html') -->
 
       <main class="main">
         <section class="privacy">
@@ -145,7 +113,15 @@
                     </p>
 
                     <p>
-                      <span>Обработка персональных данных</span> — любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных;
+                      <span>Обработка персональных данных</span> — любое
+                      действие (операция) или совокупность действий (операций),
+                      совершаемых с использованием средств автоматизации
+                      или без использования таких средств с персональными
+                      данными, включая сбор, запись, систематизацию, накопление,
+                      хранение, уточнение (обновление, изменение), извлечение,
+                      использование, передачу (распространение, предоставление,
+                      доступ), обезличивание, блокирование, удаление,
+                      уничтожение персональных данных;
                     </p>
                   </div>
                 </div>
@@ -301,13 +277,14 @@
                     </li>
 
                     <li class="list__link">
-                      Настоящая Политика конфиденциальности теряет свою силу
-                      при появлении новой версии, размещенной на сайте
+                      Настоящая Политика конфиденциальности теряет свою силу при
+                      появлении новой версии, размещенной на сайте
                       <a href="konakovo-river.ru">konakovo-river.ru</a>
                     </li>
 
                     <li class="list__link">
-                      Дети любых возрастов могут беспрепятственно пользоваться данным сайтом.
+                      Дети любых возрастов могут беспрепятственно пользоваться
+                      данным сайтом.
                     </li>
                   </ul>
                 </div>

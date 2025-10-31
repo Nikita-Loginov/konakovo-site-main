@@ -1,41 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="Конаково, Активный отдых, Спорт, Рыбалка, Яхта"
-    />
-    <meta
-      name="description"
-      content="Конаково Ривер Клаб — это место на берегу Волги для активного отдыха, занятий спортом, охотой и рыбалкой."
-    />
-    <title>«Konakovo River Club» — event-отель — Официальный сайт</title>
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/img/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/img/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/img/favicon/favicon-16x16.png"
-    />
-    <!-- <link rel="manifest" href="/img/favicon/site.webmanifest" /> -->
-    <link href="./css/lib/air-datepicker.css" rel="stylesheet" />
-    <link href="./css/lib/swiper.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/page.css" />
-    <link rel="stylesheet" href="./css/serviceCard.css" />
-  </head>
+  @@include('../modules/head.html', { "links" :
+  ["./css/lib/air-datepicker.css","./css/lib/swiper.min.css", '/css/page.css',
+  './css/serviceCard.css']})
   <body>
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -68,7 +35,14 @@
                   <div class="promo__content-head">
                     <h1 class="h2 promo__title">УСЛУГИ ПАРУСНОГО ЦЕНТРА</h1>
 
-                    <a href="#" class="link link--green" target="_blank" rel="noopener noreferrer" title="Бронь услуги онлайн">Бронь услуги онлайн</a>
+                    <a
+                      href="#"
+                      class="link link--green"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Бронь услуги онлайн"
+                      >Бронь услуги онлайн</a
+                    >
                   </div>
                 </div>
 

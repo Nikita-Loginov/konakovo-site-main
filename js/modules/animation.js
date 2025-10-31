@@ -31,6 +31,7 @@ export function toggleBlockWhenScrollFooter(block) {
     if (footerBottom < window.innerHeight + footerHeight) {
       block.style.opacity = 0;
       block.style.visibility = "hidden";
+      
     } else {
       block.style.opacity = 1;
       block.style.visibility = "visible";
