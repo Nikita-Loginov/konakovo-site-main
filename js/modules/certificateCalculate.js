@@ -229,6 +229,18 @@ const data = {
 
     name: 'Программа "Наедине"',
   },
+  aloneWeekend: {
+    totalGuests: 1,
+    minGuests: 1,
+    guestsInfo: {
+      1: {
+        summ: "96 000",
+        time: 5,
+      },
+    },
+
+    name: 'Программа "Наедине"',
+  },
 };
 
 const setGuests = (name, form) => {
