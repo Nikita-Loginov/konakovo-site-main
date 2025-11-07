@@ -132,7 +132,7 @@ function triggerValidation(field) {
   field.dispatchEvent(event);
 }
 
-function updateSubmitButton(form) {
+export function updateSubmitButton(form) {
   const submitButton = form.querySelector('button[type="submit"]');
   const formIsValid = checkFormValidity(form);
 
@@ -154,14 +154,24 @@ export function checkFormValidity(form) {
   });
 }
 
+export const resetForm = (form) => {
+  if (!form) return;
+
+  form.reset();
+  resetSelect(form);
+  updateSubmitButton(form);
+};
+
 function handleFormSubmit(event) {
   event.preventDefault();
   const form = event.target;
 
   if (checkFormValidity(form)) {
-    form.reset();
-    resetSelect(form);
-    updateSubmitButton(form);
+    const isFetchSever = form?.dataset?.fetchServer;
+
+    if (!isFetchSever) {
+      resetForm(form)
+    }
 
     const btnModal = event.target.querySelector(
       'button[type="submit"].modal-open, button[type="submit"].modal-close'

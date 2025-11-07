@@ -2527,6 +2527,7 @@ body #booking-widget-863941 {
   visibility: hidden;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  inset: 0;
 }
 .modalBlock.modalBlockTwo {
   padding: 16px;
@@ -2705,9 +2706,6 @@ body #booking-widget-863941 {
   .modalBlock.certificateModal.modalBlockTwo .modalBlockTwo__img {
     display: none;
   }
-}
-.modalBlock.holidayModal {
-  inset: 0;
 }
 .modalBlock.holidayModal .modalBlock__inner {
   max-width: 90vw;

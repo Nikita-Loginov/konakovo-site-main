@@ -54,6 +54,11 @@
           flex-direction: column;
   gap: var(--gap);
 }
+.roomGallery__slide img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .roomGallery .swiper-slide {
   width: 100%;
 }
@@ -68,7 +73,7 @@
 }
 .roomGallery .swiper-slide img {
   width: 100%;
-  height: 100%;
+  height: clamp(25rem, 21.4706rem + 11.7647vw, 31.25rem);
 }
 .roomGallery__swiper-box {
   position: relative;
@@ -87,6 +92,9 @@
 }
 .roomGallery .swiper-pagination {
   display: none;
+}
+.roomGallery__swiper-box .swiper {
+  height: 100%;
 }
 @media (max-width: 1279px) {
   .roomGallery .arrows-swiper {

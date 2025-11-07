@@ -1,5 +1,8 @@
 import { resetSelect, resetForm } from "./validate.js";
-import { setInnerHTML, declOfNum } from "../functions.js";
+import {
+  setInnerHTML,
+  declOfNum,
+} from "/bitrix/templates/konakovo.com-frogstudios/js/functions.js";
 
 const data = {
   divesWeekdays: {
@@ -217,18 +220,6 @@ const data = {
 
     name: 'Коллективная программа "Община (пт-вс)"',
   },
-  aloneWeekdays: {
-    totalGuests: 1,
-    minGuests: 1,
-    guestsInfo: {
-      1: {
-        summ: "96 000",
-        time: 5,
-      },
-    },
-
-    name: 'Программа "Наедине"',
-  },
 };
 
 const setGuests = (name, form) => {
@@ -298,7 +289,7 @@ const renderGuests = (form, { minGuests, totalGuests }) => {
 
                                 <span class="options-list__arrow">
                                   <img
-                                    src="./img/icons/arrowReady.svg"
+                                    src="/bitrix/templates/konakovo.com-frogstudios/img/icons/arrowReady.svg"
                                     alt="иконка"
                                   />
                                 </span>
@@ -343,8 +334,6 @@ const submitForm = (form) => {
 
   const guestsSelect = form.querySelector("[data-select-guests]");
 
-
-
   if (!guestsSelect) return;
 
   guestsSelect.classList.add("disabled");
@@ -353,47 +342,26 @@ const submitForm = (form) => {
 };
 
 const submitFormServer = async (form) => {
-  const programmInput = form.querySelector(
-    "[data-select-programs] .custom-select__active input"
-  );
+  const formData = {
+    name: form.querySelector('input[name="name"]').value,
+    tel: form.querySelector('input[name="tel"]').value,
+    program: form.querySelector("[data-select-programs] .selected-option")
+      .value,
+    guests: form.querySelector("[data-select-guests] .selected-option").value,
+    // price:
+  };
 
-  if (!programmInput) return;
+  try {
+    const response = await fetch("/bitrix/ajax/add_certificate.php", {
+      method: "POST",
+      body: formData,
+    });
 
-  const { nameId: programmName } = programmInput.dataset;
-  const guests = form.querySelector(
-    "[data-select-guests] .selected-option"
-  ).value;
-
-  if (guests && programmName) {
-    const { guestsInfo } = data[programmName];
-    const { summ } = guestsInfo[guests];
-
-    if (!summ) return;
-
-    const formData = {
-      name: form.querySelector('input[name="name"]').value,
-      phone: form.querySelector('input[name="tel"]').value,
-      program: form.querySelector("[data-select-programs] .selected-option")
-        .value,
-      guests: guests,
-      price: summ,
-    };
-
-    try {
-      const response = await fetch("/bitrix/ajax/add_certificate.php", {
-        method: "POST",
-        body: formData,
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      await response.json();
-    } catch (error) {
-      console.error("Ошибка при отправке формы", error);
-    } finally {
-      resetForm(form);
-    }
+    await response.json();
+  } catch (error) {
+    console.error("Ошибка при отправке формы", error);
+  } finally {
+    resetForm(form);
   }
 };
 

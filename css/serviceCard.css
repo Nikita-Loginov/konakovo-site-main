@@ -798,6 +798,15 @@
             flex-direction: column;
   }
 }
+.servicesMore__tabs-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
 .servicesMore__tabs-box .swiper-slide {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -825,6 +834,12 @@
 }
 .servicesMore__tabs-box .swiper-wrapper {
   padding-bottom: 4px;
+}
+.servicesMore__item {
+  display: none;
+}
+.servicesMore__item.active {
+  display: block;
 }
 
 .card-info {

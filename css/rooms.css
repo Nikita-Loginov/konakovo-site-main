@@ -241,7 +241,7 @@
   gap: 20px;
   width: 100%;
   padding: 20px 0;
-  border-bottom: 1px solid #EFEFEF;
+  border-bottom: 1px solid #efefef;
   cursor: pointer;
   font-size: 20px;
   color: rgba(76, 76, 76, 0.6980392157);
@@ -269,6 +269,7 @@
 @media (max-width: 1279px) {
   .goods-sidebar {
     max-width: 100%;
+    position: static;
   }
   .goods-sidebar__btn-top {
     display: none;
@@ -298,7 +299,7 @@
   .goods-sidebar__btn {
     padding: 0;
     font-size: 16px;
-    color: #4C4C4C;
+    color: #4c4c4c;
     font-weight: 600;
     text-transform: uppercase;
   }

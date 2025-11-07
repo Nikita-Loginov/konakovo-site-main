@@ -87,4 +87,18 @@ export const programsData = [
     images: ["/img/programs/four", "/img/programs/two", "/img/programs/one"],
     imgFormat: "webp",
   },
+  {
+    category: "alone",
+    name: "«Наедине»",
+    texts: [
+      "5 часов наедине с мастером.",
+      "Формирование программы в зависимости от личного запроса.",
+    ],
+    color: "green",
+    price: "96 000 ₽",
+    guests: "1 гость",
+    linkBrone: "https://shop.hotbot.ai/konakovo/",
+    images: ["/img/programs/four", "/img/programs/two", "/img/programs/one"],
+    imgFormat: "webp",
+  },
 ];

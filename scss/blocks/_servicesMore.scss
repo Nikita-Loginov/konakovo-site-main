@@ -39,6 +39,10 @@
   }
 
   &__tabs-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
     .swiper-slide {
       width: fit-content;
     }
@@ -62,10 +66,19 @@
       font-size: clamp(2rem, 1.8866rem + 0.4372vw, 2.25rem);
     }
   }
+  
 
   &__tabs-box {
     .swiper-wrapper {
       padding-bottom: 4px;
+    }
+  }
+
+  &__item {
+    display: none;
+
+    &.active {
+      display: block;
     }
   }
 
